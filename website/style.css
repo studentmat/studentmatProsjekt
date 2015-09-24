@@ -1,3 +1,5 @@
+
+/* Generelt design */
 body {
 	background-color: #e9f5dc;
 }
@@ -9,21 +11,21 @@ body {
 	padding: 10px;
 	z-index: 999;
 	margin: 0px;
+	text-align: center;
 }
 
 nav .menu ul {
-	list-style-type: none;
 	text-align: center;
 	font-size: 12px;
 }
 
-nav.menu ul li{
+nav.menu li a{
 	list-style-type: none;
 	color: white;
 	margin: 7px 5px 7px 5px;
 	padding: 1px 5px 1px 5px;
-	display: inline;
-	font-size: 20px;
+	display: inline-table;
+	font-size: 25px;
 }
 
 menu  a {
@@ -32,7 +34,8 @@ menu  a {
 
 header {
 	font-size: 2em;
-	font-weight: black;
+	font-weight: bolder;
+	text-align: center;
 }
 .mainHeading {
 	font-weight: bold;
@@ -45,13 +48,15 @@ nav.sideMenu {
 	border: red;
 }
 .pageContent {
-	margin: 200px auto 0 auto;
+	margin: 50px auto 0 auto;
 	background-color: white;
 	border: 1px solid grey;
 	border-radius: 5px;
 	width: 1000px;
-	text-align: justify;
+	text-align: center;
 }
+
+/*Design til oppskrift-sider*/
 
 ul.ingredienser {
 	list-style-type: disc;
@@ -63,6 +68,7 @@ ul.fremgangsmate {
 	display: inline-block;
 	padding-top: 0;
 }
+
 a {
 	text-decoration: none;
 	color: black;
@@ -74,8 +80,10 @@ a:hover {
 .oppskrift {
 	width: auto;
 	padding: 10px;
-}.oppskriftHeading {
-	display: block;
+}
+
+.oppskriftHeading {
+	display: inline;
 }
 
 .oppskriftBilde {
@@ -84,4 +92,21 @@ a:hover {
 
 li > ul.underMeny {
 	display: none;
+}
+
+li {
+	list-style-type: none;
+
+}
+/* Design til alltidHa */
+.underSeksjon {
+	width: 250px;
+	padding: 10px;
+	margin: 10px;
+	background-color: white;
+	border: 1px solid grey;
+	border-radius: 4px;
+	display: inline-table;
+	text-align: left;
+
 }
