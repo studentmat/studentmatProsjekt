@@ -1,0 +1,87 @@
+body {
+	background-color: #e9f5dc;
+}
+
+.menu {
+	background-color: #F1F1F1;
+	height: auto;
+	width: 100%;
+	padding: 10px;
+	z-index: 999;
+	margin: 0px;
+}
+
+nav .menu ul {
+	list-style-type: none;
+	text-align: center;
+	font-size: 12px;
+}
+
+nav.menu ul li{
+	list-style-type: none;
+	color: white;
+	margin: 7px 5px 7px 5px;
+	padding: 1px 5px 1px 5px;
+	display: inline;
+	font-size: 20px;
+}
+
+menu  a {
+	color: white;
+}
+
+header {
+	font-size: 2em;
+	font-weight: black;
+}
+.mainHeading {
+	font-weight: bold;
+	text-align: center;
+}
+
+nav.sideMenu {
+	width: 200px;
+	display: inline-table;
+	border: red;
+}
+.pageContent {
+	margin: 200px auto 0 auto;
+	background-color: white;
+	border: 1px solid grey;
+	border-radius: 5px;
+	width: 1000px;
+	text-align: justify;
+}
+
+ul.ingredienser {
+	list-style-type: disc;
+	display: inline-block;
+}
+
+ul.fremgangsmate {
+	list-style-type: decimal;
+	display: inline-block;
+	padding-top: 0;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	font-style: italic;
+}
+
+.oppskrift {
+	width: auto;
+	padding: 10px;
+}.oppskriftHeading {
+	display: block;
+}
+
+.oppskriftBilde {
+	display: inline;
+}
+
+li > ul.underMeny {
+	display: none;
+}
