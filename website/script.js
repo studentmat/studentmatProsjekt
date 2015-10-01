@@ -18,7 +18,7 @@ $(function () {
   // $("#headingDiv").load("html/headingDiv.html");
 
    // Last inn navigasjonen inn i nav elementet
-  $("#nav").load("html/nav.html");
+  $("#nav").load("nav.html");
   // Last inn footer inn i footer elementet
-  $("#footer").load("html/footer.html");
+  $("#footer").load("footer.html");
 });
