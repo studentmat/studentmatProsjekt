@@ -1,0 +1,87 @@
+
+/*Design til oppskrift-sider*/
+
+ul.ingredienser {
+	display: inline-block;
+	width: 250px;
+}
+
+ul.fremgangsmate {
+	display: inline-block;
+	vertical-align: top;
+	width: 500px;
+}
+
+.fremgangsmate > li {
+	list-style-type: decimal;
+}
+
+.ingredienser > li {
+	list-style-type: disc;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	font-style: italic;
+}
+
+.oppskrift {
+	width: auto;
+	padding: 10px;
+}
+
+.oppskriftHeading {
+	display: inline !important;
+	text-align: none;
+	padding-left: 10px;
+}
+
+img.oppskriftBilde {
+	display: inline-block;
+	margin-left: 20px;
+	border: 2px solid red;
+	text-align: left;
+}
+
+li > ul.underMeny {
+	display: none;
+	visibility: hidden;
+}
+
+li {
+	list-style-type: none;
+}
+
+.oppskriftSHDiv {
+	display: block;
+	margin-left: 20px;
+
+}
+
+.oppskriftTips, .orginaloppskrift {
+	padding-left: 37px;
+}
+
+
+/* Design til alltidHa */
+.underSeksjon {
+	width: 250px;
+	height: 600px;
+	padding: 10px;
+	margin: 10px;
+	background-color: white;
+	border: 1px solid grey;
+	border-radius: 4px;
+	display: inline-table;
+	text-align: left;
+
+}
+
+.underSeksjon > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
