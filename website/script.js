@@ -1,24 +1,40 @@
-function visOppskrift(divID)
+$ function visOppskrift(divID) {
 	console.log(divId);
 	var div = document.getElementById(divId)
 	if (div.style.display !== "none") {
 		div.style.display = "none";
-		div.style.img.width= 400px;
-		div.style.img.height= 300px;
 	}
 	else {
 		div.style.display = "block";
-		div.style.img = 125px;
-		div.style.img = 75px;
 	}
 }
 
 $(function () {
 
-  // $("#headingDiv").load("html/headingDiv.html");
+  $("#headingDiv").load("html/headingDiv.html");
 
-   // Last inn navigasjonen inn i nav elementet
-  $("#nav").load("nav.html");
+  // Laster inn "hjem" siden som første siden
+  $("#main").load("html/home.html");
+  // Last inn navigasjonen inn i nav elementet
+  $("#nav").load("html/nav.html");
   // Last inn footer inn i footer elementet
-  $("#footer").load("footer.html");
+  $("#footer").load("html/footer.html");
+
+  // Lytt på alle "a" elementer so
+  // har en "href" adresse
+  $(document).on('click','ul a', function(event) {
+    // Stopp klikket fra å navigere oss bort
+    event.preventDefault();
+
+    // Finn addressen som var lenket til
+    var page = $(this).attr("href");
+
+    window.history.pushState({},"", page);
+    // Last inn den adressen inn i main
+    // elementet
+    $("#main").load("html/" + page);
+
+    return false;
+  });
+
 });
