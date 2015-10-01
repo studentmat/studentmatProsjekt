@@ -1,38 +1,40 @@
+
+/* Generelt design */
 body {
 	background-color: #e9f5dc;
 }
 
 .menu {
-	background-color: #F1F1F1;
+	background-color: black;
 	height: auto;
 	width: 100%;
 	padding: 10px;
 	z-index: 999;
 	margin: 0px;
+	text-align: center;
 }
 
 nav .menu ul {
-	list-style-type: none;
 	text-align: center;
 	font-size: 12px;
 }
 
-nav.menu ul li{
+nav.menu li {
 	list-style-type: none;
-	color: white;
+	color: #FFFFFF;
 	margin: 7px 5px 7px 5px;
 	padding: 1px 5px 1px 5px;
-	display: inline;
-	font-size: 20px;
+	display: inline-table;
+	font-size: 25px;
 }
 
-menu  a {
-	color: white;
+menu a {
 }
 
 header {
 	font-size: 2em;
-	font-weight: black;
+	font-weight: bolder;
+	text-align: center;
 }
 .mainHeading {
 	font-weight: bold;
@@ -45,13 +47,14 @@ nav.sideMenu {
 	border: red;
 }
 .pageContent {
-	margin: 200px auto 0 auto;
+	margin: 50px auto 0 auto;
 	background-color: white;
 	border: 1px solid grey;
 	border-radius: 5px;
 	width: 1000px;
-	text-align: justify;
 }
+
+/*Design til oppskrift-sider*/
 
 ul.ingredienser {
 	list-style-type: disc;
@@ -61,11 +64,12 @@ ul.ingredienser {
 ul.fremgangsmate {
 	list-style-type: decimal;
 	display: inline-block;
-	padding-top: 0;
+	position: top;
 }
+
 a {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 a:hover {
 	font-style: italic;
@@ -74,14 +78,44 @@ a:hover {
 .oppskrift {
 	width: auto;
 	padding: 10px;
-}.oppskriftHeading {
-	display: block;
 }
 
-.oppskriftBilde {
-	display: inline;
+.oppskriftHeading {
+	display: inline !important;
+	text-align: none;
+}
+
+img.oppskriftBilde {
+	display: inline-block;
+	margin-left: 20px;
+	border: 2px solid red;
+	text-align: left;
 }
 
 li > ul.underMeny {
 	display: none;
+}
+
+li {
+	list-style-type: none;
+
+}
+/* Design til alltidHa */
+.underSeksjon {
+	width: 250px;
+	height: 600px;
+	padding: 10px;
+	margin: 10px;
+	background-color: white;
+	border: 1px solid grey;
+	border-radius: 4px;
+	display: inline-table;
+	text-align: left;
+
+}
+
+.underSeksjon > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
