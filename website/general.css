@@ -1,0 +1,130 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-size: 14pt;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+p {
+	font-family: serif;
+}
+
+h1 {
+	font-family: sans-serif;
+	font-size: 22pt;
+}
+
+h2 {
+	font-family: sans-serif;
+	font-size: 18pt;
+}
+
+.page{
+	background-color: #e7e7e7;
+	position: absolute;
+	min-height: 100%;
+	height: auto;
+	width: 100%;
+}
+
+header {
+	width: 100%;
+	height: 100px;
+}
+
+.headerContent{
+	margin: 0px auto;
+	width: 1000px;
+}
+
+.navBar {
+	background-color: black;
+	height: 30px;
+	width: 100%;
+	margin: 0;
+}
+
+.navList {
+	text-align: center;
+	list-style: none;
+	font-size: 25px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.navList > li, .navList a {
+	display: inline-block;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 200px;
+	margin: 0 auto;
+}
+
+.navList li ul {
+	position: relative;
+	display: none;
+}
+
+.navList li:hover {
+	background-color: grey;
+}
+
+.navList li:hover ul {
+	font-size: 20px;
+	display: block;
+	background-color: grey;
+	width: 70px;
+  	padding: 5px 0;
+}
+
+.navList li ul li {
+	display: block;
+	height: auto;
+}
+
+
+nav.ankerMeny {
+	width: 200px;
+	position: fixed;
+	float: left;
+	background-color: #FFF;
+	margin: 0 auto;
+}
+
+.wrap{
+	width: 1400px;
+	margin: 0px auto;
+}
+
+.main {
+	margin: 0px auto;
+	padding: 30px;
+	width: 940px;
+	min-height: 1000px;
+	height: auto;
+	background-color: #FFF;
+}
+
+footer{
+	background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+}
+
+
+#footerContent {
+	margin: 0px auto;
+	width: 1000px;
+	height: 100px;
+	color: #fff;
+
+}

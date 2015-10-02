@@ -1,9 +1,4 @@
-/* Generelt design */
-body {
-	background-color: #e9f5dc;
-}
-
-.menu {
+nav#navBar {
 	background-color: black;
 	height: auto;
 	width: 100%;
@@ -30,25 +25,9 @@ nav.menu li {
 menu a {
 }
 
-header {
-	font-size: 2em;
-	font-weight: bolder;
-	text-align: center;
-}
-.mainHeading {
-	font-weight: bold;
-	text-align: center;
-}
-
 nav.sideMenu {
 	width: 200px;
 	display: inline-table;
 	border: red;
 }
-.pageContent {
-	margin: 50px auto 0 auto;
-	background-color: white;
-	border: 1px solid grey;
-	border-radius: 5px;
-	width: 1000px;
-}
+
