@@ -1,4 +1,5 @@
-$ function visOppskrift(divID) {
+// Sier at visOppskrift er en global funskjon
+visOppskrift = function (divId){
 	console.log(divId);
 	var div = document.getElementById(divId)
 	if (div.style.display !== "none") {
@@ -9,7 +10,11 @@ $ function visOppskrift(divID) {
 	}
 }
 
+// $ viser til JQuery som kjorer den gitte funksjonen/strengen e.l. nar hele siden er lastet
+// Kortversjon for document.onload
 $(function () {
+
+  console.log("funksjon kjører");
 
   $("#headingDiv").load("html/headingDiv.html");
 
