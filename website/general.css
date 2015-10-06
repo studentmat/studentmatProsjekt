@@ -43,30 +43,37 @@ header {
 }
 
 .navBar {
-	background-color: black;
-	height: 30px;
+	background-color: #313130;
+	height: 50px;
 	width: 100%;
-	margin: 0;
 }
 
 .navList {
-	text-align: center;
-	list-style: none;
 	font-size: 25px;
 	width: 1000px;
 	margin: 0 auto;
 }
 
-.navList > li, .navList a {
+.navlist ul {
+	list-style: none;
+  	text-align: center;
+  	padding: 0;
+  	margin: 0;
+
+}
+
+.navList > li, .navList > a {
 	display: inline-block;
 	color: #FFFFFF;
 	text-decoration: none;
 	width: 200px;
+	height: 30px;
+	padding: 10px 0;
 	margin: 0 auto;
 }
 
 .navList li ul {
-	position: relative;
+	position: absolute;
 	display: none;
 }
 
@@ -75,16 +82,19 @@ header {
 }
 
 .navList li:hover ul {
-	font-size: 20px;
 	display: block;
 	background-color: grey;
 	width: 70px;
   	padding: 5px 0;
+  	margin-top: 18px;
+	font-size: 20px;
 }
 
 .navList li ul li {
 	display: block;
-	height: auto;
+	height: 30px;
+	background-color: #e7e7e7;
+	padding: 10px 0px;
 }
 
 
@@ -111,7 +121,7 @@ nav.ankerMeny {
 }
 
 footer{
-	background-color: #000;
+	background-color: #313130;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -125,6 +135,6 @@ footer{
 	margin: 0px auto;
 	width: 1000px;
 	height: 100px;
-	color: #fff;
+	color: #313130;
 
 }
