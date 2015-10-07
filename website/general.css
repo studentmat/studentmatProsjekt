@@ -15,37 +15,39 @@ p {
 }
 
 h1 {
-	font-family: sans-serif;
+	font-family: Fontin, "Fertigo Pro";
 	font-size: 22pt;
 }
 
-h2 {
+h3 {
 	font-family: sans-serif;
 	font-size: 18pt;
 }
 
 #page{
-	background-color: #78FB64;
+	background-color: #EFF2EF;
 	position: absolute;
 	min-height: 100%;
 	height: auto;
-	padding: 10px;
 	width: 100%;
 }
 
 header {
 	margin-top: 0;
 	padding-top: 0;
+	overflow: hidden;
+	font-family: "Fertigo Pro", Anivers, sans-serif;
 }
 
 #headerContent{
-	font-family: sans-serif;
+	font-family: "FFF TUSJ", Anivers, sans-serif;
 	text-align: center;
 	margin-top: 0px;
 	padding-top: 0px;
 	width: 100%;
-	background-color: #D6D9DB;
-	height: 100px;
+	background-color: #2ECC71;
+	height: 150px;
+	color: white;
 }
 
 .fixed {
@@ -54,14 +56,13 @@ header {
 }
 
 #navBar {
-	background-color: #313130;
-	height: 50px;
+	background-color: #2C3E50;
 	width: 100%;
 	font-family: sans-serif;
 }
 
 #navList {
-	font-size: 22px;
+	font-size: 18px;
 	width: 1000px;
 	margin: 0 auto;
 	padding-left: 0;
@@ -79,9 +80,15 @@ header {
 	text-align: center;
 	padding-left: 0;
 	display: inline-block;
+	margin: 0 auto;
+}
+
+#navList > li > a{
+	text-align: center;
+	padding-left: 0;
+	display: inline-block;
 	color: #FFFFFF;
 	width: 200px;
-	height: 30px;
 	margin: 0 auto;
 	text-transform: uppercase;
 	padding: 10px 0;
@@ -105,10 +112,22 @@ header {
 	position: absolute;
 	display: none;
 	z-index: 999;
+	opacity: 0.8;
 }
 
-#navList li:hover, #navList li ul li:hover {
-	background-color: grey;
+#navList li:hover {
+	transition: 0.2s;
+	color:black;
+	background: white;
+}
+
+#navList li:hover > a{
+	transition: 0.2s;
+	color:black;
+	
+}
+
+#navList li ul li:hover {
 }
 
 #navList li:hover ul {
@@ -149,7 +168,7 @@ li > ul.underMeny {
 }
 
 #main {
-	margin: 0 auto -100px;
+	margin: 0 auto;
 	padding: 30px;
 	width: 940px;
 	min-height: 1000px;
@@ -160,17 +179,15 @@ li > ul.underMeny {
 
 #mainHeading {
 	font-family: sans-serif;
-}id
+}
 
 #footer{
-	background-color: #313130;
-    position: absolute;
+	background-color: #2C3E50;
     left: 0;
     bottom: 0;
     height: 250px;
     width: 100%;
 }
-
 
 #footerContent {
 	margin: 0 auto;
