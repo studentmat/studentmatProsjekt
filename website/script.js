@@ -21,13 +21,13 @@ $(function () {
   // Laster inn "hjem" siden som første siden
   //$(".main").load("html/home.html");
   // Last inn navigasjonen inn i nav elementet
-  $(".navBar").load("html/nav.html");
+  $("#navBar").load("html/nav.html");
   // Last inn footer inn i footer elementet
-  $(".footer").load("html/footer.html");
+  $("#footer").load("html/footer.html");
 
   // Lytt på alle "a" elementer so
   // har en "href" adresse
-  $(document).on('click','.navList ul a', function(event) {
+  $(document).on('click','#navList ul a', function(event) {
     // Stopp klikket fra å navigere oss bort
     event.preventDefault();
 
@@ -37,9 +37,25 @@ $(function () {
     window.history.pushState({},"", page);
     // Last inn den adressen inn i main
     // elementet
-    $(".main").load("html/" + page);
+    $("#main").load("html/" + page);
+
+    //
+
+    // For a laste inn ankermeny
+    $("#ankerMeny").load("html/"+ page + "#ankerMeny")
 
     return false;
   });
 
 });
+
+//Holder navbaren fiksert i toppen 
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > $("#headerContent").outerHeight()) {
+        $('#navBar').addClass('fixed');
+    } else {
+        $('#navBar').removeClass('fixed');
+    }
+});
+
+

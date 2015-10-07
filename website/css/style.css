@@ -1,6 +1,33 @@
 
 /*Design til oppskrift-sider*/
 
+.oppskrift {
+	width: auto;
+	padding: 10px;
+}
+
+.oppskriftHeading {
+	display: inline !important;
+	vertical-align: top;
+	padding-left: 10px;
+	height: 200px;
+}
+
+.oppskriftsHeading a {
+	font-size: 2em;
+}
+
+.oppskriftsHeading p {
+	font-style: italic;
+}
+
+img.oppskriftBilde {
+	display: inline-block;
+	margin-left: 20px;
+	border: 2px solid red;
+	text-align: left;
+}
+
 ul.ingredienser {
 	display: inline-block;
 	width: 250px;
@@ -24,27 +51,7 @@ a {
 	text-decoration: none;
 	color: black;
 }
-a:hover {
-	font-style: italic;
-}
 
-.oppskrift {
-	width: auto;
-	padding: 10px;
-}
-
-.oppskriftHeading {
-	display: inline !important;
-	text-align: none;
-	padding-left: 10px;
-}
-
-img.oppskriftBilde {
-	display: inline-block;
-	margin-left: 20px;
-	border: 2px solid red;
-	text-align: left;
-}
 
 li > ul.underMeny {
 	display: none;

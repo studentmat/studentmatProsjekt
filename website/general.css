@@ -24,7 +24,7 @@ h2 {
 	font-size: 18pt;
 }
 
-.page{
+#page{
 	background-color: #e7e7e7;
 	position: absolute;
 	min-height: 100%;
@@ -37,68 +37,94 @@ header {
 	height: 100px;
 }
 
-.headerContent{
+#headerContent{
 	margin: 0px auto;
 	width: 1000px;
 }
 
-.navBar {
+.fixed {
+	position: fixed;
+	top: 0;
+}
+
+#navBar {
 	background-color: #313130;
 	height: 50px;
 	width: 100%;
+	font-family: sans-serif;
 }
 
-.navList {
-	font-size: 25px;
+#navList {
+	font-size: 22px;
 	width: 1000px;
 	margin: 0 auto;
+	padding-left: 0;
+	
 }
 
-.navlist ul {
+#navlist ul {
 	list-style: none;
-  	text-align: center;
   	padding: 0;
   	margin: 0;
 
 }
 
-.navList > li, .navList > a {
+#navList > li {
+	text-align: center;
+	padding-left: 0;
 	display: inline-block;
 	color: #FFFFFF;
-	text-decoration: none;
 	width: 200px;
-	height: 30px;
-	padding: 10px 0;
+	height: 40px;
+	padding-top: 10px;
 	margin: 0 auto;
+	text-transform: uppercase;
 }
 
-.navList li ul {
+#navList a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#navlist a:hover {
+	font-style: normal;
+}
+
+
+#navList li ul {
 	position: absolute;
 	display: none;
+	z-index: 999;
 }
 
-.navList li:hover {
+#navList li:hover {
 	background-color: grey;
 }
 
-.navList li:hover ul {
+#navList li:hover ul {
 	display: block;
 	background-color: grey;
-	width: 70px;
+	width: 200px;
   	padding: 5px 0;
-  	margin-top: 18px;
+  	margin-top: 0px;
 	font-size: 20px;
 }
 
-.navList li ul li {
+li > ul.underMeny {
+	display: none;
+	visibility: hidden;
+	height: auto;
+	padding-top: 5px;
+}
+
+#navList li ul li {
 	display: block;
 	height: 30px;
-	background-color: #e7e7e7;
+	background-color: grey;
 	padding: 10px 0px;
 }
 
-
-nav.ankerMeny {
+#ankerMeny {
 	width: 200px;
 	position: fixed;
 	float: left;
@@ -106,12 +132,12 @@ nav.ankerMeny {
 	margin: 0 auto;
 }
 
-.wrap{
+#wrap{
 	width: 1400px;
 	margin: 0px auto;
 }
 
-.main {
+#main {
 	margin: 0px auto;
 	padding: 30px;
 	width: 940px;
@@ -120,21 +146,42 @@ nav.ankerMeny {
 	background-color: #FFF;
 }
 
-footer{
+#mainHeading {
+	font-family: sans-serif;
+}
+
+#footer{
 	background-color: #313130;
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 100px;
+    height: 250px;
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 
 #footerContent {
 	margin: 0px auto;
 	width: 1000px;
-	height: 100px;
+	height: 250px;
 	color: #313130;
+}
 
+.footerBox {
+	vertical-align: top;
+	text-align: center;
+	display: inline-block;
+	width: 300px;
+	margin: 0;
+	padding: 10px;
+	font-size: 0.7em;
+	color: white;
+}
+
+#siteMap a{
+	text-decoration: none;
+	color: white;
+	list-style-type: none;
+	text-align: left;
 }
