@@ -31,4 +31,19 @@ h1, h2, h3 {
 	font-family: Sans-serif;
 }
 
+table, th, td {
+    width: 800px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+th, td {
+    padding: 7px;
+    text-align: left;
+}
+
+ul.listeBullet {
+    list-style-type: disc;
+}
