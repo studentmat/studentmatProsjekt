@@ -25,21 +25,27 @@ h2 {
 }
 
 #page{
-	background-color: #e7e7e7;
+	background-color: #78FB64;
 	position: absolute;
 	min-height: 100%;
 	height: auto;
+	padding: 10px;
 	width: 100%;
 }
 
 header {
-	width: 100%;
-	height: 100px;
+	margin-top: 0;
+	padding-top: 0;
 }
 
 #headerContent{
-	margin: 0px auto;
-	width: 1000px;
+	font-family: sans-serif;
+	text-align: center;
+	margin-top: 0px;
+	padding-top: 0px;
+	width: 100%;
+	background-color: #D6D9DB;
+	height: 100px;
 }
 
 .fixed {
@@ -75,10 +81,14 @@ header {
 	display: inline-block;
 	color: #FFFFFF;
 	width: 200px;
-	height: 40px;
-	padding-top: 10px;
+	height: 30px;
 	margin: 0 auto;
 	text-transform: uppercase;
+	padding: 10px 0;
+}
+
+.highlight {
+	background-color: #DAD6D6;
 }
 
 #navList a {
@@ -97,13 +107,13 @@ header {
 	z-index: 999;
 }
 
-#navList li:hover {
+#navList li:hover, #navList li ul li:hover {
 	background-color: grey;
 }
 
 #navList li:hover ul {
 	display: block;
-	background-color: grey;
+	background-color: #313130;
 	width: 200px;
   	padding: 5px 0;
   	margin-top: 0px;
@@ -120,8 +130,9 @@ li > ul.underMeny {
 #navList li ul li {
 	display: block;
 	height: 30px;
-	background-color: grey;
-	padding: 10px 0px;
+	background-color: #313130;
+	padding: 5px 0px;
+	margin: 10px;
 }
 
 #ankerMeny {
@@ -138,17 +149,18 @@ li > ul.underMeny {
 }
 
 #main {
-	margin: 0px auto;
+	margin: 0 auto -100px;
 	padding: 30px;
 	width: 940px;
 	min-height: 1000px;
-	height: auto;
+	height: auto !important;
+	height: 100%;
 	background-color: #FFF;
 }
 
 #mainHeading {
 	font-family: sans-serif;
-}
+}id
 
 #footer{
 	background-color: #313130;
@@ -157,31 +169,33 @@ li > ul.underMeny {
     bottom: 0;
     height: 250px;
     width: 100%;
-    overflow: hidden;
 }
 
 
 #footerContent {
-	margin: 0px auto;
+	margin: 0 auto;
 	width: 1000px;
 	height: 250px;
 	color: #313130;
 }
 
+#footerContent a {
+	color: white;
+}
+
 .footerBox {
 	vertical-align: top;
-	text-align: center;
 	display: inline-block;
 	width: 300px;
 	margin: 0;
 	padding: 10px;
-	font-size: 0.7em;
+	font-size: 1em;
 	color: white;
 }
 
-#siteMap a{
+#siteMap li, #siteMap a{
 	text-decoration: none;
-	color: white;
+	color: white !important; 
 	list-style-type: none;
 	text-align: left;
 }

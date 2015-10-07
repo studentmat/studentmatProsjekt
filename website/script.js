@@ -39,7 +39,8 @@ $(function () {
     // elementet
     $("#main").load("html/" + page);
 
-    //
+    //Viser i navBaren hvilken side en er pa
+    $("#navBar").
 
     // For a laste inn ankermeny
     $("#ankerMeny").load("html/"+ page + "#ankerMeny")
@@ -48,6 +49,25 @@ $(function () {
   });
 
 });
+
+$(document).ready(function(){
+
+  var str=location.href.toLowerCase();
+
+  $("#navBar li").each(function() {
+
+    if (str.indexOf(this.href.toLowerCase()) > -1) {
+
+     $("li.highlight").removeClass("highlight");
+
+    $(this).parent().addClass("highlight");
+
+    }
+
+  });
+
+ })
+
 
 //Holder navbaren fiksert i toppen 
 $(window).bind('scroll', function () {
