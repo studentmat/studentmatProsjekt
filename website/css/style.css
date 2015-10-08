@@ -5,28 +5,20 @@
 	padding: 10px;
 }
 
-.oppskriftHeading img {
+.oppskriftsBilde {
 	display: inline-block;
+	margin-left: 20px;
 }
-.oppskriftHeading header{
+.oppskriftsNavn {
 	vertical-align: top;
 	padding-left: 10px;
 	height: auto;
 }
 
-.oppskriftsHeading a {
-	font-size: 2em;
-}
-
-.oppskriftsHeading p {
+.beskrivelse {
 	font-style: italic;
-}
-
-img.oppskriftBilde {
 	display: inline-block;
-	margin-left: 20px;
-	border: 2px solid red;
-	text-align: left;
+	vertical-align: top;
 }
 
 ul.ingredienser {
@@ -64,7 +56,7 @@ li {
 }
 
 .oppskriftSHDiv {
-	display: block;
+	visibility: hidden;
 	margin-left: 20px;
 
 }

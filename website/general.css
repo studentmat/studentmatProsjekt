@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	font-size: 14pt;
+	font-size: 15pt;
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
@@ -11,32 +11,21 @@ body {
 }
 
 p {
-	font-family: serif;
+	font-family: "Goudy Old Style"serif;
 }
 
-h1 {
-	font-family: Fontin, "Fertigo Pro";
-	font-size: 22pt;
-}
-
-h3 {
-	font-family: sans-serif;
-	font-size: 18pt;
+header {
+	font-family: Helvetica, sans-serif;
+	font-size: 35pt;
+	text-align: center;
 }
 
 #page{
-	background-color: #EFF2EF;
 	position: absolute;
 	min-height: 100%;
 	height: auto;
 	width: 100%;
-}
-
-header {
-	margin-top: 0;
-	padding-top: 0;
-	overflow: hidden;
-	font-family: "Fertigo Pro", Anivers, sans-serif;
+	background-color: #F5F9F2;
 }
 
 #headerContent{
@@ -45,9 +34,10 @@ header {
 	margin-top: 0px;
 	padding-top: 0px;
 	width: 100%;
-	background-color: #2ECC71;
+	background-color: #E4DFDF;
 	height: 150px;
 	color: white;
+	overflow: hidden;
 }
 
 .fixed {
@@ -55,8 +45,11 @@ header {
 	top: 0;
 }
 
+.navfooterColor {
+	background-color: #544B4B;
+}
+
 #navBar {
-	background-color: #2C3E50;
 	width: 100%;
 	font-family: sans-serif;
 }
@@ -88,7 +81,7 @@ header {
 	padding-left: 0;
 	display: inline-block;
 	color: #FFFFFF;
-	width: 200px;
+	width: 250px;
 	margin: 0 auto;
 	text-transform: uppercase;
 	padding: 10px 0;
@@ -117,23 +110,20 @@ header {
 
 #navList li:hover {
 	transition: 0.2s;
-	color:black;
+	color: black;
 	background: white;
 }
 
 #navList li:hover > a{
 	transition: 0.2s;
-	color:black;
+	color: #544B4B;
 	
-}
-
-#navList li ul li:hover {
 }
 
 #navList li:hover ul {
 	display: block;
 	background-color: #313130;
-	width: 200px;
+	width: 250px;
   	padding: 5px 0;
   	margin-top: 0px;
 	font-size: 20px;
@@ -162,19 +152,15 @@ li > ul.underMeny {
 	margin: 0 auto;
 }
 
-#wrap{
-	width: 1400px;
-	margin: 0px auto;
-}
-
 #main {
+	background-color: white;
 	margin: 0 auto;
 	padding: 30px;
 	width: 940px;
 	min-height: 1000px;
 	height: auto !important;
 	height: 100%;
-	background-color: #FFF;
+	box-shadow: 0 2px 2px 2px #544B4B;
 }
 
 #mainHeading {
@@ -182,7 +168,6 @@ li > ul.underMeny {
 }
 
 #footer{
-	background-color: #2C3E50;
     left: 0;
     bottom: 0;
     height: 250px;

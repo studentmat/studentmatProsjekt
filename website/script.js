@@ -19,7 +19,7 @@ $(function () {
   //$(".headerContent").load("html/headerContent.html");
 
   // Laster inn "hjem" siden som første siden
-  //$(".main").load("html/home.html");
+  $(".main").load("html/home.html");
   // Last inn navigasjonen inn i nav elementet
   $("#navBar").load("html/nav.html", function () {
     // Ventet til nav har lastet inn
@@ -35,6 +35,8 @@ $(function () {
       var page = $(this).attr("href");
 
       window.history.pushState({},"", page);
+      
+     
       // Last inn den adressen inn i main
       // elementet
       $("#main").load("html/" + page);
@@ -60,6 +62,7 @@ $(function(){
   var page = location.href.toLowerCase();
 
   $("#navBar li a").each(function() {
+
 
     if (page.indexOf(this.href.toLowerCase()) > -1) {
 
