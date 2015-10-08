@@ -15,17 +15,17 @@ p {
 }
 
 h1 {
-	font-family: sans-serif;
+	font-family: Fontin, "Fertigo Pro";
 	font-size: 22pt;
 }
 
-h2 {
+h3 {
 	font-family: sans-serif;
 	font-size: 18pt;
 }
 
 #page{
-	background-color: #e7e7e7;
+	background-color: #EFF2EF;
 	position: absolute;
 	min-height: 100%;
 	height: auto;
@@ -33,13 +33,21 @@ h2 {
 }
 
 header {
-	width: 100%;
-	height: 100px;
+	margin-top: 0;
+	padding-top: 0;
+	overflow: hidden;
+	font-family: "Fertigo Pro", Anivers, sans-serif;
 }
 
 #headerContent{
-	margin: 0px auto;
-	width: 1000px;
+	font-family: "FFF TUSJ", Anivers, sans-serif;
+	text-align: center;
+	margin-top: 0px;
+	padding-top: 0px;
+	width: 100%;
+	background-color: #2ECC71;
+	height: 150px;
+	color: white;
 }
 
 .fixed {
@@ -48,14 +56,13 @@ header {
 }
 
 #navBar {
-	background-color: #313130;
-	height: 50px;
+	background-color: #2C3E50;
 	width: 100%;
 	font-family: sans-serif;
 }
 
 #navList {
-	font-size: 22px;
+	font-size: 18px;
 	width: 1000px;
 	margin: 0 auto;
 	padding-left: 0;
@@ -73,12 +80,22 @@ header {
 	text-align: center;
 	padding-left: 0;
 	display: inline-block;
+	margin: 0 auto;
+}
+
+#navList > li > a{
+	text-align: center;
+	padding-left: 0;
+	display: inline-block;
 	color: #FFFFFF;
 	width: 200px;
-	height: 40px;
-	padding-top: 10px;
 	margin: 0 auto;
 	text-transform: uppercase;
+	padding: 10px 0;
+}
+
+.highlight {
+	background-color: #DAD6D6;
 }
 
 #navList a {
@@ -95,15 +112,27 @@ header {
 	position: absolute;
 	display: none;
 	z-index: 999;
+	opacity: 0.8;
 }
 
 #navList li:hover {
-	background-color: grey;
+	transition: 0.2s;
+	color:black;
+	background: white;
+}
+
+#navList li:hover > a{
+	transition: 0.2s;
+	color:black;
+	
+}
+
+#navList li ul li:hover {
 }
 
 #navList li:hover ul {
 	display: block;
-	background-color: grey;
+	background-color: #313130;
 	width: 200px;
   	padding: 5px 0;
   	margin-top: 0px;
@@ -120,8 +149,9 @@ li > ul.underMeny {
 #navList li ul li {
 	display: block;
 	height: 30px;
-	background-color: grey;
-	padding: 10px 0px;
+	background-color: #313130;
+	padding: 5px 0px;
+	margin: 10px;
 }
 
 #ankerMeny {
@@ -138,11 +168,12 @@ li > ul.underMeny {
 }
 
 #main {
-	margin: 0px auto;
+	margin: 0 auto;
 	padding: 30px;
 	width: 940px;
 	min-height: 1000px;
-	height: auto;
+	height: auto !important;
+	height: 100%;
 	background-color: #FFF;
 }
 
@@ -151,37 +182,37 @@ li > ul.underMeny {
 }
 
 #footer{
-	background-color: #313130;
-    position: absolute;
+	background-color: #2C3E50;
     left: 0;
     bottom: 0;
     height: 250px;
     width: 100%;
-    overflow: hidden;
 }
 
-
 #footerContent {
-	margin: 0px auto;
+	margin: 0 auto;
 	width: 1000px;
 	height: 250px;
 	color: #313130;
 }
 
+#footerContent a {
+	color: white;
+}
+
 .footerBox {
 	vertical-align: top;
-	text-align: center;
 	display: inline-block;
 	width: 300px;
 	margin: 0;
 	padding: 10px;
-	font-size: 0.7em;
+	font-size: 1em;
 	color: white;
 }
 
-#siteMap a{
+#siteMap li, #siteMap a{
 	text-decoration: none;
-	color: white;
+	color: white !important; 
 	list-style-type: none;
 	text-align: left;
 }

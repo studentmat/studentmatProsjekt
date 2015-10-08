@@ -1,4 +1,3 @@
-
 /*Design til oppskrift-sider*/
 
 .oppskrift {
@@ -6,11 +5,13 @@
 	padding: 10px;
 }
 
-.oppskriftHeading {
-	display: inline !important;
+.oppskriftHeading img {
+	display: inline-block;
+}
+.oppskriftHeading header{
 	vertical-align: top;
 	padding-left: 10px;
-	height: 200px;
+	height: auto;
 }
 
 .oppskriftsHeading a {

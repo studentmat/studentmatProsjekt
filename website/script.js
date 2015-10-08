@@ -21,33 +21,58 @@ $(function () {
   // Laster inn "hjem" siden som første siden
   //$(".main").load("html/home.html");
   // Last inn navigasjonen inn i nav elementet
-  $("#navBar").load("html/nav.html");
+  $("#navBar").load("html/nav.html", function () {
+    // Ventet til nav har lastet inn
+
+    // Lytt på alle "a" elementer so
+    // har en "href" adresse
+    $('a[href]').click(function(event) {
+      // Stopp klikket fra å navigere oss bort
+      console.log("Caught click!")
+      event.preventDefault();
+
+      // Finn addressen som var lenket til
+      var page = $(this).attr("href");
+
+      window.history.pushState({},"", page);
+      // Last inn den adressen inn i main
+      // elementet
+      $("#main").load("html/" + page);
+
+      //Viser i navBaren hvilken side en er pa
+      //$("#navBar").
+
+      // For a laste inn ankermeny
+      $("#ankerMeny").load("html/"+ page + "#ankerMeny")
+
+      return false;
+    });
+  });
+
   // Last inn footer inn i footer elementet
   $("#footer").load("html/footer.html");
 
-  // Lytt på alle "a" elementer so
-  // har en "href" adresse
-  $(document).on('click','#navList ul a', function(event) {
-    // Stopp klikket fra å navigere oss bort
-    event.preventDefault();
-
-    // Finn addressen som var lenket til
-    var page = $(this).attr("href");
-
-    window.history.pushState({},"", page);
-    // Last inn den adressen inn i main
-    // elementet
-    $("#main").load("html/" + page);
-
-    //
-
-    // For a laste inn ankermeny
-    $("#ankerMeny").load("html/"+ page + "#ankerMeny")
-
-    return false;
-  });
 
 });
+
+$(function(){
+
+  var page = location.href.toLowerCase();
+
+  $("#navBar li a").each(function() {
+
+    if (page.indexOf(this.href.toLowerCase()) > -1) {
+
+     $("li.highlight").removeClass("highlight");
+
+    $(this).parent().addClass("highlight");
+
+    }
+
+  });
+
+ })
+
 
 //Holder navbaren fiksert i toppen 
 $(window).bind('scroll', function () {
