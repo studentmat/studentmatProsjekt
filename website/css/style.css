@@ -5,9 +5,21 @@
 	padding: 10px;
 }
 
+.oppskriftHeading {
+	overflow: hidden;
+	transition: 0.2s;
+}
+
+.oppskriftHeading:hover {
+	cursor: pointer;
+	background-color: grey;
+	color: white;
+	transition: 0.2s;
+}
+
 .oppskriftsBilde {
-	display: inline-block;
-	margin-left: 20px;
+	float: left;
+	margin-right: 20px;
 }
 .oppskriftsNavn {
 	vertical-align: top;
@@ -17,8 +29,12 @@
 
 .beskrivelse {
 	font-style: italic;
-	display: inline-block;
 	vertical-align: top;
+}
+
+.oppskriftsTekst {
+	float: left;
+	width: 600px;
 }
 
 ul.ingredienser {
@@ -55,10 +71,18 @@ li {
 	list-style-type: none;
 }
 
-.oppskriftSHDiv {
-	visibility: hidden;
+.oppskriftsDiv {
+	/*display: none;*/
 	margin-left: 20px;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
 
+}
+.oppskriftsDiv.active {
+	display: block;
+	height: 420px;
+	transition: height 0.5s;
 }
 
 .oppskriftTips, .orginaloppskrift {

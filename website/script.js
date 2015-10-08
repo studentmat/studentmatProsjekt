@@ -1,13 +1,17 @@
 // Sier at visOppskrift er en global funskjon
 visOppskrift = function (divId){
 	console.log(divId);
+  $("#"+divId).toggleClass("active");
+  /*
 	var div = document.getElementById(divId)
 	if (div.style.display !== "none") {
 		div.style.display = "none";
+    div.addClass('active')
 	}
 	else {
 		div.style.display = "block";
 	}
+  */
 }
 
 // $ viser til JQuery som kjorer den gitte funksjonen/strengen e.l. nar hele siden er lastet
@@ -19,7 +23,7 @@ $(function () {
   //$(".headerContent").load("html/headerContent.html");
 
   // Laster inn "hjem" siden som første siden
-  $(".main").load("html/home.html");
+  $("#main").load("html/home.html");
   // Last inn navigasjonen inn i nav elementet
   $("#navBar").load("html/nav.html", function () {
     // Ventet til nav har lastet inn
@@ -28,15 +32,19 @@ $(function () {
     // har en "href" adresse
     $('a[href]').click(function(event) {
       // Stopp klikket fra å navigere oss bort
-      console.log("Caught click!")
+      console.log("Caught click from el:", $(this)[0]);
       event.preventDefault();
 
       // Finn addressen som var lenket til
       var page = $(this).attr("href");
+      console.log("Trying to navigate to: ", page)
+      
+      if (page === "#") {
+         return false;
+      }
 
       window.history.pushState({},"", page);
-      
-     
+
       // Last inn den adressen inn i main
       // elementet
       $("#main").load("html/" + page);
