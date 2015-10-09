@@ -11,14 +11,35 @@ body {
 }
 
 p {
-	font-family: "Goudy Old Style"serif;
+	font-family: "Times New Roman", serif;
+	font-size: 14pt;
+	text-align: justify;
 }
 
-header {
-	font-family: Helvetica, sans-serif;
-	font-size: 35pt;
-	text-align: center;
+.textStyle {
+	font-family: "Times New Roman", serif;
+	font-size: 14pt;
 }
+
+h1, h2, h3 {
+	font-family: Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 33pt;
+	text-align: center;
+	padding: 10px 0;
+}
+
+h2 {
+	text-align: center;
+	font-size: 27pt;
+}
+
+h3 {
+	font-size: 22pt;
+}
+
 
 #page{
 	position: absolute;
@@ -55,7 +76,7 @@ header {
 }
 
 #navList {
-	font-size: 18px;
+	font-size: 15pt;
 	width: 1000px;
 	margin: 0 auto;
 	padding-left: 0;
@@ -153,6 +174,8 @@ li > ul.underMeny {
 }
 
 #main {
+	font-family: "Times New Roman", serif;
+	font-soze: 14pt;
 	background-color: white;
 	margin: 0 auto;
 	padding: 30px;
@@ -170,15 +193,15 @@ li > ul.underMeny {
 #footer{
     left: 0;
     bottom: 0;
-    height: 250px;
+    height: 300px;
     width: 100%;
 }
 
 #footerContent {
 	margin: 0 auto;
 	width: 1000px;
-	height: 250px;
-	color: #313130;
+	color: white;
+	line-height: 1.2em;
 }
 
 #footerContent a {
@@ -189,15 +212,22 @@ li > ul.underMeny {
 	vertical-align: top;
 	display: inline-block;
 	width: 300px;
-	margin: 0;
-	padding: 10px;
-	font-size: 1em;
-	color: white;
+	margin: 0 5px;
+	padding: 10px 10px;
+	line-height: 1.2em;
 }
 
-#siteMap li, #siteMap a{
+#sidekart {
+	margin-top: 0;
+}
+#sidekart li, #sidekart a{
 	text-decoration: none;
-	color: white !important; 
+	color: white; 
 	list-style-type: none;
 	text-align: left;
+}
+
+.slagord {
+	text-align: center;
+	font-size: 1.5em;
 }

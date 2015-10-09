@@ -1,17 +1,10 @@
 // Sier at visOppskrift er en global funskjon
 visOppskrift = function (divId){
 	console.log(divId);
-  $("#"+divId).toggleClass("active");
-  /*
-	var div = document.getElementById(divId)
-	if (div.style.display !== "none") {
-		div.style.display = "none";
-    div.addClass('active')
-	}
-	else {
-		div.style.display = "block";
-	}
-  */
+  $("#"+divId+" .oppskriftsDiv").toggleClass("active");
+  console.log("makes #"+divId+" > oppskrifsDiv active");
+  //Skjuler den lille visningen av oppskriften
+  $("#"+divId + " .oppskriftHeading").hide();
 }
 
 // $ viser til JQuery som kjorer den gitte funksjonen/strengen e.l. nar hele siden er lastet
@@ -94,4 +87,7 @@ $(window).bind('scroll', function () {
     }
 });
 
-
+//Gir feilmelding for kundens "fake" linker
+errorMessage = function () {
+  console.alert("Beklager, siden eksisterer ikke");
+}

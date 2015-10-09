@@ -8,23 +8,19 @@
 .oppskriftHeading {
 	overflow: hidden;
 	transition: 0.2s;
+	height: auto;
 }
 
 .oppskriftHeading:hover {
 	cursor: pointer;
-	background-color: grey;
+	background-color: #544B4B;
 	color: white;
 	transition: 0.2s;
 }
 
-.oppskriftsBilde {
+.oppskriftBilde {
 	float: left;
 	margin-right: 20px;
-}
-.oppskriftsNavn {
-	vertical-align: top;
-	padding-left: 10px;
-	height: auto;
 }
 
 .beskrivelse {
@@ -34,7 +30,7 @@
 
 .oppskriftsTekst {
 	float: left;
-	width: 600px;
+	width: 580px;
 }
 
 ul.ingredienser {
@@ -72,16 +68,20 @@ li {
 }
 
 .oppskriftsDiv {
-	/*display: none;*/
-	margin-left: 20px;
+	margin: 0 auto;
 	overflow: hidden;
 	height: 0;
 	transition: height 0.5s;
-
 }
+
+.oppskriftsDiv img {
+	display: block;
+	margin: 0 auto;
+}
+
 .oppskriftsDiv.active {
 	display: block;
-	height: 420px;
+	height: auto;
 	transition: height 0.5s;
 }
 
@@ -92,16 +92,14 @@ li {
 
 /* Design til alltidHa */
 .underSeksjon {
-	width: 250px;
+	width: 268px;
 	height: 600px;
 	padding: 10px;
 	margin: 10px;
-	background-color: white;
 	border: 1px solid grey;
 	border-radius: 4px;
 	display: inline-table;
 	text-align: left;
-
 }
 
 .underSeksjon > img {
@@ -109,3 +107,8 @@ li {
 	margin-left: auto;
 	margin-right: auto;
 }
+.underSeksjon h3 {
+	text-align: center;
+	
+}
+
