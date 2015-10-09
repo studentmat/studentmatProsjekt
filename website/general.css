@@ -16,23 +16,29 @@ p {
 	text-align: justify;
 }
 
+@font-face {
+    font-family: 'libelSuit'; /*a name to be used later*/
+    src: "libelsuit.ttf";
+}
+
 .textStyle {
-	font-family: "Times New Roman", serif;
+	font-family: libelSuit, "Times New Roman", serif;
 	font-size: 14pt;
 }
 
 h1, h2, h3 {
 	font-family: Helvetica, sans-serif;
+	text-align: center;
+
+
 }
 
 h1 {
 	font-size: 33pt;
-	text-align: center;
 	padding: 10px 0;
 }
 
 h2 {
-	text-align: center;
 	font-size: 27pt;
 }
 
@@ -50,7 +56,7 @@ h3 {
 }
 
 #headerContent{
-	font-family: "FFF TUSJ", Anivers, sans-serif;
+	font-family: sans-serif;
 	text-align: center;
 	margin-top: 0px;
 	padding-top: 0px;
@@ -87,7 +93,6 @@ h3 {
 	list-style: none;
   	padding: 0;
   	margin: 0;
-
 }
 
 #navList > li {
@@ -206,7 +211,13 @@ li > ul.underMeny {
 
 #footerContent a {
 	color: white;
+	font-style: italic;
 }
+
+#footerContent a:hover {
+	text-decoration: underline;
+}
+
 
 .footerBox {
 	vertical-align: top;

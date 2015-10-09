@@ -1,5 +1,5 @@
 // Sier at visOppskrift er en global funskjon
-visOppskrift = function (divId){
+visDiv = function (divId){
 	console.log(divId);
   $("#"+divId+" .oppskriftsDiv").toggleClass("active");
   console.log("makes #"+divId+" > oppskrifsDiv active");
@@ -58,6 +58,7 @@ $(function () {
 
 });
 
+// Highlighter i navbaren hvilken side vi er på
 $(function(){
 
   var page = location.href.toLowerCase();
@@ -91,3 +92,9 @@ $(window).bind('scroll', function () {
 errorMessage = function () {
   console.alert("Beklager, siden eksisterer ikke");
 }
+
+//Kode for å hente inn tilfeldig oppskrift til home siden
+//
+//
+
+//FOrm validering

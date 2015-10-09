@@ -5,20 +5,21 @@
 	padding: 10px;
 }
 
-.oppskriftHeading {
+/*Alt med div her har å gjøre med åpne-lukke divene*/
+.divHeading {
 	overflow: hidden;
 	transition: 0.2s;
 	height: auto;
 }
 
-.oppskriftHeading:hover {
+.divHeading:hover {
 	cursor: pointer;
 	background-color: #544B4B;
 	color: white;
 	transition: 0.2s;
 }
 
-.oppskriftBilde {
+.divBilde {
 	float: left;
 	margin-right: 20px;
 }
@@ -28,9 +29,31 @@
 	vertical-align: top;
 }
 
-.oppskriftsTekst {
+.divTekst {
 	float: left;
 	width: 580px;
+}
+
+.innholdsDiv {
+	margin: 0 auto;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
+}
+
+.innholdsDiv img {
+	display: block;
+	margin: 0 auto;
+}
+
+.innholdsDiv.active {
+	display: block;
+	height: auto;
+	transition: height 0.5s;
+}
+
+.divTips, .orginalKilde {
+	padding-left: 37px;
 }
 
 ul.ingredienser {
@@ -57,7 +80,6 @@ a {
 	color: black;
 }
 
-
 li > ul.underMeny {
 	display: none;
 	visibility: hidden;
@@ -67,27 +89,6 @@ li {
 	list-style-type: none;
 }
 
-.oppskriftsDiv {
-	margin: 0 auto;
-	overflow: hidden;
-	height: 0;
-	transition: height 0.5s;
-}
-
-.oppskriftsDiv img {
-	display: block;
-	margin: 0 auto;
-}
-
-.oppskriftsDiv.active {
-	display: block;
-	height: auto;
-	transition: height 0.5s;
-}
-
-.oppskriftTips, .orginaloppskrift {
-	padding-left: 37px;
-}
 
 
 /* Design til alltidHa */
