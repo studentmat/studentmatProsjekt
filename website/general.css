@@ -191,6 +191,7 @@ li > ul.underMeny {
 	box-shadow: 0 2px 2px 2px #544B4B;
 }
 
+/**/
 #main a:link{
 	text-decoration: underline;
 }
@@ -198,6 +199,7 @@ li > ul.underMeny {
 #main a:hover{
 	text-decoration: none;
 }
+/**/
 
 #mainHeading {
 	font-family: sans-serif;
