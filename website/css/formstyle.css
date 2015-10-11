@@ -1,0 +1,36 @@
+#formwrap {
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+#formwrap .form {
+    width: 600px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+
+#formwrap .form-field  input{
+    display: block;
+    width: 600px;
+    height: 25px;
+    border: 1px solid #888;
+}
+
+#formwrap .form-field textarea {
+    width: 600px;
+    height: 150px;
+}
+#formwrap .form-field select {
+    height: 25px;
+    width: 600px;
+}
+
+#formwrap .form-field input:invalid,
+#formwrap .form-field select:invalid {
+    border: 1px solid #D80000;
+}
+

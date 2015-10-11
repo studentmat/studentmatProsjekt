@@ -1,19 +1,44 @@
-<header>Kontakt oss</header>
-<form action="POST" href="...">
+<section id="formwrap">  
+	<h1>Kontakt oss</h1>
+
 	<p>Har du noen tips, enten oppskrifter eller annet, som andre kan ha nytte av? Eller kanskje tilbakemelding til oss? Send oss gjerne en melding!</p>
+ 
+	<form action="POST" href="...">
+	        <section class="form">
+	                <label for="name">Navn:(Valgfritt)</label><br/>
+	                <section class="form-field">
+	                    <input type="text" id="name" name="name" value="" />
+	                </section>
+	        </section>
 
-	<label>Navn (frivillig):</label>
-	<input type="text">
+	        <section class="form">
+	            <label for="email">E-post:*</label><br/>
+	            <section class="form-field">
+	                <input required type="email" id="email" name="email" value="" />
+	            </section>
+	        </section>
 
-	<label>Epost (frivillig):</label>
-	<input type="email">
+	        <section class="form">
+	            <label for="year">Hva gjelder meldingen?*</label><br/>
+	            <section class="form-field">
+	                <select required name="year" id="year">
+	                    <option value="" selected="selected" disabled="disabled">Velg</option>
+	                    <option value="1">Forslag til innhold</option>
+	                    <option value="2">Teknisk feil på siden</option>
+	                </select>
+	            </section>
+	        </section>
 
-	<label>Hva gjelder meldingen?:</label>
-	
-
-
-	<label>Melding</label>
-	<br>
-	<textarea></textarea>
-	<button action="submit">Send</button>
+	        <section class="form">
+	            <label for="comments">Melding:*</label><br/>
+	            <section class="form-field">
+	                <textarea id="comments" required name="comments"></textarea>
+	            </section>
+	        </section>
+	        <section class="form">
+	        	<input type="submit" name="form-submit" id="form-submit" value="Send" />
+	        </section>
+	 
+	</form>    
+</section>
 </form>

@@ -18,16 +18,16 @@ p {
 
 @font-face {
     font-family: 'libelSuit'; /*a name to be used later*/
-    src: "libelsuit.ttf";
+    src: url(libelsuit.woff);
 }
 
 .textStyle {
-	font-family: libelSuit, "Times New Roman", serif;
+	font-family: "Times New Roman", serif;
 	font-size: 14pt;
 }
 
 h1, h2, h3 {
-	font-family: Helvetica, sans-serif;
+	font-family: libelSuit;
 	text-align: center;
 
 
@@ -189,6 +189,14 @@ li > ul.underMeny {
 	height: auto !important;
 	height: 100%;
 	box-shadow: 0 2px 2px 2px #544B4B;
+}
+
+#main a:link{
+	text-decoration: underline;
+}
+
+#main a:hover{
+	text-decoration: none;
 }
 
 #mainHeading {
