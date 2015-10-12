@@ -1,0 +1,50 @@
+table, th, td {
+    width: 800px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    padding: 7px;
+    text-align: left;
+    font-size: 15pt;
+    font-family: Serif;
+}
+
+ul.listeBullet {
+    list-style-type: disc;
+}
+
+/*Alt med div her har å gjøre med åpne/lukke divene*/
+.divHeading {
+	overflow: hidden;
+	transition: 0.2s;
+	height: auto;
+        float: left;
+	width: 580px;
+}
+
+.divHeading:hover {
+	cursor: pointer;
+	background-color: #544B4B;
+	color: white;
+	transition: 0.2s;
+}
+
+.innholdsDiv {
+	margin: 0 auto;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
+}
+
+.innholdsDiv.active {
+	display: block;
+	height: auto;
+	transition: height 0.5s;
+}
+
+
+
