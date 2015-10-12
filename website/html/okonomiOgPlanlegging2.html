@@ -2,35 +2,43 @@
 <head>
     <title>StudentMat</title>
     <meta charset="windows-1252">
-    <link rel='stylesheet' type='text/css' href='../css/styletips.css'>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="hoho.js"></script>
+    <link rel='stylesheet' type='text/css' href='../general.css'>
+    <link rel='stylesheet' type='text/css' href='../css/styletips2.css'>
 </head>
-<section id='page'>
-    <div class="inndeling" id="okonomi" class="textFont">
-        <a onclick="visDiv('okonomi')">
-            <div class='divHeading'> <!--Her har Dora Oline brukt både divHeading og divTekst, men det 
-                                     gir ingen hensikt i dette tilfellet, pass på at det passer med css!-->
 
-                <h2 class='overskrift'>
-                    Økonomi
-                </h2>
-                <p class='beskrivelse'>
-                    Vi har samlet de beste tipsene for å få økonomien på stell, i hvertfall der matlaging er relevant. 
-                </p>
-            </div>
-        </a>
-        <div class="innholdsDiv">
-            <div class='divHeadingBig'> <!--Her har Dora Oline brukt både divHeading og divTekst, men det 
-                                 gir ingen hensikt i dette tilfellet, pass på at det passer med css!-->
-                <h2 class='overskrift'>
-                    Økonomi
-                </h2>
-                <p class='beskrivelse'>
-                    Vi har samlet de beste tipsene for å få økonomien på stell, i hvertfall der matlaging er relevant. 
-                </p>
-            </div>
-            <ul class="listNum">
+<section id='page'>
+    <a href="home.html">
+        <header id="headerContent">
+            <h1>
+                    Studentmat
+            </h1>
+            <h3>
+                    Tips og oppskrifter for studenter
+            </h3>
+        </header>
+    </a>
+    <nav id="navBar" class="navfooterColor"></nav> 
+    <main id="main">
+        <heading>
+            <h2 class='overskrift'>
+                Økonomi
+            </h2>
+            <p class='beskrivelse'>
+                Vi har samlet de beste tipsene for å få økonomien på stell, i hvertfall der matlaging er relevant. 
+            </p>
+        </heading>
+ 
+        <heading>
+            <h2>
+                Hvordan planlegge uken din?
+            </h2>
+            <p class="beskrivelse">
+                Vi har funnet eksempler på hvordan du kan få en mer organisert mathverdag. Dette gir mer
+                struktur i hverdagen og gjør det enklere å få ting gjort. Det er tidsbesparende, og er en viktig støtte
+                under det nye budsjettet ditt.
+            </p>
+        </heading>
+           <ul class="listNum">
                 <li><h4>Beregningskalkulator</h4><p>
                     Beregningskalkulatoren til SIFO er et verktøy som kan hjelpe deg med å finne ut 
                     hvor store utgifter du kan regne med på en mnd. Testen tar utgangspunkt i faktorer 
@@ -64,8 +72,8 @@
                     for eksempel på månedsbasis.
                 </p></li>
             </ul>
+            <h3>Hvordan leve etter budsjett?</h3>
             <ul class="listBullet">
-                <li><h3>Hvordan leve etter budsjett?</h3></li>
                 <li><p>Gå kun på butikken 1-2 ganger i uken.</p></li>
                 <li><p>Ikke gå på butikken på sulten mage, dette øker fristelsen til å gå utenfor handlelisten.</p></li>
                 <li><p>Kom forberedt på butikken - Lag en detaljert meny for uken som samsvarer med hva budsjettet ditt 
@@ -87,94 +95,77 @@
                 <li><p>Prøv å kutte ned på brus og søtsaker. Dette vil spare deg for penger, samtidig som det selvfølgelig hjelper på helsen.</p></li>
                 <li><p>Ta ut matbudsjettet ditt i kontanter, del kontantene i fire, og fyll på i lommeboken med for eksempel en ukes budsjett hver gang du starter en ny uke. </p></li>
             </ul>
-        </div>
-    </div> 
-    <div class="inndeling">
-            <a onclick="visDiv('planlegging')">
-                <div class="divHeading">
-                    <h2>
-                        Hvordan planlegge uken din?
-                    </h2>
-                    <p class="beskrivelse">
-                        Vi har funnet eksempler på hvordan du kan få en mer organisert mathverdag. Dette gir mer
-                        struktur i hverdagen og gjør det enklere å få ting gjort. Det er tidsbesparende, og er en viktig støtte
-                        under det nye budsjettet ditt.
-                    </p>
-                </div>
-            </a>
-            <div id="planlegging" class="inndelingDiv">
-                    <table>
-                    <tr>
-                        <th>Måltid</th>
-                        <th scope="col">Mandag</th>
-                        <th scope="col">Tirsdag</th>
-                        <th scope="col">Onsdag</th>
-                        <th scope="col">Torsdag</th>
-                        <th scope="col">Fredag</th>
-                        <th scope="col">Lørdag</th>
-                        <th scope="col">Søndag</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">Lunsj</th>
-                        <td>F. eks: Brødskiver</td>
-                        <td>F. eks: Pannekakerester</td>
-                        <td>F. eks: Toast</td>
-                        <td>F. eks: Hjemmelaget pizza</td>
-                        <td>F. eks: Yoghurt med hjemmelaget musli</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Middag</th>
-                        <td>F. eks: Pannekaker</td>
-                        <td>F. eks: Kjøttkaker i brun saus med kokte poteter</td>
-                        <td>F. eks: Hjemmelaget pizza</td>
-                        <td>F. eks: Laks med ris og grønnsaker</td>
-                        <td>F. eks: Tomatsuppe</td>
-                        <td>F. eks: Taco</td>
-                        <td>F. eks: Salat</td>
-                    </tr>
-                    </table>
-                    <h2>Handleliste</h2>
-                    <table class='tabellPlanlegging'>
-                        <tr>
-                            <th scope="col">Produkt</th>
-                            <th scope="col">Mengde</th>
-                            <th scope="col">Pris</th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Melk</th>
-                            <td>1.5 liter</td>
-                            <td>13 kr.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Hakkede tomater</th>
-                            <td>2 bokser</td>
-                            <td>15 kr.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Brød</th>
-                            <td>1 stk.</td>
-                            <td>30 kr.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td>58 kr.</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+
+        <table>
+        <tr>
+            <th>Måltid</th>
+            <th scope="col">Mandag</th>
+            <th scope="col">Tirsdag</th>
+            <th scope="col">Onsdag</th>
+            <th scope="col">Torsdag</th>
+            <th scope="col">Fredag</th>
+            <th scope="col">Lørdag</th>
+            <th scope="col">Søndag</th>
+        </tr>
+        <tr>
+            <th scope="row">Lunsj</th>
+            <td>F. eks: Brødskiver</td>
+            <td>F. eks: Pannekakerester</td>
+            <td>F. eks: Toast</td>
+            <td>F. eks: Hjemmelaget pizza</td>
+            <td>F. eks: Yoghurt med hjemmelaget musli</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Middag</th>
+            <td>F. eks: Pannekaker</td>
+            <td>F. eks: Kjøttkaker i brun saus med kokte poteter</td>
+            <td>F. eks: Hjemmelaget pizza</td>
+            <td>F. eks: Laks med ris og grønnsaker</td>
+            <td>F. eks: Tomatsuppe</td>
+            <td>F. eks: Taco</td>
+            <td>F. eks: Salat</td>
+        </tr>
+        </table>
+        <h2>Handleliste</h2>
+        <table class='tabellPlanlegging'>
+            <tr>
+                <th scope="col">Produkt</th>
+                <th scope="col">Mengde</th>
+                <th scope="col">Pris</th>
+            </tr>
+            <tr>
+                <th scope="row">Melk</th>
+                <td>1.5 liter</td>
+                <td>13 kr.</td>
+            </tr>
+            <tr>
+                <th scope="row">Hakkede tomater</th>
+                <td>2 bokser</td>
+                <td>15 kr.</td>
+            </tr>
+            <tr>
+                <th scope="row">Brød</th>
+                <td>1 stk.</td>
+                <td>30 kr.</td>
+            </tr>
+            <tr>
+                <th scope="row">Sett inn produkt</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">Sett inn produkt</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">Total sum</th>
+                <td></td>
+                <td>58 kr.</td>
+            </tr>
+        </table>
+    </main>
+    <footer id="footer" class="navfooterColor"></footer>
 </section>
