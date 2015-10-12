@@ -2,7 +2,7 @@
 
 .oppskrift {
 	width: auto;
-	padding: 10px;
+	margin: 0 -30px;
 	display: block;
 }
 
@@ -28,8 +28,9 @@
 	transition: height 0.5s;
 	display: none;
 }
+/*
 .divSmall:active {
-   display: block;
+   	display: block;
 	height: auto;
 	transition: height 0.5s;
 }
@@ -38,8 +39,15 @@
 	height: auto;
 	transition: height 0.5s;
 }
+*/
 
-.divBilde {
+.active {
+	display: block;
+	height: auto;
+	transition: height 0.5s;
+}
+
+.divSmallBilde {
 	float: left;
 	margin-right: 20px;
 }
@@ -60,44 +68,57 @@
 	margin: 0 auto;
 }
 
-.active {
-	display: block;
-	height: auto;
-	transition: height 0.5s;
-}
-
 .hidden {
 	display: none;
 	height: auto;
 	transistion: height 0.5s;
 }
 
-.divTips, .orginalKilde {
-	display: inline-block;
+.divTips, .kilde {
+	float: left;
+	padding-left: 36px;
 }
 
-ul.ingredienser {
+.oppSkriftsInnhold {
+	padding: 30px;
+	width: 900px;
+}
+
+.oppskriftStorrelse {
+	font-size: 12pt;
+	font-style: italic;
+}
+
+.ingredienser {
+	list-style-type: none;
 	display: inline-block;
 	width: 300px;
 	vertical-align: top;
 }
 
-ul.fremgangsmate {
-	display: inline-block;
+.ingredienser li {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 8px;
+}
+
+.fremgangsmate {
 	vertical-align: top;
 	width: 500px;
-}
-
-.fremgangsmate > li {
-	list-style-type: decimal;
-	text-indent: 1.5em;
-	list-style-position: inside;
-	display: inline-block;
-}
-
-.ingredienser > li {
+	line-height: 1.5em;
 	list-style-type: none;
-	text-indent: 1.5em;
+}
+
+.fremgangsmate li {
+	margin-bottom: 8px;
+}
+
+.listHeading {
+	font-size: 16pt;
+}
+
+.rightCol {
+	display: inline-block;
+	width: 600px;
 }
 
 a {
@@ -114,6 +135,32 @@ li {
 	list-style-type: none;
 }
 
+.divBigImg {
+	height: 400px;
+    background-position-y: 114%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.meksikanskGryteBg {
+	background-image: url("../oppskriftsbilder/meksikanskbonnegryte.jpg");
+}
+
+.gulrotSuppeBg {
+	background-image: url("../oppskriftsbilder/gulrotSuppe.jpg");
+}
+
+.falafler {
+	background-image: url("../oppskriftsbilder/falafler.jpg");
+}
+.kyllingfrikasse {
+	background-image: url("../oppskriftsbilder/kyllingfrikasse.jpg");
+}
+
+
+
+
 /* Design til alltidHa */
 .underSeksjon {
 	width: 268px;
@@ -126,7 +173,7 @@ li {
 }
 
 .underSeksjonHeight {
-	height: 600px;
+	height: 620px;
 }
 
 .underSeksjon > img {

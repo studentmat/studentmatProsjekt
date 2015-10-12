@@ -11,7 +11,7 @@ body {
 }
 
 p {
-	font-family: "Times New Roman", serif;
+	font-family: "Helvetica", serif;
 	font-size: 14pt;
 	text-align: justify;
 }
@@ -22,15 +22,14 @@ p {
 }
 
 .textStyle {
-	font-family: "Times New Roman", serif;
+	font-family: "Helvetica", serif;
 	font-size: 14pt;
 }
 
 h1, h2, h3 {
 	font-family: libelSuit;
 	text-align: center;
-
-
+	letter-spacing: 0.05em;
 }
 
 h1 {
@@ -208,7 +207,6 @@ li > ul.underMeny {
 #footer{
     left: 0;
     bottom: 0;
-    height: 300px;
     width: 100%;
 }
 
