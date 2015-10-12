@@ -1,21 +1,40 @@
 // Sier at visOppskrift er en global funskjon
-visDiv = function (divId){
+visDiv = function (divId, smallOrBig){
 	console.log(divId);
-  $("#"+divId+" .oppskriftsDiv").toggleClass("active");
-  console.log("makes #"+divId+" > oppskrifsDiv active");
-  //Skjuler den lille visningen av oppskriften
-  $("#"+divId + " .oppskriftHeading").hide();
+  console.log(smallOrBig);
+  // Vis det er divHeadingClosed funksjonen kjøres på
+  if (smallOrBig == "divSmall") {
+    $("#"+divId+" .divBig").toggleClass("active");
+    $("#"+divId + " .divBig").removeClass("hidden");
+
+    
+    console.log("makes #"+divId+" > divBig active");
+    //Skjuler den lille visningen av oppskriften
+    $("#"+divId + " .divSmall").removeClass("active");
+    $("#"+divId + " .divSmall").toggleClass("hidden");
+  }
+
+  //Hvis det er divHeadingOpen
+  else if (smallOrBig == "divBig") {
+    $("#"+divId+" .divSmall").toggleClass("active");
+    $("#"+divId + " .divSmall").removeClass("hidden");
+
+    console.log("makes #"+divId+" > divSmall active");
+    //Skjuler den lille visningen av oppskriften
+    $("#"+divId + " .divBig").removeClass('active');
+     $("#"+divId + " .divBig").toggleClass('hidden');
+  }
+
 }
 
 // $ viser til JQuery som kjorer den gitte funksjonen/strengen e.l. nar hele siden er lastet
 // Kortversjon for document.onload
+// Laster inn rett html-dokument i rett tag
 $(function () {
 
   console.log("funksjon kjører");
 
-  //$(".headerContent").load("html/headerContent.html");
-
-  // Laster inn "hjem" siden som første siden
+  // Laster inn "home.html" siden som første siden
   $("#main").load("html/home.html");
   // Last inn navigasjonen inn i nav elementet
   $("#navBar").load("html/nav.html", function () {
@@ -44,9 +63,6 @@ $(function () {
 
       //Viser i navBaren hvilken side en er pa
       //$("#navBar").
-
-      // For a laste inn ankermeny
-      $("#ankerMeny").load("html/"+ page + "#ankerMeny")
 
       return false;
     });
@@ -77,16 +93,9 @@ $(function () {
       // elementet
       $("#main").load("html/" + page);
 
-      //Viser i navBaren hvilken side en er pa
-      //$("#navBar").
-
-      // For a laste inn ankermeny
-      $("#ankerMeny").load("html/"+ page + "#ankerMeny")
-
       return false;
     });
   });
-
 
 });
 
@@ -129,4 +138,4 @@ errorMessage = function () {
 //
 //
 
-//FOrm validering
+//Form validering

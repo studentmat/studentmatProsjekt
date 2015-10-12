@@ -3,20 +3,40 @@
 .oppskrift {
 	width: auto;
 	padding: 10px;
+	display: block;
 }
 
 /*Alt med div her har å gjøre med åpne-lukke divene*/
-.divHeading {
+.divSmall {
 	overflow: hidden;
 	transition: 0.2s;
 	height: auto;
+	display: block;
 }
 
-.divHeading:hover {
+.divSmall:hover {
 	cursor: pointer;
 	background-color: #544B4B;
 	color: white;
 	transition: 0.2s;
+}
+
+.divBig {
+   	margin: 0 auto;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
+	display: none;
+}
+.divSmall:active {
+   display: block;
+	height: auto;
+	transition: height 0.5s;
+}
+.divBig:active {
+	display: block;
+	height: auto;
+	transition: height 0.5s;
 }
 
 .divBilde {
@@ -27,6 +47,7 @@
 .beskrivelse {
 	font-style: italic;
 	vertical-align: top;
+	padding: 0 5px;
 }
 
 .divTekst {
@@ -34,31 +55,31 @@
 	width: 580px;
 }
 
-.innholdsDiv {
-	margin: 0 auto;
-	overflow: hidden;
-	height: 0;
-	transition: height 0.5s;
-}
-
-.innholdsDiv img {
+.divBig img {
 	display: block;
 	margin: 0 auto;
 }
 
-.innholdsDiv.active {
+.active {
 	display: block;
 	height: auto;
 	transition: height 0.5s;
 }
 
+.hidden {
+	display: none;
+	height: auto;
+	transistion: height 0.5s;
+}
+
 .divTips, .orginalKilde {
-	padding-left: 37px;
+	display: inline-block;
 }
 
 ul.ingredienser {
 	display: inline-block;
-	width: 250px;
+	width: 300px;
+	vertical-align: top;
 }
 
 ul.fremgangsmate {
@@ -69,10 +90,14 @@ ul.fremgangsmate {
 
 .fremgangsmate > li {
 	list-style-type: decimal;
+	text-indent: 1.5em;
+	list-style-position: inside;
+	display: inline-block;
 }
 
 .ingredienser > li {
-	list-style-type: disc;
+	list-style-type: none;
+	text-indent: 1.5em;
 }
 
 a {
@@ -89,18 +114,19 @@ li {
 	list-style-type: none;
 }
 
-
-
 /* Design til alltidHa */
 .underSeksjon {
 	width: 268px;
-	height: 600px;
 	padding: 10px;
 	margin: 10px;
 	border: 1px solid grey;
 	border-radius: 4px;
 	display: inline-table;
 	text-align: left;
+}
+
+.underSeksjonHeight {
+	height: 600px;
 }
 
 .underSeksjon > img {

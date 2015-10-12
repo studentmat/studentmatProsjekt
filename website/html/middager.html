@@ -3,8 +3,8 @@
 </h1>
 
 <div class="oppskrift" id="meksikanskGryte" class="textFont">
-	<a onclick="visDiv('meksikanskGryte')" >
-		<div class="divHeading">
+	<a onclick="visDiv('meksikanskGryte', 'divSmall')" class="divSmall">
+		<div class="divSmall">
 			<img src="../oppskriftsbilder/meksikanskbonnegryte.jpg" class="divBilde" width="320" height="240" alt="Meksikansk gryte">
 			<div class="divTekst">
 				<h3 class="overskrift">
@@ -17,15 +17,13 @@
 			</div>
 		</div>
 	</a>
-	<div class="innholdsDiv">
-		<div class="divHeadingBig">
-			<img src="../oppskriftsbilder/meksikanskbonnegryte.jpg" width="640" height="480" alt="Meksikansk gryte">
+	<a onclick="visDiv('meksikanskGryte', 'divBig')" class="divBig">
+		<img src="../oppskriftsbilder/meksikanskbonnegryte.jpg" width="640" height="480" alt="Meksikansk gryte">
 
-			<h2 class="overskrift">
-				Meksikansk bønnegryte
-			</h2>
-		</div>
-		<ul class="ingredienser">
+		<h2 class="overskrift">
+			Meksikansk bønnegryte
+		</h2>
+		<ul class="ingredienser underSeksjon">
 			<b>Ingredienser (4 personer)</b>
 			<li> 
 				200 g brune bønner
@@ -82,102 +80,112 @@
 				Smak til med salt og pepper
 			</li>
 		</ul>
-
 		<p class="divTips">
 			Server med hvitløksbrød, ris eller alene
 			Lett å fryse ned til senere måltid
 		</p>
-		
-		<a href="http://vegetarmat.org/oppskrift/meksikansk-bonnegryte" class="orginalKilde">orginalKilde</a>
-	</div>
+		<!--
+		<a href="http://vegetarmat.org/oppskrift/meksikansk-bonnegryte" class="orginalKilde">
+			Orginal kilde
+		</a>
+		-->
+	</a>
 </div>
 
 <div class="oppskrift">
-	<a onclick="visDiv('gulerotsuppe')">
-		<div class="divHeading">
-			<img src="../oppskriftsbilder/gulrotsuppe.jpg" class="oppskriftBilde" width="320" height="240" alt="Gulerotsuppe">
-			<div class="oppskriftsTekst">
-				<h3 class="overskrift">
-					Gulerotsuppe
-				</h3>
+	<a onclick="visDiv('gulerotsuppe', 'smallDiv')" class="divSmall">
+		<img src="../oppskriftsbilder/gulrotsuppe.jpg" class="divBilde" width="320" height="240" alt="Gulerotsuppe">
+		<div class="divTekst">
+			<h3 class="overskrift">
+				Gulerotsuppe
+			</h3>
 
-				<p class="beskrivelse">
-					En fyldig, smaksrik, rimelig og enkel gulrotsuppe.Hovedingrediensene er gulerot, men ha gjerne stekte kikerter/linser i tillegg, eller ferskt brød
-				</p>
-			</div>
+			<p class="beskrivelse">
+				En fyldig, smaksrik, rimelig og enkel gulrotsuppe.Hovedingrediensene er gulerot, men ha gjerne stekte kikerter/linser i tillegg, eller ferskt brød
+			</p>
 		</div>
 	</a>
-	<div id="gulerotsuppe" class="oppskriftsDiv">
-		<ul class="ingredienser">
-			<b>Ingredienser (4 personer)</b>
-			<li> 
-				800 g gulrot
-			</li>
-			<li>
-				4 sjarlotteløk
-			</li>
-			<li>
-				2 fedd hvitløk
-			</li>
-			<li>
-				3 cm fersk ingefær
-			</li>
-			<li>
-				Smør til steking
-			</li>
-			<li>
-				1/2 fersk chili
-			</li>
-			<li>
-				Grønnsaks/kyllingsbuljong
-			</li>
-			<li>
-				3 dl matfløte
-			</li>
-			<li>
-				1 lime
-			</li>
-			<li>
-				1 ts havsalt
-			</li>
-		</ul>
-		<ul class="fremgangsmate">
-			<b>Fremgangsmåte</b>
-			<li>
-				Skrell og skjær gulerøtter, sjarlotteløk og hvitløk i biter
-			</li>
-			<li>
-				Finhakk chili og riv ingefær
-			</li>
-			<li>
-				Smelt smør i en kjele og surr løken til den er blank (ca. 5 min)
-			</li>
-			<li>
-				Tilsett buljong og 8 dl vann
-			</li>
-			<li>
-				Ha i resten av ingrediensene og kok til gulrøttene er møre
-			</li>
-			<li>
-				Kjør suppen glatt med stavmikser
-			</li>
-			<li>
-				Tilsett fløte og smak til med limesaft, salt og pepper
-			</li>
 
-		</ul>
-		<p class="divTips">
-			Kan serveres med stekte linser/kikerter med valgfritt krydder
-		</p>
-		
-		<a href="http://www.tine.no/oppskrifter/middag-og-hovedretter/supper/gulrotsuppe-med-lime">orginalKilde</a>
-	</div>
+	<a onclick="visDiv('gulerotsuppe', 'divBig')" class="divBig">
+		<img src="../oppskriftsbilder/gulrotsuppe.jpg" width="640" height="480" alt="Gulerotsuppe">
+
+		<h2 class="overskrift">
+			Gulerotsuppe
+		</h2>
+		<div id="gulerotsuppe" class="oppskriftsDiv">
+			<ul class="ingredienser underSeksjon">
+				<b>Ingredienser (4 personer)</b>
+				<li> 
+					800 g gulrot
+				</li>
+				<li>
+					4 sjarlotteløk
+				</li>
+				<li>
+					2 fedd hvitløk
+				</li>
+				<li>
+					3 cm fersk ingefær
+				</li>
+				<li>
+					Smør til steking
+				</li>
+				<li>
+					1/2 fersk chili
+				</li>
+				<li>
+					Grønnsaks/kyllingsbuljong
+				</li>
+				<li>
+					3 dl matfløte
+				</li>
+				<li>
+					1 lime
+				</li>
+				<li>
+					1 ts havsalt
+				</li>
+			</ul>
+			<ul class="fremgangsmate">
+				<b>Fremgangsmåte</b>
+				<li>
+					Skrell og skjær gulerøtter, sjarlotteløk og hvitløk i biter
+				</li>
+				<li>
+					Finhakk chili og riv ingefær
+				</li>
+				<li>
+					Smelt smør i en kjele og surr løken til den er blank (ca. 5 min)
+				</li>
+				<li>
+					Tilsett buljong og 8 dl vann
+				</li>
+				<li>
+					Ha i resten av ingrediensene og kok til gulrøttene er møre
+				</li>
+				<li>
+					Kjør suppen glatt med stavmikser
+				</li>
+				<li>
+					Tilsett fløte og smak til med limesaft, salt og pepper
+				</li>
+
+			</ul>
+			<p class="divTips">
+				Kan serveres med stekte linser/kikerter med valgfritt krydder
+			</p>
+			
+			<!--
+			<a href="http://www.tine.no/oppskrifter/middag-og-hovedretter/supper/gulrotsuppe-med-lime">orginalKilde</a>
+			-->
+		</div>
+	</a>
 </div>
 
-<section class="oppskrift">
-	<a onlclick="visDiv('falafler')">
+<div class="oppskrift">
+	<a onlclick="visDiv('falafler', 'divBig')">
 		<div class="divHeading">
-			<img src="../oppskriftsbilder/falafler.jpg" class="oppskriftBilde" width="320" height="240" alt="Falafler">
+			<img src="../oppskriftsbilder/falafler.jpg" class="divBilde" width="320" height="240" alt="Falafler">
 			<div class="oppskriftsTekst">
 				<h3 class="overskrift">
 					Falafler
@@ -189,67 +197,76 @@
 			</div>
 		</div>
 	</a>
-	<section id="falafler" class="oppskriftsDiv">
-		<ul class="ingredienser">
-			<b>Ingredienser (4 personer)</b>
-			<li> 
-				1 boks kikerter
-			</li>
-			<li>
-				1-2 hvitløksfedd
-			</li>
-			<li>
-				1 ts finhakka chili
-			</li>
-			<li>
-				1/2 ts malt koriander, spisskummen, salt og paprikakrydder
-			</li>
-			<li>
-				1 håndfull spinat
-			</li>
-			<li>
-				Litt hakka rødløk og paprika
-			</li>
-			<li>
-				1 ss potetmel
-			</li>
-			<li>
-				Eventuelt litt vann til passe konsistens
-			</li>
-		</ul>
-		<ul class="fremgangsmate">
-			<b>Fremgangsmåte</b>
-			<li>
-				Skyll kikertene i rennende vann
-			</li>
-			<li>
-				Mos sammen presset hvitløksfedd, chili og krydder med stavmikser
-			</li>
-			<li>
-				Tilsett potetmel til passe konsistens og juster med vann etter behov
-			</li>
-			<li>
-				Vend inn hakket spinat, rødløk og paprika
-			</li>
-			<li>
-				Form til flate boller
-			</li>
-			<li>
-				Stek på middels varme i ei stekepanne med litt smør,og snu underveis
-			</li>
-		</ul>
-		<p class="divTips">
-			Serveres varm eller kald, og gjerne med salat eller grønnsaker
-		</p>
-		
-		<a href="http://lindastuhaug.blogg.no/1428909710_fargerike_falafler.html" class="orginalKilde">orginalKilde</a>
-	</section>
-</section>
+	<a onclick="visDiv('falafler', 'divBig')" class="divBig">
+		<img src="../oppskriftsbilder/falafler.jpg" width="640" height="480" alt="Falaføer">
+
+		<h2 class="overskrift">
+			Falafler
+		</h2>
+		<div id="falafler" class="oppskriftsDiv">
+			<ul class="ingredienser">
+				<b>Ingredienser (4 personer)</b>
+				<li> 
+					1 boks kikerter
+				</li>
+				<li>
+					1-2 hvitløksfedd
+				</li>
+				<li>
+					1 ts finhakka chili
+				</li>
+				<li>
+					1/2 ts malt koriander, spisskummen, salt og paprikakrydder
+				</li>
+				<li>
+					1 håndfull spinat
+				</li>
+				<li>
+					Litt hakka rødløk og paprika
+				</li>
+				<li>
+					1 ss potetmel
+				</li>
+				<li>
+					Eventuelt litt vann til passe konsistens
+				</li>
+			</ul>
+			<ul class="fremgangsmate">
+				<b>Fremgangsmåte</b>
+				<li>
+					Skyll kikertene i rennende vann
+				</li>
+				<li>
+					Mos sammen presset hvitløksfedd, chili og krydder med stavmikser
+				</li>
+				<li>
+					Tilsett potetmel til passe konsistens og juster med vann etter behov
+				</li>
+				<li>
+					Vend inn hakket spinat, rødløk og paprika
+				</li>
+				<li>
+					Form til flate boller
+				</li>
+				<li>
+					Stek på middels varme i ei stekepanne med litt smør,og snu underveis
+				</li>
+			</ul>
+			<p class="divTips">
+				Serveres varm eller kald, og gjerne med salat eller grønnsaker
+			</p>
+			
+			<!--
+			<a href="http://lindastuhaug.blogg.no/1428909710_fargerike_falafler.html" class="orginalKilde">orginalKilde</a>
+			-->
+		</div>
+	</a>
+</div>
 
 <section class="oppskrift">
-	<a onclick="visDiv('kyllingfrikasse')">
+	<a onclick="visDiv('kyllingfrikasse', 'divBig')">
 		<div class="divHeading">
-			<img src="../oppskriftsbilder/kyllingfrikkasse.jpg" class="oppskriftBilde" width="320" height="240" alt="Kyllingfrikasse">
+			<img src="../oppskriftsbilder/kyllingfrikkasse.jpg" class="divBilde" width="320" height="240" alt="Kyllingfrikasse">
 			<div class="divTekst">
 				<h3 class="overskrift">
 					Kyllingfrikasse
