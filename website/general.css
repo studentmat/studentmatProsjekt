@@ -192,7 +192,7 @@ li > ul.underMeny {
 
 /**/
 #main a:link{
-	text-decoration: underline;
+	font-style: italic;
 }
 
 #main a:hover{
