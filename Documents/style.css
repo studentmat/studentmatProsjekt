@@ -47,3 +47,14 @@ th, td {
 ul.listeBullet {
     list-style-type: disc;
 }
+
+figcaption {
+	font-style: italic;
+	font-size: 15px;
+	text-align: center;
+}
+
+.mockup {
+	margin-left: 120px;
+
+}
