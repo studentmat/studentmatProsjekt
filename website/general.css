@@ -252,3 +252,11 @@ li > ul.underMeny {
 	text-align: center;
 	font-size: 1.5em;
 }
+/*spesifik for filmer på matlagningstips-siden*/
+iframe{
+        width: 420px;
+        height: 315px; 
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+}
