@@ -32,8 +32,6 @@ visDiv = function (divId, smallOrBig){
 // Laster inn rett html-dokument i rett tag
 $(function () {
 
-  console.log("funksjon kjører");
-
   // Laster inn "home.html" siden som første siden
   $("#main").load("html/home.html");
   // Last inn navigasjonen inn i nav elementet
@@ -44,12 +42,12 @@ $(function () {
     // har en "href" adresse
     $('a[href]').click(function(event) {
       // Stopp klikket fra å navigere oss bort
-      console.log("Caught click from el:", $(this)[0]);
+      //console.log("Caught click from el:", $(this)[0]);
       event.preventDefault();
 
       // Finn addressen som var lenket til
       var page = $(this).attr("href");
-      console.log("Trying to navigate to: ", page)
+      //console.log("Trying to navigate to: ", page)
       
       if (page === "#") {
          return false;
@@ -64,13 +62,28 @@ $(function () {
       //Viser i navBaren hvilken side en er pa
       //$("#navBar").
 
+      //Markerer i navbar hvilken side en er pa IKKE FUNGERENDE
+      console.log("Kjorer funksjonen for a markere i navbar");
+
+      //Fjerner klassen highlight fra listeelementet med den klassen 
+      $("li.highlight").removeClass("highlight");
+
+      var buttonLi = $(this).closest(".navButton");
+      console.log("ButtonLi: " + buttonLi);
+      
+
+      console.log("Siden er " + page + " og foreldren som markeres er " + buttonLi); 
+
+      buttonLi.addClass("highlight");
+
+      console.log("highlight navbar button");
+
       return false;
     });
   });
 
   // Last inn footer inn i footer elementet
   $("#footer").load("html/footer.html", function () {
-    // Ventet til nav har lastet inn
 
     // Lytt på alle "a" elementer so
     // har en "href" adresse
@@ -96,28 +109,7 @@ $(function () {
       return false;
     });
   });
-
 });
-
-// Highlighter i navbaren hvilken side vi er på
-$(function(){
-
-  var page = location.href.toLowerCase();
-
-  $("#navBar li a").each(function() {
-
-
-    if (page.indexOf(this.href.toLowerCase()) > -1) {
-
-     $("li.highlight").removeClass("highlight");
-
-    $(this).parent().addClass("highlight");
-
-    }
-
-  });
-
- })
 
 
 //Holder navbaren fiksert i toppen 
@@ -131,7 +123,7 @@ $(window).bind('scroll', function () {
 
 //Gir feilmelding for kundens "fake" linker
 errorMessage = function () {
-  console.alert("Beklager, siden eksisterer ikke");
+  alert("Beklager, siden eksisterer ikke");
 }
 
 //Kode for å hente inn tilfeldig oppskrift til home siden
@@ -139,3 +131,9 @@ errorMessage = function () {
 //
 
 //Form validering
+
+//Lukke alle andre opne div for en apner en ny
+
+  //hente inn side
+
+  //Ga gjennom alle elementer med classe bigDiv og fjerne activ classen

@@ -111,9 +111,11 @@ h3 {
 	text-transform: uppercase;
 	padding: 10px 0;
 }
-
+#navList > li.highlight > a{
+	color: #544B4B;
+}
 .highlight {
-	background-color: #DAD6D6;
+	background-color: white;
 }
 
 #navList a {

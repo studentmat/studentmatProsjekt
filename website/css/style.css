@@ -1,5 +1,3 @@
-/*Design til oppskrift-sider*/
-
 .oppskrift {
 	width: auto;
 	margin: 0 -30px;
@@ -28,18 +26,6 @@
 	transition: height 0.5s;
 	display: none;
 }
-/*
-.divSmall:active {
-   	display: block;
-	height: auto;
-	transition: height 0.5s;
-}
-.divBig:active {
-	display: block;
-	height: auto;
-	transition: height 0.5s;
-}
-*/
 
 .active {
 	display: block;
@@ -151,14 +137,29 @@ li {
 	background-image: url("../oppskriftsbilder/gulrotsuppe.jpg");
 }
 
-.falafler {
+.falaflerBg {
 	background-image: url("../oppskriftsbilder/falafler.jpg");
 }
-.kyllingfrikasse {
+
+.kyllingfrikasseBg {
 	background-image: url("../oppskriftsbilder/kyllingfrikkasse.jpg");
 }
 
-
+.BLT-sandwichBg {
+	background-image: url("../oppskriftsbilder/BLT-sandwich.jpg");
+}
+.ostskinkemuffinsBg {
+	background-image: url("../oppskriftsbilder/ostskinkemuffins.jpg");
+}
+.pastasalatBg {
+	background-image: url("../oppskriftsbilder/pastasalat.jpg");
+}
+.pitaMedKremostBg {
+	background-image: url("../oppskriftsbilder/pitaMedKremost.jpg");
+}
+.pizzasnurrerBg {
+	background-image: url("../oppskriftsbilder/Pizzasnurrer.jpg");
+}
 
 
 /* Design til alltidHa */
