@@ -18,33 +18,36 @@ ul.listeBullet {
 }
 
 /*Alt med div her har å gjøre med åpne/lukke divene*/
-.divHeading {
+.divSmall {
 	overflow: hidden;
 	transition: 0.2s;
 	height: auto;
-        float: left;
-	width: 580px;
+	display: block;
 }
 
-.divHeading:hover {
+.divSmall:hover {
 	cursor: pointer;
 	background-color: #544B4B;
 	color: white;
 	transition: 0.2s;
 }
 
-.innholdsDiv {
-	margin: 0 auto;
+.divBig {
+   	margin: 0 auto;
 	overflow: hidden;
 	height: 0;
 	transition: height 0.5s;
+	display: none;
 }
 
-.innholdsDiv.active {
+.active {
 	display: block;
 	height: auto;
 	transition: height 0.5s;
 }
 
-
-
+.hidden {
+	display: none;
+	height: auto;
+	transistion: height 0.5s;
+}
