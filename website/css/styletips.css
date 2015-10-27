@@ -1,38 +1,29 @@
-table, th, td {
-    width: 800px;
-    border: solid 1px black;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-th, td {
-    padding: 7px;
+#okoConent {
+    width: 700px;
     text-align: left;
-    font-size: 15pt;
-    font-family: Serif;
 }
 
-ul.listeBullet {
+ul.listePunkt {
     list-style-type: disc;
 }
 
-/*Alt med div her har å gjøre med åpne/lukke divene*/
-.divSmall {
+
+/*Alt med div her har ï¿½ gjï¿½re med ï¿½pne/lukke divene*/
+.divSmallOko {
 	overflow: hidden;
 	transition: 0.2s;
 	height: auto;
 	display: block;
 }
 
-.divSmall:hover {
+.divSmallOko:hover {
 	cursor: pointer;
 	background-color: #544B4B;
 	color: white;
 	transition: 0.2s;
 }
 
-.divBig {
+.divBigOko {
    	margin: 0 auto;
 	overflow: hidden;
 	height: 0;

@@ -3,26 +3,25 @@ visDiv = function (divId, smallOrBig){
 	console.log(divId);
   console.log(smallOrBig);
   // Vis det er divHeadingClosed funksjonen kjøres på
-  if (smallOrBig == "divSmall") {
-    $("#"+divId+" .divBig").toggleClass("active");
-    $("#"+divId + " .divBig").removeClass("hidden");
-
+  if (smallOrBig == "divSmallOko") {
+    $("#"+divId+" .divBigOko").toggleClass("active");
+    $("#"+divId + " .divBigOko").removeClass("hidden");
     
-    console.log("makes #"+divId+" > divBig active");
+    console.log("makes #"+divId+" > divBigOko active");
     //Skjuler den lille visningen av oppskriften
-    $("#"+divId + " .divSmall").removeClass("active");
-    $("#"+divId + " .divSmall").toggleClass("hidden");
+    $("#"+divId + " .divSmallOko").removeClass("active");
+    $("#"+divId + " .divSmallOko").toggleClass("hidden");
   }
 
   //Hvis det er divHeadingOpen
-  else if (smallOrBig == "divBig") {
-    $("#"+divId+" .divSmall").toggleClass("active");
-    $("#"+divId + " .divSmall").removeClass("hidden");
+  else if (smallOrBig == "divBigOko") {
+    $("#"+divId+" .divSmallOko").toggleClass("active");
+    $("#"+divId + " .divSmallOko").removeClass("hidden");
 
-    console.log("makes #"+divId+" > divSmall active");
+    console.log("makes #"+divId+" > divSmallOko active");
     //Skjuler den lille visningen av oppskriften
-    $("#"+divId + " .divBig").removeClass('active');
-     $("#"+divId + " .divBig").toggleClass('hidden');
+    $("#"+divId + " .divBigOko").removeClass('active');
+     $("#"+divId + " .divBigOko").toggleClass('hidden');
   }
 
 }

@@ -3,19 +3,27 @@ table, th, td {
     border: solid 1px black;
     border-collapse: collapse;
     margin-left: auto;
+    line-height: 1.5em;
     margin-right: auto;
-    padding: 7px;
 }
 
 th, td {
     padding: 7px;
     text-align: left;
-    font-size: 15pt;
-    font-family: Serif;
+    font-size: 14pt;
+    font-family: Helvetica, sans-serif;
 }
 
 
 
-ul.listeBullet {
+ul.listBullet {
     list-style-type: disc;
+    line-height: 1.5em;
+    font-family: helvetica, sans-serif;
+    width: 900px;
+    margin-left: -10px;
+}
+
+li.listBullet {
+    padding: 20px;
 }
