@@ -1,7 +1,28 @@
 iframe{
         width: 420px;
-        height: 315px; 
-        margin-right: auto;
-        margin-left: auto;
+        height: 315px;
+        margin-top: 24px;
+}
+.tips_oppsett{
+        width: auto;
         display: block;
+}
+.tips_left{
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1.5em;
+}
+.tips_right{
+        display: inline-block;
+        width: 420px;
+        margin-left: 40px;
+        vertical-align: top;
+        line-height: 1.5em;
+}
+.tips_fremgangsmate {
+        vertical-align: top;
+        width: 500px;
+        line-height: 1.5em;
+        margin-left: 40px;
+        display: inline-block;
 }
