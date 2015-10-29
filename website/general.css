@@ -1,3 +1,5 @@
+/* Generelt desing */
+
 html {
 	height: 100%;
 }
@@ -45,7 +47,6 @@ h3 {
 	font-size: 22pt;
 }
 
-
 #page{
 	position: absolute;
 	min-height: 100%;
@@ -71,6 +72,7 @@ h3 {
 	top: 0;
 }
 
+/* Til navigasjonsbaren */
 .navfooterColor {
 	background-color: #544B4B;
 }
@@ -85,7 +87,6 @@ h3 {
 	width: 1000px;
 	margin: 0 auto;
 	padding-left: 0;
-	
 }
 
 #navlist ul {
@@ -111,9 +112,11 @@ h3 {
 	text-transform: uppercase;
 	padding: 10px 0;
 }
+
 #navList > li.highlight > a{
 	color: #544B4B;
 }
+
 .highlight {
 	background-color: white;
 }
@@ -126,7 +129,6 @@ h3 {
 #navlist a:hover {
 	font-style: normal;
 }
-
 
 #navList li ul {
 	position: absolute;
@@ -179,6 +181,7 @@ li > ul.underMeny {
 	margin: 0 auto;
 }
 
+/*Til hovedboksen */
 #main {
 	font-family: "Times New Roman", serif;
 	font-size: 14pt;
@@ -192,7 +195,6 @@ li > ul.underMeny {
 	box-shadow: 0 2px 2px 2px #544B4B;
 }
 
-/**/
 #main a:link{
 	font-style: italic;
 }
@@ -200,12 +202,12 @@ li > ul.underMeny {
 #main a:hover{
 	text-decoration: none;
 }
-/**/
 
 #mainHeading {
 	font-family: sans-serif;
 }
 
+/* Til footer */
 #footer{
     left: 0;
     bottom: 0;
@@ -238,9 +240,11 @@ li > ul.underMeny {
 	line-height: 1.2em;
 }
 
+/* Til sidekart i footer */
 #sidekart {
 	margin-top: 0;
 }
+
 #sidekart li, #sidekart a{
 	text-decoration: none;
 	color: white; 
@@ -248,7 +252,200 @@ li > ul.underMeny {
 	text-align: left;
 }
 
+/* Slagord i footer */
 .slagord {
 	text-align: center;
 	font-size: 1.5em;
 }
+
+/* Til diver med apne og lukke-mekanisme */
+.divSmall {
+	overflow: hidden;
+	transition: 0.2s;
+	height: auto;
+	display: block;
+}
+
+.divSmall:hover {
+	cursor: pointer;
+	background-color: #544B4B;
+	color: white;
+	transition: 0.2s;
+}
+
+.divBig {
+   	margin: 0 auto;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
+	display: none;
+}
+
+.active {
+	display: block;
+	height: auto;
+	transition: height 0.5s;
+}
+
+.divSmallBilde {
+	float: left;
+	margin-right: 20px;
+}
+
+.beskrivelse {
+	font-style: italic;
+	vertical-align: top;
+	padding: 0 5px;
+}
+
+.divTekst {
+	float: left;
+	width: 580px;
+}
+
+.divBig img {
+	display: block;
+	margin: 0 auto;
+}
+
+.hidden {
+	display: none;
+	height: auto;
+	transistion: height 0.5s;
+}
+
+.divTips, .kilde {
+	float: left;
+	padding-left: 36px;
+}
+
+
+.listHeading {
+	font-size: 16pt;
+}
+
+.rightCol {
+	display: inline-block;
+	width: 600px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li > ul.underMeny {
+	display: none;
+	visibility: hidden;
+}
+
+li {
+	list-style-type: none;
+}
+
+.divBigImg {
+	height: 400px;
+    background-position-y: 114%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Til oppskrifter */
+
+.oppskrift {
+	width: auto;
+	margin: 0 -30px;
+	display: block;
+}
+
+.oppSkriftsInnhold {
+	padding: 30px;
+	width: 900px;
+}
+
+.oppskriftStorrelse {
+	font-size: 12pt;
+	font-style: italic;
+}
+
+.ingredienser {
+	list-style-type: none;
+	display: inline-block;
+	width: 300px;
+	vertical-align: top;
+}
+
+.ingredienser li {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 8px;
+}
+
+.fremgangsmate {
+	vertical-align: top;
+	width: 500px;
+	line-height: 1.5em;
+	list-style-type: none;
+}
+
+.fremgangsmate li {
+	margin-bottom: 8px;
+}
+
+
+.meksikanskGryteBg {
+	background-image: url("../oppskriftsbilder/meksikanskbonnegryte.jpg");
+}
+
+.gulrotSuppeBg {
+	background-image: url("../oppskriftsbilder/gulrotsuppe.jpg");
+}
+
+.falaflerBg {
+	background-image: url("../oppskriftsbilder/falafler.jpg");
+}
+
+.kyllingfrikasseBg {
+	background-image: url("../oppskriftsbilder/kyllingfrikkasse.jpg");
+}
+
+.BLT-sandwichBg {
+	background-image: url("../oppskriftsbilder/BLT-sandwich.jpg");
+}
+.ostskinkemuffinsBg {
+	background-image: url("../oppskriftsbilder/ostskinkemuffins.jpg");
+}
+.pastasalatBg {
+	background-image: url("../oppskriftsbilder/pastasalat.jpg");
+}
+.pitaMedKremostBg {
+	background-image: url("../oppskriftsbilder/pitaMedKremost.jpg");
+}
+.pizzasnurrerBg {
+	background-image: url("../oppskriftsbilder/Pizzasnurrer.jpg");
+}
+
+/* Design til alltidHa */
+.underSeksjon {
+	width: 268px;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid grey;
+	border-radius: 4px;
+	display: inline-table;
+	text-align: left;
+}
+
+.underSeksjonHeight {
+	height: 620px;
+}
+
+.underSeksjon > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.underSeksjon h3 {
+	text-align: center;	
+}
+
