@@ -1,117 +1,92 @@
 
-visDiv = function (divId, smallOrBig){
+// Ma settes til null hver gang en ny side lastes inn MANGLER
+var openDiv = null;
 
-  // Vis det er divSmall funksjonen kjøres på
-  if (smallOrBig == "divSmall") {
-    $("#"+divId+" .divBig").toggleClass("active");
-    $("#"+divId + " .divBig").removeClass("hidden");
+var loadPage = function() {
 
-        //Skjuler den lille visningen av oppskriften
-    $("#"+divId + " .divSmall").removeClass("active");
-    $("#"+divId + " .divSmall").toggleClass("hidden");
+  console.log("loading page");
+  //Sjekker om vi ber om a ga til index (ikke #) eller refresher
+  if (window.location.href.indexOf("#/") > -1 ) {
+    var page = window.location.href.split("#/")[1];
+    $("#main").load("/html/" + page + ".html");
+
+  } else {
+    // Om ingen side er spesifisert, lastes home.html opp
+    $("#main").load("/html/home.html"); 
   }
 
-  //Hvis det er divBig
-  else if (smallOrBig == "divBig") {
-    $("#"+divId+" .divSmall").toggleClass("active");
-    $("#"+divId + " .divSmall").removeClass("hidden");
-
-    console.log("makes #"+divId+" > divSmall active");
-    //Skjuler den lille visningen av oppskriften
-    $("#"+divId + " .divBig").removeClass('active');
-     $("#"+divId + " .divBig").toggleClass('hidden');
-  }
-
-  //Gar gjennom alle barna/divene og fjerner active-classen fra divBig IKKE FERDIG
-/*
-  var bigDivs = document.getElementsByClass("bigDiv");
-  for (div in bigDivs) {
-    if (div.hasClass("active")) {
-      div.removeClass("active");
-      div.parent.children.hasClass("smallDiv")
-    }
-    }
-*/
+  updateNavbar(page);
 }
-// ÅPne og lukke av div hvor det ikke erstattes med ny div
-visDivOnly = function (divId) {
-  var div = document.getElementById(divId);
-  var bigDiv = div.children('.bigDiv');
-  if (bigDiv.classList.contains('active')) {
-    $(bigDiv).removeClass("active");
-  }
-   $(bigDiv).toggleClass("active");
+
+var handleHrefClick = function(event) {
+      
+    // Stopp klikket fra å navigere oss bort
+    event.preventDefault();
+
+    // Finn addressen som var lenket til
+    var page = $(this).attr("href");
+
+    if (page === "#") {
+       return false;
+    }
+
+    // Lager den endrede page-variabelen i page, hvor jeg har fjernet .html fra slutten
+    page = page.split("/#/")[1];
+
+    if (!page) {
+      page = "home";
+    }
+
+    window.history.pushState({},"", "/#/" + page);
+
+    // Last inn den adressen inn i main
+    var path = "/html/" + page + ".html";
+    console.log(path);
+    $("#main").load(path);
+
+    updateNavbar(page);
+
+    return false;
 }
+
+window.addEventListener('popstate', loadPage); 
+  //Oppdater navbar
+  //HOpper bare 1 hakk tilbake per andre klikk
 
 // Kortversjon for document.onload
 // Laster inn rett html-dokument i rett tag
 $(function () {
+  loadPage();
 
-  // Laster inn "home.html" siden som første siden
-  $("#main").load("html/home.html");
   // Last inn navigasjonen inn i nav elementet
-  $("#navBar").load("html/nav.html", function () {
+  $("#navBar").load("/html/nav.html", function () {
     // Ventet til nav har lastet inn
 
-    // Lytt på alle "a" elementer so
-    // har en "href" adresse
-    $('a[href]').click(function(event) {
-      
-      // Stopp klikket fra å navigere oss bort
-      event.preventDefault();
+    // Så gjøre det mulig å lytte lytte til elementene og navigere
 
-      // Finn addressen som var lenket til
-      var page = $(this).attr("href");
-
-      if (page === "#") {
-         return false;
-      }
-
-      // HVA GJØR DENNE?????????????????????????
-      window.history.pushState({},"", page);
-
-      // Last inn den adressen inn i main
-      $("#main").load("html/" + page);
-
-      //Fjerner klassen highlight fra listeelementet med den klassen 
-      $("li.highlight").removeClass("highlight");
-
-      //Finner foreldren/knappen i navbaren
-      var buttonLi = $(this).closest(".navButton");
-      
-      //Setter knappen til å ha klassen highlight
-      buttonLi.addClass("highlight");
-
-      return false;
-    });
+    // Lytt på alle "a" elementer som har en "href" adresse
+    $('#navBar a[href]').click(handleHrefClick);
   });
+  
 
   // Last inn footer inn i footer elementet
-  $("#footer").load("html/footer.html", function () {
+  $("#footer").load("/html/footer.html", function () {
 
     // Lytt på alle "a" elementer so
     // har en "href" adresse
-    $('a[href]').click(function(event) {
-
-      // Stopp klikket fra å navigere oss bort
-      event.preventDefault();
-
-      // Finn addressen som var lenket til
-      var page = $(this).attr("href");
-      
-      if (page === "#") {
-         return false;
-      }
-
-      window.history.pushState({},"", page);
-
-      // Last inn den adressen inn i mainelementet
-      $("#main").load("html/" + page);
-
-      return false;
-    });
+    $('#fotter a[href]').click(handleHrefClick);
   });
 });
+
+var updateNavbar = function(page) {
+
+  console.log("page: ", page);
+
+  //Fjerner klassen highlight fra listeelementet med den klassen 
+  $("li.highlight").removeClass("highlight");
+  var el = $("[href='/#/"+page+"']").closest(".navButton").addClass("highlight");
+  console.log("El: ", el);
+}
 
 
 //Holder navbaren fiksert i toppen ved å legge til classen fixed om det er lengre til toppen enn headerContents hoyde
@@ -122,6 +97,66 @@ $(window).bind('scroll', function () {
         $('#navBar').removeClass('fixed');
     }
 });
+
+// Åpner og lukker divs
+visDiv = function (divId, smallOrBig) {
+
+  // Vis det er divSmall funksjonen kjøres på
+  if (smallOrBig == "divSmall") {
+    $("#"+divId + " .divBig").toggleClass("active");
+    $("#"+divId + " .divBig").removeClass("hidden");
+
+    //Skjuler den lille visningen av oppskriften
+    $("#"+divId + " .divSmall").removeClass("active");
+    $("#"+divId + " .divSmall").toggleClass("hidden");
+
+    console.log("kalt på divSmall");
+  }
+
+  //Hvis det er divBig
+  else if (smallOrBig == "divBig") {
+    $("#"+divId + " .divSmall").toggleClass("active");
+    $("#"+divId + " .divSmall").removeClass("hidden");
+
+    console.log("makes #"+divId+" > divSmall active");
+    //Skjuler den lille visningen av oppskriften
+    $("#"+divId + " .divBig").removeClass('active');
+    $("#"+divId + " .divBig").toggleClass('hidden');
+
+    openDiv = null;
+    console.log("kalt på divBig");
+  }
+
+    console.log("openDiv: ", openDiv);
+
+  //Lukker tidligere åpnet div
+  if (openDiv !== null) {
+    //Lukker diven
+    var bigDiv = openDiv.getElementsByClassName("divBig")[0];
+    bigDiv.classList.remove("active");
+    bigDiv.classList.add("hidden");
+    //Finner den rette divSmall og setter den til active
+    var smallDiv = openDiv.getElementsByClassName("divSmall")[0];
+    smallDiv.classList.add("active");
+    smallDiv.classList.remove("hidden");
+  } 
+
+  //Legger diven i openDiv hvis funksjonen ble kalt på divSmall
+  if (smallOrBig == "divSmall") {
+    openDiv = document.getElementById(divId);
+  }
+}
+
+// Åpne og lukke av div hvor det ikke erstattes med ny div
+visDivOnly = function (divId) {
+  var div = document.getElementById(divId);
+  var bigDiv = div.children('.divBig');
+  if (bigDiv.classList.contains('active')) {
+    $(bigDiv).removeClass("active");
+    openDiv = null;
+  }
+  $(bigDiv).toggleClass("active");
+}
 
 //Gir feilmelding for kundens "fake" linker
 errorMessage = function () {
