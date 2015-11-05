@@ -9,20 +9,22 @@ iframe{
 }
 .tips_left{
         display: inline-block;
+        margin-left: 20px;
         vertical-align: top;
         line-height: 1.5em;
 }
 .tips_right{
         display: inline-block;
         width: 420px;
-        margin-left: 40px;
+        margin-right: 20px;
+        margin-left: 50px;
         vertical-align: top;
         line-height: 1.5em;
 }
 .tips_fremgangsmate {
         vertical-align: top;
+        margin-left: 40px;
         width: 500px;
         line-height: 1.5em;
-        margin-left: 40px;
         display: inline-block;
 }
