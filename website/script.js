@@ -51,7 +51,6 @@ var handleHrefClick = function(event) {
 
 window.addEventListener('popstate', loadPage); 
   //Oppdater navbar
-  //HOpper bare 1 hakk tilbake per andre klikk
 
 // Kortversjon for document.onload
 // Laster inn rett html-dokument i rett tag
@@ -67,14 +66,13 @@ $(function () {
     // Lytt på alle "a" elementer som har en "href" adresse
     $('#navBar a[href]').click(handleHrefClick);
   });
-  
-
+ 
   // Last inn footer inn i footer elementet
   $("#footer").load("/html/footer.html", function () {
 
     // Lytt på alle "a" elementer so
     // har en "href" adresse
-    $('#fotter a[href]').click(handleHrefClick);
+    $('#footer a[href]').click(handleHrefClick);
   });
 });
 
