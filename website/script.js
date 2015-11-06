@@ -1,8 +1,5 @@
-
-// Ma settes til null hver gang en ny side lastes inn MANGLER
-var openDiv = null;
-
 var loadPage = function() {
+  var openDiv = null;
 
   console.log("loading page");
   //Sjekker om vi ber om a ga til index (ikke #) eller refresher
@@ -20,16 +17,25 @@ var loadPage = function() {
 
 var handleHrefClick = function(event) {
       
-    // Stopp klikket fra å navigere oss bort
-    event.preventDefault();
 
     // Finn addressen som var lenket til
     var page = $(this).attr("href");
 
+    /* ENDRET GRUNNET ANKERBAR
     if (page === "#") {
        return false;
     }
+    */
+   
+    if (page.indexOf("#/") < -1 ) {
+      console.log("# -page");
+      return false;
+    }
 
+    console.log("cept going");
+    
+    // Stopp klikket fra å navigere oss bort
+    event.preventDefault();
     // Lager den endrede page-variabelen i page, hvor jeg har fjernet .html fra slutten
     page = page.split("/#/")[1];
 
