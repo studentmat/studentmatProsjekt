@@ -449,3 +449,143 @@ li {
 	text-align: center;	
 }
 
+#okoConent {
+    width: 700px;
+    text-align: left;
+}
+
+ul.listePunkt {
+    list-style-type: disc;
+}
+
+
+/*Alt med div her har � gj�re med �pne/lukke divene*/
+.divSmallOko {
+	overflow: hidden;
+	transition: 0.2s;
+	height: auto;
+	display: block;
+}
+
+.divSmallOko:hover {
+	cursor: pointer;
+	background-color: #544B4B;
+	color: white;
+	transition: 0.2s;
+}
+
+.divBigOko {
+   	margin: 0 auto;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
+	display: none;
+}
+
+.active {
+	display: block;
+	height: auto;
+	transition: height 0.5s;
+}
+
+.hidden {
+	display: none;
+	height: auto;
+	transistion: height 0.5s;
+}
+
+iframe{
+        width: 420px;
+        height: 315px;
+        margin-top: 24px;
+}
+.tips_oppsett{
+        width: auto;
+        display: block;
+}
+.tips_left{
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1.5em;
+}
+.tips_right{
+        display: inline-block;
+        width: 420px;
+        margin-left: 40px;
+        vertical-align: top;
+        line-height: 1.5em;
+}
+.tips_fremgangsmate {
+        vertical-align: top;
+        width: 500px;
+        line-height: 1.5em;
+        margin-left: 40px;
+        display: inline-block;
+}
+table, th, td {
+    width: 800px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin-left: auto;
+    line-height: 1.5em;
+    margin-right: auto;
+}
+
+th, td {
+    padding: 7px;
+    text-align: left;
+    font-size: 14pt;
+    font-family: Helvetica, sans-serif;
+}
+
+
+
+ul.listBullet {
+    list-style-type: disc;
+    line-height: 1.5em;
+    font-family: helvetica, sans-serif;
+    width: 900px;
+    margin-left: -10px;
+}
+
+li.listBullet {
+    padding: 20px;
+}
+
+#formwrap {
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+#formwrap .form {
+    width: 600px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+
+#formwrap .form-field  input{
+    display: block;
+    width: 600px;
+    height: 25px;
+    border: 1px solid #888;
+}
+
+#formwrap .form-field textarea {
+    width: 600px;
+    height: 150px;
+}
+#formwrap .form-field select {
+    height: 25px;
+    width: 600px;
+}
+
+#formwrap .form-field input:invalid,
+#formwrap .form-field select:invalid {
+    border: 1px solid #D80000;
+}
+
+

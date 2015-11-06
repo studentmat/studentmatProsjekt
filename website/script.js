@@ -164,7 +164,11 @@ errorMessage = function () {
 }
 
 //Kode for å hente inn tilfeldig oppskrift til home siden
-//
-//
-
+randomOppskrift = function() { 
+  var nummer = Math.floor(Math.random()*10);
+  console.log(nummer)
+  oppskrift = document.getElementById(nummer);
+  console.log(oppskrift)
+  oppskrift.style.display = "block";
+}
 //Form validering
