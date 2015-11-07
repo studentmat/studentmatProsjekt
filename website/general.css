@@ -315,7 +315,6 @@ li > ul.underMeny {
 }
 
 .divTips, .kilde {
-	float: left;
 	padding-left: 36px;
 }
 
@@ -394,7 +393,8 @@ li {
 
 
 .meksikanskGryteBg {
-	background-image: url("../oppskriftsbilder/meksikanskbonnegryte.jpg");
+	background-image: url("../oppskriftsbilder/meksikanskbonnegryte2.jpg");
+	background-position-y: 55%;
 }
 
 .gulrotSuppeBg {
@@ -406,7 +406,8 @@ li {
 }
 
 .kyllingfrikasseBg {
-	background-image: url("../oppskriftsbilder/kyllingfrikkasse.jpg");
+	background-image: url("../oppskriftsbilder/kyllingfrikasse2.jpg");
+	background-position-y:  51%;
 }
 
 .BLT-sandwichBg {
