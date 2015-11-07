@@ -399,10 +399,12 @@ li {
 
 .gulrotSuppeBg {
 	background-image: url("../oppskriftsbilder/gulrotsuppe.jpg");
+	background-position-y: 40%;
 }
 
 .falaflerBg {
 	background-image: url("../oppskriftsbilder/falafler.jpg");
+	background-position-y: 40%;
 }
 
 .kyllingfrikasseBg {
@@ -415,6 +417,7 @@ li {
 }
 .ostskinkemuffinsBg {
 	background-image: url("../oppskriftsbilder/ostskinkemuffins.jpg");
+	background-position-y: 40%;
 }
 .pastasalatBg {
 	background-image: url("../oppskriftsbilder/pastasalat.jpg");
@@ -424,8 +427,13 @@ li {
 }
 .pizzasnurrerBg {
 	background-image: url("../oppskriftsbilder/Pizzasnurrer.jpg");
+	background-position-y: 40%;
 }
 
+.tortillapizzaBg {
+	background-image: url("../oppskriftsbilder/tortillapizza.jpg");
+	background-position-y: 40%;
+}
 /* Design til alltidHa */
 .underSeksjon {
 	width: 268px;
