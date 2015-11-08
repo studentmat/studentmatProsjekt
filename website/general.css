@@ -351,7 +351,6 @@ li {
 }
 
 /* Til oppskrifter */
-
 .oppskrift {
 	width: auto;
 	margin: 0 -30px;
@@ -436,7 +435,8 @@ li {
 }
 /* Design til alltidHa */
 .underSeksjon {
-	width: 268px;
+	width: 261px;
+	height: 690px;
 	padding: 10px;
 	margin: 10px;
 	border: 1px solid grey;
@@ -445,14 +445,12 @@ li {
 	text-align: left;
 }
 
-.underSeksjonHeight {
-	height: 620px;
-}
-
-.underSeksjon > img {
+.underSeksjon > figure > img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	height: 90px;
+	width: 90px;
 }
 .underSeksjon h3 {
 	text-align: center;	
@@ -465,6 +463,11 @@ li {
 
 ul.listePunkt {
     list-style-type: disc;
+}
+
+figcaption {
+	font-size: 8pt;
+	text-align: center;
 }
 
 
