@@ -10,11 +10,12 @@ body {
 	padding: 0px;
 	height: 100%;
 	width: 100%;
+        line-height: 25px;
 }
 
 p {
-	font-family: "Helvetica", serif;
-	font-size: 14pt;
+	font-family:"Times New Roman", serif;
+	font-size: 15pt;
 	text-align: justify;
 }
 
@@ -24,8 +25,8 @@ p {
 }
 
 .textStyle {
-	font-family: "Helvetica", serif;
-	font-size: 14pt;
+	font-family:"Times New Roman", serif;
+	font-size: 15pt;
 }
 
 h1, h2, h3 {
@@ -52,7 +53,7 @@ h3 {
 	min-height: 100%;
 	height: auto;
 	width: 100%;
-	background-color: #F5F9F2;
+	background-color: rgba(210,201,192,0.2);
 }
 
 #headerContent{
@@ -61,8 +62,8 @@ h3 {
 	margin-top: 0px;
 	padding-top: 0px;
 	width: 100%;
-	background-color: #E4DFDF;
-	height: 150px;
+	background-color: rgba(129, 165, 148,1);
+	height: 350px;
 	color: white;
 	overflow: hidden;
 }
@@ -74,7 +75,7 @@ h3 {
 
 /* Til navigasjonsbaren */
 .navfooterColor {
-	background-color: #544B4B;
+	background-color: rgba(129, 165, 148,1);
 }
 
 #navBar {
@@ -151,7 +152,7 @@ h3 {
 
 #navList li:hover ul {
 	display: block;
-	background-color: #313130;
+	background-color: rgb(129, 165, 148);
 	width: 250px;
   	padding: 5px 0;
   	margin-top: 0px;
@@ -168,7 +169,7 @@ li > ul.underMeny {
 #navList li ul li {
 	display: block;
 	height: 30px;
-	background-color: #313130;
+	background-color: rgb(129, 165, 148);
 	padding: 5px 0px;
 	margin: 10px;
 }
@@ -192,7 +193,7 @@ li > ul.underMeny {
 	min-height: 1000px;
 	height: auto !important;
 	height: 100%;
-	box-shadow: 0 2px 2px 2px #544B4B;
+	box-shadow: 0 2px 2px 2px rgb(129, 165, 148);
 }
 
 #main a:link{
@@ -343,7 +344,7 @@ li {
 }
 
 .divBigImg {
-	height: 400px;
+    height: 400px;
     background-position-y: 114%;
     width: 100%;
     background-repeat: no-repeat;
@@ -456,15 +457,6 @@ li {
 	text-align: center;	
 }
 
-#okoConent {
-    width: 700px;
-    text-align: left;
-}
-
-ul.listePunkt {
-    list-style-type: disc;
-}
-
 figcaption {
 	font-size: 8pt;
 	text-align: center;
@@ -546,16 +538,13 @@ table, th, td {
 th, td {
     padding: 7px;
     text-align: left;
-    font-size: 14pt;
-    font-family: Helvetica, sans-serif;
+    font-size: 15pt;
+    font-family:"Times New Roman", serif;
 }
 
-
-
 ul.listBullet {
-    list-style-type: disc;
     line-height: 1.5em;
-    font-family: helvetica, sans-serif;
+    font-family:"Times New Roman", serif;
     width: 900px;
     margin-left: -10px;
 }
@@ -600,4 +589,21 @@ li.listBullet {
     border: 1px solid #D80000;
 }
 
+/*Style for ankerbar*/
+
+#meny {
+    text-align: center;
+    font-family:"Times New Roman", serif;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.linje {
+    color: #B2CDC9;
+    background-color: #B2CDC9;
+}
+
+#liste{
+    list-style: disc;
+}
 
