@@ -437,7 +437,7 @@ li {
 /* Design til alltidHa */
 .underSeksjon {
 	width: 261px;
-	height: 690px;
+	height: 880px;
 	padding: 10px;
 	margin: 10px;
 	border: 1px solid grey;
@@ -450,8 +450,8 @@ li {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height: 90px;
-	width: 90px;
+	height: 120px;
+	width: 120px;
 }
 .underSeksjon h3 {
 	text-align: center;	
@@ -460,6 +460,7 @@ li {
 figcaption {
 	font-size: 8pt;
 	text-align: center;
+	line-height: 1em;
 }
 
 
