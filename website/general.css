@@ -5,17 +5,17 @@ html {
 }
 
 body {
-	font-size: 15pt;
+	font-size: 14pt;
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
 	width: 100%;
-        line-height: 25px;
+        line-height: 30px;
 }
 
 p {
-	font-family:"Times New Roman", serif;
-	font-size: 15pt;
+	font-family:"Georgia", serif;
+	font-size: 14pt;
 	text-align: justify;
 }
 
@@ -25,8 +25,8 @@ p {
 }
 
 .textStyle {
-	font-family:"Times New Roman", serif;
-	font-size: 15pt;
+	font-family:"Georgia", serif;
+	font-size: 14pt;
 }
 
 h1, h2, h3 {
@@ -184,7 +184,7 @@ li > ul.underMeny {
 
 /*Til hovedboksen */
 #main {
-	font-family: "Times New Roman", serif;
+	font-family: "Georgia", serif;
 	font-size: 14pt;
 	background-color: white;
 	margin: 0 auto;
@@ -526,25 +526,10 @@ iframe{
         margin-left: 40px;
         display: inline-block;
 }
-table, th, td {
-    width: 800px;
-    border: solid 1px black;
-    border-collapse: collapse;
-    margin-left: auto;
-    line-height: 1.5em;
-    margin-right: auto;
-}
-
-th, td {
-    padding: 7px;
-    text-align: left;
-    font-size: 15pt;
-    font-family:"Times New Roman", serif;
-}
 
 ul.listBullet {
     line-height: 1.5em;
-    font-family:"Times New Roman", serif;
+    font-family:"Georgia", serif;
     width: 900px;
     margin-left: -10px;
 }
@@ -593,17 +578,61 @@ li.listBullet {
 
 #meny {
     text-align: center;
-    font-family:"Times New Roman", serif;
+    font-family:"Georgia", serif;
     margin-top: -10px;
     margin-bottom: 30px;
+    font-style: oblique;
 }
 
 .linje {
     color: #B2CDC9;
-    background-color: #B2CDC9;
+    background: #B2CDC9;
 }
 
-#liste{
-    list-style: disc;
+.anchor:hover {
+    color: #B2CDC9;
 }
 
+/*Style for økonomi og planlegging og lagrin*/
+
+.num {
+    list-style: decimal;
+}
+
+table, th, td {
+    width: 850px;
+    margin-left: auto;
+    line-height: 30px;
+    margin-right: auto;
+    font-style: normal;
+    font-weight: normal;
+    border: solid 2px #B2CDC9;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 14pt;
+    font-family:"Georgia", serif;
+}
+
+.cell1, .cell2 {
+    background-color: rgba(178,205,201,0.5);
+}
+
+th, td {
+    text-align: center;
+}
+
+.mellomtittelPlan {
+    font-family: libelSuit;
+    font-size: 25px;
+    text-align: center;
+}
+
+.mellomtittel {
+    font-weight: normal;
+    font-style: oblique;
+    margin-bottom: -13px;
+}
