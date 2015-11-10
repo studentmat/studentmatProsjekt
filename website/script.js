@@ -3,7 +3,7 @@ var openDiv = null;
 if (window.location.hostname === "folk.ntnu.no") {
   var startPath = "/doraoe/studmat/";
 } else {
-  var startPath = "/";
+  var startPath = "";
 }
 
 var loadPage = function() {
@@ -47,7 +47,7 @@ var handleHrefClick = function(event) {
   }
 
 
-  window.history.pushState({},"", "/doraoe/studmat/" + "/#/" + page);
+  window.history.pushState({},"", startPath + "/#/" + page);
 
   // Last inn den adressen inn i main
   var path = startPath +  "/html/" + page + ".html";
