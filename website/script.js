@@ -1,4 +1,11 @@
 var openDiv = null;
+// For å kunne kjøre den på folk-side
+if (window.location.hostname === "folk.ntnu.no") {
+  var startPath = "/doraoe/studmat/";
+} else {
+  var startPath = "/";
+}
+
 var loadPage = function() {
   openDiv = null;
   $(window).scrollTop(0) ;
@@ -9,11 +16,11 @@ var loadPage = function() {
   if (window.location.href.indexOf("#/") > -1 ) {
     var page = window.location.href.split("#/")[1];
     // Kaller addAnchorEventListeners etter at siden er lastet ned/inn
-    $("#main").load("/html/" + page + ".html", addAnchorEventListeners);
+    $("#main").load(startPath + "/html/" + page + ".html", addAnchorEventListeners);
 
   } else {
     // Om ingen side er spesifisert, lastes home.html opp
-    $("#main").load("/html/home.html");
+    $("#main").load(startPath +  "/html/home.html");
 
   }
   updateNavbar(page);
@@ -39,10 +46,10 @@ var handleHrefClick = function(event) {
   }
 
 
-  window.history.pushState({},"", "/#/" + page);
+  window.history.pushState({},"", "/doraoe/studmat/" + "/#/" + page);
 
   // Last inn den adressen inn i main
-  var path = "/html/" + page + ".html";
+  var path = startPath +  "/html/" + page + ".html";
   $("#main").load(path);
 
   updateNavbar(page);
@@ -62,10 +69,12 @@ $(function () {
   loadPage();
 
   // Last inn navigasjonen inn i nav elementet
-  $("#navBar").load("/html/nav.html", function () {
+  $("#navBar").load(startPath + "/html/nav.html", function () {
     // Ventet til nav har lastet inn
 
-    // Så gjøre det mulig å lytte lytte til elementene og navigere
+    // Oppdaterer navbar etter at den er lastet opp
+    var page = window.location.href.split("#/")[1];
+    updateNavbar(page);
 
     // Lytt på alle "a" elementer som har en "href" adresse
     $('#navBar a[href]').click(handleHrefClick);
@@ -73,7 +82,7 @@ $(function () {
  
   $()
   // Last inn footer inn i footer elementet
-  $("#footer").load("/html/footer.html", function () {
+  $("#footer").load(startPath +  "/html/footer.html", function () {
 
     // Lytt på alle "a" elementer som har en "href" adresse
     $('#footer a[href]').click(handleHrefClick);
@@ -82,9 +91,14 @@ $(function () {
 
 var updateNavbar = function(page) {
 
+  console.log("updating navbar: ", page);
   //Fjerner klassen highlight fra listeelementet med den klassen 
   $("li.highlight").removeClass("highlight");
-  var el = $("[href='/#/"+page+"']").closest(".navButton").addClass("highlight");
+  if (page == "home" || page == undefined) {
+    $("[href='/']").closest(".navButton").addClass("highlight");
+  } else {
+    var el = $("[href='/#/"+page+"']").closest(".navButton").addClass("highlight");
+  }
 }
 
 
@@ -169,18 +183,6 @@ visDiv = function (divId, smallOrBig) {
     openDiv = document.getElementById(divId);
   }
 }
-/*
-// Åpne og lukke av div hvor det ikke erstattes med ny div
-visDivOnly = function (divId) {
-  var div = document.getElementById(divId);
-  var bigDiv = div.children('.divBig');
-  if (bigDiv.classList.contains('active')) {
-    $(bigDiv).removeClass("active");
-    openDiv = null;
-  }
-  $(bigDiv).toggleClass("active");
-}
-*/
 
 //Gir feilmelding for kundens "fake" linker
 errorMessage = function () {

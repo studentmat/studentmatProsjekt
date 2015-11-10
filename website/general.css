@@ -365,6 +365,7 @@ margin-top: 0;
 
 .divTips, .kilde {
 	padding-left: 36px;
+	color: black;
 }
 
 
@@ -441,48 +442,48 @@ li {
 
 
 .meksikanskGryteBg {
-	background-image: url("../oppskriftsbilder/meksikanskbonnegryte2.jpg");
+	background-image: url("oppskriftsbilder/meksikanskbonnegryte2.jpg");
 	background-position-y: 55%;
 }
 
 .gulrotSuppeBg {
-	background-image: url("../oppskriftsbilder/gulrotsuppe.jpg");
+	background-image: url("oppskriftsbilder/gulrotsuppe.jpg");
 	background-position-y: 40%;
 }
 
 .falaflerBg {
-	background-image: url("../oppskriftsbilder/falafler.jpg");
+	background-image: url("oppskriftsbilder/falafler.jpg");
 	background-position-y: 40%;
 }
 
 .kyllingfrikasseBg {
-	background-image: url("../oppskriftsbilder/kyllingfrikasse2.jpg");
+	background-image: url("oppskriftsbilder/kyllingfrikasse2.jpg");
 	background-position-y:  51%;
 }
 
 .BLT-sandwichBg {
-	background-image: url("../oppskriftsbilder/BLT-sandwich.jpg");
+	background-image: url("oppskriftsbilder/BLT-sandwich.jpg");
 }
 .ostskinkemuffinsBg {
-	background-image: url("../oppskriftsbilder/ostskinkemuffins.jpg");
+	background-image: url("oppskriftsbilder/ostskinkemuffins.jpg");
 	background-position-y: 40%;
 }
 .pastasalatBg {
-	background-image: url("../oppskriftsbilder/pastasalat.jpg");
+	background-image: url("oppskriftsbilder/pastasalat.jpg");
 	background-position-y: 40%;
 
 }
 .pitaMedKremostBg {
-	background-image: url("../oppskriftsbilder/pitaMedKremost.jpg");
+	background-image: url("oppskriftsbilder/pitaMedKremost.jpg");
 	background-position-y: 40%;
 }
 .pizzasnurrerBg {
-	background-image: url("../oppskriftsbilder/Pizzasnurrer.jpg");
+	background-image: url("oppskriftsbilder/Pizzasnurrer.jpg");
 	background-position-y: 40%;
 }
 
 .tortillapizzaBg {
-	background-image: url("../oppskriftsbilder/tortillapizza.jpg");
+	background-image: url("oppskriftsbilder/tortillapizza.jpg");
 	background-position-y: 40%;
 }
 /* Design til alltidHa */
@@ -514,6 +515,9 @@ figcaption {
 	line-height: 1em;
 }
 
+figcaption a {
+	color: black;
+}
 
 /*Alt med div her har � gj�re med �pne/lukke divene*/
 .divSmallOko {
@@ -715,7 +719,7 @@ th, td {
     border: 2px solid rgba(130, 176, 84, 0.5);
 }
 
-#linkerSide a:link, a:visited{
+#linkerSide a:link, #linkerSide a:visited{
 	display: block;
 	font-style: normal;
 	height: 30px;
