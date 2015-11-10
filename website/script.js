@@ -1,62 +1,60 @@
+var openDiv = null;
 var loadPage = function() {
-  var openDiv = null;
+  openDiv = null;
+  $(window).scrollTop(0) ;
 
-  console.log("loading page");
+  console.log("loading page and scrolling to top");
+
   //Sjekker om vi ber om a ga til index (ikke #) eller refresher
   if (window.location.href.indexOf("#/") > -1 ) {
     var page = window.location.href.split("#/")[1];
-    $("#main").load("/html/" + page + ".html");
+    // Kaller addAnchorEventListeners etter at siden er lastet ned/inn
+    $("#main").load("/html/" + page + ".html", addAnchorEventListeners);
 
   } else {
     // Om ingen side er spesifisert, lastes home.html opp
-    $("#main").load("/html/home.html"); 
-  }
+    $("#main").load("/html/home.html");
 
+  }
   updateNavbar(page);
 }
 
 var handleHrefClick = function(event) {
-      
+  // Stopp klikket fra å navigere oss bort
+  event.preventDefault();
 
-    // Finn addressen som var lenket til
-    var page = $(this).attr("href");
+  console.log("handleHrefClick");
+  // Finn addressen (verdien til href) som var lenket til
+  var page = $(this).attr("href");
 
-    /* ENDRET GRUNNET ANKERBAR
-    if (page === "#") {
-       return false;
-    }
-    */
-   
-    if (page.indexOf("#/") < -1 ) {
-      console.log("# -page");
-      return false;
-    }
+  if (page === "#") {
+     return false;
+  }
 
-    console.log("cept going");
-    
-    // Stopp klikket fra å navigere oss bort
-    event.preventDefault();
-    // Lager den endrede page-variabelen i page, hvor jeg har fjernet .html fra slutten
-    page = page.split("/#/")[1];
+  // Lager den endrede page-variabelen i page, hvor jeg har fjernet .html fra slutten
+  page = page.split("/#/")[1];
 
-    if (!page) {
-      page = "home";
-    }
+  if (!page) {
+    page = "home";
+  }
 
-    window.history.pushState({},"", "/#/" + page);
 
-    // Last inn den adressen inn i main
-    var path = "/html/" + page + ".html";
-    console.log(path);
-    $("#main").load(path);
+  window.history.pushState({},"", "/#/" + page);
 
-    updateNavbar(page);
+  // Last inn den adressen inn i main
+  var path = "/html/" + page + ".html";
+  $("#main").load(path);
 
-    return false;
+  updateNavbar(page);
+  
+  loadPage();
+
+  return false;
 }
 
+//Laster ei ny side når vi klikker tilbake
 window.addEventListener('popstate', loadPage); 
-  //Oppdater navbar
+  
 
 // Kortversjon for document.onload
 // Laster inn rett html-dokument i rett tag
@@ -73,23 +71,20 @@ $(function () {
     $('#navBar a[href]').click(handleHrefClick);
   });
  
+  $()
   // Last inn footer inn i footer elementet
   $("#footer").load("/html/footer.html", function () {
 
-    // Lytt på alle "a" elementer so
-    // har en "href" adresse
+    // Lytt på alle "a" elementer som har en "href" adresse
     $('#footer a[href]').click(handleHrefClick);
   });
 });
 
 var updateNavbar = function(page) {
 
-  console.log("page: ", page);
-
   //Fjerner klassen highlight fra listeelementet med den klassen 
   $("li.highlight").removeClass("highlight");
   var el = $("[href='/#/"+page+"']").closest(".navButton").addClass("highlight");
-  console.log("El: ", el);
 }
 
 
@@ -101,6 +96,33 @@ $(window).bind('scroll', function () {
         $('#navBar').removeClass('fixed');
     }
 });
+
+
+//Legge til listeners til ankerne
+var addAnchorEventListeners = function() {
+  var anchors = document.getElementsByClassName("anchor");
+  console.log(anchors);
+  for (var i = 0; i < anchors.length; i++) {
+      anchors[i].addEventListener("click", scrollToAnchor);
+  }  
+};
+
+//For ankermenyen
+var scrollToAnchor = function () {
+  console.log("scroll to Anchor");
+  var id = $(this).attr("data-anchor");
+  console.log("id:", id);
+  var el = document.getElementById(id);
+  // Finner posisjonen til elementet
+  var offset = $(el).offset();
+
+  // Scroller elegant ned til elementet
+  $("html, body").animate({
+    // Finner posisjonen minus høyden til navbaren
+    scrollTop: offset.top - $("#navBar").height()*2
+  }, 100);
+};
+
 
 // Åpner og lukker divs
 visDiv = function (divId, smallOrBig) {
@@ -114,7 +136,7 @@ visDiv = function (divId, smallOrBig) {
     $("#"+divId + " .divSmall").removeClass("active");
     $("#"+divId + " .divSmall").toggleClass("hidden");
 
-    console.log("kalt på divSmall");
+
   }
 
   //Hvis det er divBig
@@ -122,16 +144,13 @@ visDiv = function (divId, smallOrBig) {
     $("#"+divId + " .divSmall").toggleClass("active");
     $("#"+divId + " .divSmall").removeClass("hidden");
 
-    console.log("makes #"+divId+" > divSmall active");
     //Skjuler den lille visningen av oppskriften
     $("#"+divId + " .divBig").removeClass('active');
     $("#"+divId + " .divBig").toggleClass('hidden');
 
     openDiv = null;
-    console.log("kalt på divBig");
   }
 
-    console.log("openDiv: ", openDiv);
 
   //Lukker tidligere åpnet div
   if (openDiv !== null) {
@@ -150,7 +169,7 @@ visDiv = function (divId, smallOrBig) {
     openDiv = document.getElementById(divId);
   }
 }
-
+/*
 // Åpne og lukke av div hvor det ikke erstattes med ny div
 visDivOnly = function (divId) {
   var div = document.getElementById(divId);
@@ -161,6 +180,7 @@ visDivOnly = function (divId) {
   }
   $(bigDiv).toggleClass("active");
 }
+*/
 
 //Gir feilmelding for kundens "fake" linker
 errorMessage = function () {
@@ -170,11 +190,10 @@ errorMessage = function () {
 //Kode for å hente inn tilfeldig oppskrift til home siden
 randomOppskrift = function() { 
   var nummer = Math.floor(Math.random()*10);
-  console.log(nummer)
   oppskrift = document.getElementById(nummer);
-  console.log(oppskrift)
   oppskrift.style.display = "block";
 }
+
 //Form validering
 function validateForm(){
   var nm = document.getElementById("name");
