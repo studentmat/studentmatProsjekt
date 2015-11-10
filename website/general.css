@@ -655,3 +655,14 @@ th, td {
     margin-bottom: -13px;
 }
 
+
+/*Mobil og tablet design*/
+
+@media screen and (max-width: 481px) {
+}
+
+@media screen and (max-width: 769px) {
+}
+
+@media screen and (max-width: 993px) {
+}
