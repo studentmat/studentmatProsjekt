@@ -317,7 +317,7 @@ margin-top: 0;
 
 .divSmall:hover {
 	cursor: pointer;
-	background-color: #544B4B;
+	background-color: rgb(52, 76, 56);
 	color: white;
 	transition: 0.2s;
 }
