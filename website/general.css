@@ -422,9 +422,12 @@ li {
 }
 .pastasalatBg {
 	background-image: url("../oppskriftsbilder/pastasalat.jpg");
+	background-position-y: 40%;
+
 }
 .pitaMedKremostBg {
 	background-image: url("../oppskriftsbilder/pitaMedKremost.jpg");
+	background-position-y: 40%;
 }
 .pizzasnurrerBg {
 	background-image: url("../oppskriftsbilder/Pizzasnurrer.jpg");
