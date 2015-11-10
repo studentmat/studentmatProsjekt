@@ -53,7 +53,7 @@ h3 {
 	min-height: 100%;
 	height: auto;
 	width: 100%;
-	background-color: rgba(210,201,192,0.2);
+	background-color: rgba(131,174,84,0.2);
 }
 
 #headerContent{
@@ -62,7 +62,7 @@ h3 {
 	margin-top: 0px;
 	padding-top: 0px;
 	width: 100%;
-	background-color: rgba(129, 165, 148,1);
+	background-color: rgba(130, 176, 84,1);
 	height: 350px;
 	color: white;
 	overflow: hidden;
@@ -75,7 +75,7 @@ h3 {
 
 /* Til navigasjonsbaren */
 .navfooterColor {
-	background-color: rgba(129, 165, 148,1);
+	background-color: rgba(131, 174, 84,1);
 }
 
 #navBar {
@@ -193,7 +193,7 @@ li > ul.underMeny {
 	min-height: 1000px;
 	height: auto !important;
 	height: 100%;
-	box-shadow: 0 2px 2px 2px rgb(129, 165, 148);
+	box-shadow: 0 2px 2px 2px rgb(230, 238, 202);
 }
 
 #main a:link{
