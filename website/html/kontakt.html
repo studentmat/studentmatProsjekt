@@ -2,77 +2,47 @@
 	<h1>Kontakt oss</h1>
 
 	<p>Har du noen tips, enten oppskrifter eller annet, som andre kan ha nytte av? Eller kanskje tilbakemelding til oss? Send oss gjerne en melding!</p>
- 
-	<form id='mainForm' name="from" action="POST" method='post'>
+ 	<section id="formMelding"></section>
+	<form name="form" onSubmit="return validateForm(); return false;">
+
 	        <section class="form">
 	                <label for="name">Navn:(Valgfritt)</label><br/>
 	                <section class="form-field">
-	                    <input type="text" id="name" name="name" value="" />
+	                    <input type="text" name="name" id="name" value=""></input>
 	                </section>
 	        </section>
+
 
 	        <section class="form">
 	            <label for="email">E-post:*</label><br/>
 	            <section class="form-field">
-	                <input type="email" id="email" name="email" value="" />
+	                <input type="email" id="email" name="email"/>
 	            </section>
 	        </section>
 
+
 	        <section class="form">
-	            <label for="year">Hva gjelder meldingen?*</label><br/>
+	            <label for="Topic">Hva gjelder meldingen?*</label><br/>
 	            <section class="form-field">
-	                <select name="year" id="year">
-	                    <option value="" selected="selected" disabled="disabled">Velg</option>
+	                <select name="melding" id="melding" value="Velg">
+	                    <option selected="selected" default="Velg">Velg</option>
 	                    <option value="1">Forslag til innhold</option>
 	                    <option value="2">Teknisk feil på siden</option>
 	                </select>
 	            </section>
 	        </section>
 
+
 	        <section class="form">
 	            <label for="comments">Melding:*</label><br/>
 	            <section class="form-field">
-	                <textarea id="comments" name="comments"></textarea>
+	                <textarea id="comments" name="comments" id="comments" value=""></textarea>
 	            </section>
 	        </section>
-	        <section class="form">
-	        	<input type="submit" name="form-submit" id="form-submit" value="Send" />
-	        </section>
-	 
-	</form>    
-</section>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-<!--include jQuery 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
-type="text/javascript"></script>
- 
-include jQuery Validation Plugin
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"
-type="text/javascript"></script>-->
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
-<script type="text/javascript">
-    $(function()
-    {
-        $("#mainForm").validate(
-            {
-                rules:
-                {
-                    name:
-                    {
-                        required:true
-                    },
-                    email:
-                    {
-                        required:true,
-                        email:true  
-                
-                    },
-                    comments:
-                    {
-                        maxlength:500
-                    }
-                }
-            });
-    });
-</script>
+
+	        <section class="form">
+	        <input type="submit" value="Send" /> 
+	    </section>
+	</form>  
+</section>

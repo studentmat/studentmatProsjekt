@@ -592,9 +592,24 @@ li.listBullet {
     width: 600px;
 }
 
-#formwrap .form-field input:invalid,
-#formwrap .form-field select:invalid {
-    border: 1px solid #D80000;
+
+#formMelding {
+	margin: 0 auto;
+	width: 600px;
+	height: 30px;
+	overflow: hidden;
 }
 
+#no {
+	width: inherit;
+	height: inherit;
+	background-color: red;
+	color: #FFF;
+}
 
+#yes {
+	background-color: green;
+	width: inherit;
+	height: inherit;
+	color: #FFF;
+}

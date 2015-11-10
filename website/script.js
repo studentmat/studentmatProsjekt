@@ -176,3 +176,120 @@ randomOppskrift = function() {
   oppskrift.style.display = "block";
 }
 //Form validering
+function validateForm(){
+  var nm = document.getElementById("name");
+  console.log(nm)
+  console.log(nm.value)
+  var em = document.getElementById("email");
+  console.log(em)
+  console.log(em.value)
+  var tp = document.getElementById("melding");
+    console.log(tp)
+    console.log(tp.value)
+  var mld = document.getElementById("comments");
+    console.log(mld)
+    console.log(mld.value)
+
+
+if(nameLength(nm))
+{
+if(emailFormat(em))
+{
+
+if(selectTopic(tp))
+{
+
+if(meldingLength(mld))
+{
+  if(writeToFile(nm, em, tp, mld))
+  {
+    return false;
+  }
+
+
+
+}}}}
+return false;
+}
+
+function nameLength(nm)
+{   
+var nmLength = nm.value.length;
+console.log(nmLength)
+
+if(nmLength > 30)
+{
+  console.log("hmm")
+  document.getElementById("formMelding").innerHTML = 
+    "<div id='no'>Navnet kan ikke ha flere enn 30 tegn.</div>";
+    return false; 
+}
+else
+{
+  return true;
+}
+}
+
+function emailFormat(em)
+{
+if(!em.value)
+{
+  document.getElementById("formMelding").innerHTML = 
+    "<div id='no'>Du må skrive inn E-mail.</div>";
+    return false; 
+}
+else 
+{
+return true;  
+}    
+}
+
+function selectTopic(tp)
+{
+if(tp.value == "Velg")
+{
+document.getElementById("formMelding").innerHTML = 
+    "<div id='no'> Du må velge hva meldingen handler om. </div>";
+    return false;
+}
+else
+{
+  return true;
+}
+}
+
+function meldingLength(mld)
+{
+var mldLength = mld.value.length;
+if(!mld.value)
+{
+  document.getElementById("formMelding").innerHTML = 
+    "<div id='no'>Du må skrive inn en melding.</div>";
+    return false; 
+}
+if(mldLength >= 400)
+{
+  document.getElementById("formMelding").innerHTML = 
+    "<div id='no'>Meldingen kan ikke ha flere enn 400 tegn.</div>";
+    return false; 
+}
+else
+{
+ return true;
+}
+
+}
+function writeToFile(nm, em, tp, mld) {
+    var fil = "text.txt";
+    fil.open("w");
+    fil.writeln("------------------------------------------------");
+    fil.writeln("name: " + nm.value);
+    fil.writeln("Mail: " + em.value);
+    fil.writeln("Topic: " + tp.value);
+    fil.writeln("Melding: " + mld.value);
+    fil.writeln("------------------------------------------------");
+    fil.Close();
+    document.getElementById("formMelding").innerHTML = 
+    "<div id='yes'>Din melding ble sendt!</div>";
+    return true;
+ }
