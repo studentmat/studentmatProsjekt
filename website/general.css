@@ -63,9 +63,18 @@ h3 {
 	padding-top: 0px;
 	width: 100%;
 	background-color: rgba(130, 176, 84,1);
-	height: 350px;
+	height: 375px;
 	color: white;
 	overflow: hidden;
+}
+
+#logo {
+    margin-top: -15px;
+}
+
+#footerLogo {
+    margin-top: 50px;
+    margin-left: -50px;
 }
 
 .fixed {
@@ -75,7 +84,7 @@ h3 {
 
 /* Til navigasjonsbaren */
 .navfooterColor {
-	background-color: rgba(64, 74, 38,1);
+	background-color: rgba(52, 76, 56, 1);
 }
 
 #navBar {
@@ -153,7 +162,7 @@ h3 {
 #navList li:hover ul {
 	display: block;
 	/*background-color: rgb(129, 165, 148);*/
-        background-color: rgb(64,73,38);
+        background-color: rgb(52, 76, 56);
 	width: 250px;
   	padding: 5px 0;
   	margin-top: 0px;
@@ -170,7 +179,7 @@ li > ul.underMeny {
 #navList li ul li {
 	display: block;
 	height: 30px;
-	background-color: rgb(64,73,38);
+	background-color: rgb(52, 76, 56);
 	padding: 5px 0px;
 	margin: 10px;
 }
@@ -240,6 +249,10 @@ li > ul.underMeny {
 	margin: 0 5px;
 	padding: 10px 10px;
 	line-height: 1.2em;
+}
+
+#footerLogo img:hover {
+    text-decoration: none;
 }
 
 /* Til sidekart i footer */
@@ -656,7 +669,16 @@ th, td {
 .mellomtittel {
     font-weight: normal;
     font-style: oblique;
-    margin-bottom: -13px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.okonomi > #sifo {
+    margin-top: 30px;
+    margin-left: 30px;
+    float: right;
+    text-align: center;
+    border: 2px solid rgba(130, 176, 84, 0.5);
 }
 
 
