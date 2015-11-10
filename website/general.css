@@ -612,7 +612,7 @@ li.listBullet {
 }
 
 .anchor:hover {
-    color: #B2CDC9;
+    color: rgba(130, 176, 84, 1);
 }
 
 /*Style for økonomi og planlegging og lagrin*/
@@ -628,7 +628,7 @@ table, th, td {
     margin-right: auto;
     font-style: normal;
     font-weight: normal;
-    border: solid 2px #B2CDC9;
+    border: solid 2px rgba(130, 176, 84, 1);
     border-collapse: collapse;
 }
 
@@ -640,7 +640,7 @@ th, td {
 }
 
 .cell1, .cell2 {
-    background-color: rgba(178,205,201,0.5);
+    background-color: rgba(130, 176, 84, 0.5);
 }
 
 th, td {
@@ -659,3 +659,14 @@ th, td {
     margin-bottom: -13px;
 }
 
+
+/*Mobil og tablet design*/
+
+@media screen and (max-width: 481px) {
+}
+
+@media screen and (max-width: 769px) {
+}
+
+@media screen and (max-width: 993px) {
+}

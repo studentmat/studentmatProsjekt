@@ -3,7 +3,7 @@
 
 	<p>Har du noen tips, enten oppskrifter eller annet, som andre kan ha nytte av? Eller kanskje tilbakemelding til oss? Send oss gjerne en melding!</p>
  	<section id="formMelding"></section>
-	<form name="form" onSubmit="return validateForm(); return false;">
+	<form name="form">
 
 	        <section class="form">
 	                <label for="name">Navn:(Valgfritt)</label><br/>
@@ -42,7 +42,7 @@
 
 
 	        <section class="form">
-	        <input type="submit" value="Send" /> 
+	        <input type="button" onclick="return validateForm();" value="Send" /> 
 	    </section>
 	</form>  
 </section>

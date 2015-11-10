@@ -230,7 +230,10 @@ if(meldingLength(mld))
 {
   if(writeToFile(nm, em, tp, mld))
   {
-    return false;
+    nm.value= "";
+    em.value= "";
+    tp.value= "";
+    mld.value="";
   }
 
 
@@ -307,15 +310,15 @@ else
 
 }
 function writeToFile(nm, em, tp, mld) {
-    var fil = "text.txt";
-    fil.open("w");
-    fil.writeln("------------------------------------------------");
-    fil.writeln("name: " + nm.value);
-    fil.writeln("Mail: " + em.value);
-    fil.writeln("Topic: " + tp.value);
-    fil.writeln("Melding: " + mld.value);
-    fil.writeln("------------------------------------------------");
-    fil.Close();
+    //var fil = "text.txt";
+    //fil.open("w");
+    //fil.writeln("------------------------------------------------");
+    //fil.writeln("name: " + nm.value);
+    //fil.writeln("Mail: " + em.value);
+    //fil.writeln("Topic: " + tp.value);
+    //fil.writeln("Melding: " + mld.value);
+    //fil.writeln("------------------------------------------------");
+    //fil.Close();
     document.getElementById("formMelding").innerHTML = 
     "<div id='yes'>Din melding ble sendt!</div>";
     return true;
