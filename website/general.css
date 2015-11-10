@@ -242,9 +242,17 @@ li > ul.underMeny {
 	line-height: 1.2em;
 }
 
+.footerBottom {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	color: #FFF;
+}
+
 /* Til sidekart i footer */
 #sidekart {
 	margin-top: 0;
+	font-size: 15px;
 }
 
 #sidekart li, #sidekart a{
@@ -253,6 +261,8 @@ li > ul.underMeny {
 	list-style-type: none;
 	text-align: left;
 }
+
+
 
 /* Slagord i footer */
 .slagord {
