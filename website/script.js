@@ -12,18 +12,19 @@ var loadPage = function() {
 
   console.log("loading page and scrolling to top");
 
-  //Sjekker om vi ber om a ga til index (ikke #) eller refresher
-  if (window.location.href.indexOf("#/") > -1 ) {
-    var page = window.location.href.split("#/")[1];
-    // Kaller addAnchorEventListeners etter at siden er lastet ned/inn
-    $("#main").load(startPath + "/html/" + page + ".html", addAnchorEventListeners);
-
-  } else {
-    // Om ingen side er spesifisert, lastes home.html opp
-    $("#main").load(startPath +  "/html/home.html");
-
-  }
+  var page = findPage();
+  // Kaller addAnchorEventListeners etter at siden er lastet ned/inn
+  $("#main").load(startPath + "/html/" + page + ".html", addAnchorEventListeners);
   updateNavbar(page);
+}
+
+//Finner hvilken side en er på
+var findPage = function() {
+  if (window.location.href.indexOf("#/") > -1 ) {
+    return window.location.href.split("#/")[1];
+  } else {
+    return "home";
+  }
 }
 
 var handleHrefClick = function(event) {
@@ -73,7 +74,7 @@ $(function () {
     // Ventet til nav har lastet inn
 
     // Oppdaterer navbar etter at den er lastet opp
-    var page = window.location.href.split("#/")[1];
+    var page = findPage();
     updateNavbar(page);
 
     // Lytt på alle "a" elementer som har en "href" adresse
@@ -137,7 +138,6 @@ var scrollToAnchor = function () {
   }, 100);
 };
 
-
 // Åpner og lukker divs
 visDiv = function (divId, smallOrBig) {
 
@@ -149,8 +149,6 @@ visDiv = function (divId, smallOrBig) {
     //Skjuler den lille visningen av oppskriften
     $("#"+divId + " .divSmall").removeClass("active");
     $("#"+divId + " .divSmall").toggleClass("hidden");
-
-
   }
 
   //Hvis det er divBig
