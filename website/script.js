@@ -1,29 +1,30 @@
 var openDiv = null;
 var loadPage = function() {
+  console.log("loading page and scrolling to top");
+  
   openDiv = null;
   $(window).scrollTop(0) ;
-
-  console.log("loading page and scrolling to top");
 
   //Sjekker om vi ber om a ga til index (ikke #) eller refresher
   if (window.location.href.indexOf("#/") > -1 ) {
     var page = window.location.href.split("#/")[1];
     // Kaller addAnchorEventListeners etter at siden er lastet ned/inn
     $("#main").load("/html/" + page + ".html", addAnchorEventListeners);
-
+    updateNavbar(page);
   } else {
     // Om ingen side er spesifisert, lastes home.html opp
     $("#main").load("/html/home.html");
+    updateNavbar("home");
 
   }
-  updateNavbar(page);
 }
 
 var handleHrefClick = function(event) {
+  console.log("handleHrefClick");
+
   // Stopp klikket fra å navigere oss bort
   event.preventDefault();
 
-  console.log("handleHrefClick");
   // Finn addressen (verdien til href) som var lenket til
   var page = $(this).attr("href");
 
@@ -38,14 +39,13 @@ var handleHrefClick = function(event) {
     page = "home";
   }
 
-
   window.history.pushState({},"", "/#/" + page);
 
   // Last inn den adressen inn i main
   var path = "/html/" + page + ".html";
   $("#main").load(path);
 
-  updateNavbar(page);
+  //updateNavbar(page);
   
   loadPage();
 
@@ -53,13 +53,13 @@ var handleHrefClick = function(event) {
 }
 
 //Laster ei ny side når vi klikker tilbake
-window.addEventListener('popstate', loadPage); 
-  
+window.addEventListener('popstate', loadPage);   
 
 // Kortversjon for document.onload
 // Laster inn rett html-dokument i rett tag
 $(function () {
-  loadPage();
+  console.log("on onload");
+ 
 
   // Last inn navigasjonen inn i nav elementet
   $("#navBar").load("/html/nav.html", function () {
@@ -78,15 +78,24 @@ $(function () {
     // Lytt på alle "a" elementer som har en "href" adresse
     $('#footer a[href]').click(handleHrefClick);
   });
+
+  loadPage();
+
 });
 
 var updateNavbar = function(page) {
-
+  console.log("updating Navbar");
+  console.log("page: ", page);
   //Fjerner klassen highlight fra listeelementet med den klassen 
   $("li.highlight").removeClass("highlight");
-  var el = $("[href='/#/"+page+"']").closest(".navButton").addClass("highlight");
+  if (page == "home") {
+    //Spesielt for homesiden, da den i navbaren blir henvist til med /
+    $("#navBar a[href='/']").closest(".navButton").addClass("highlight");
+  } else {
+    var el = $("#navBar a[href='/#/"+page+"']").closest(".navButton").addClass("highlight");
+    console.log("el: ", el);
+  }
 }
-
 
 //Holder navbaren fiksert i toppen ved å legge til classen fixed om det er lengre til toppen enn headerContents hoyde
 $(window).bind('scroll', function () {
@@ -96,7 +105,6 @@ $(window).bind('scroll', function () {
         $('#navBar').removeClass('fixed');
     }
 });
-
 
 //Legge til listeners til ankerne
 var addAnchorEventListeners = function() {
