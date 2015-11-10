@@ -232,6 +232,10 @@ li > ul.underMeny {
 	line-height: 1.2em;
 }
 
+#footerContent p {
+	font-size: 12pt;
+}
+
 #footerContent a {
 	color: white;
 	font-style: italic;
@@ -245,12 +249,27 @@ li > ul.underMeny {
 .footerBox {
 	vertical-align: top;
 	display: inline-block;
-	width: 300px;
-	margin: 0 5px;
 	padding: 10px 10px;
 	line-height: 1.2em;
 }
 
+#footerBox1 {
+width: 270px;
+margin-left: 10px;
+}
+
+#footerBox2 {
+width: 320px;
+margin-left: 40px;
+position: relative;
+
+}
+
+#footerBox3 {
+width: 270px;
+margin-left: 20px;
+position: relative;
+}
 
 .footerBottom {
 	width: 100%;
@@ -258,9 +277,12 @@ li > ul.underMeny {
 	text-align: center;
 	color: #FFF;
 }
-
-#footerLogo img:hover {
+#footerIconBox a:hover{
     text-decoration: none;
+
+}
+#footerLogo{
+margin-top: 0;
 
 }
 
@@ -693,6 +715,23 @@ th, td {
     border: 2px solid rgba(130, 176, 84, 0.5);
 }
 
+#linkerSide a:link, a:visited{
+	display: block;
+	font-style: normal;
+	height: 30px;
+	width: 170px;
+	padding: 3px;
+	text-align: center;
+	background-color: rgba(130, 176, 84,1);
+	border: 2px solid rgba(52, 76, 56, 1);
+	color: #FFF;
+}
+
+#linkerSide a:hover {
+	background-color: #FFF;
+	border: 2px solid rgba(130, 176, 84,1);
+	color: rgba(52, 76, 56, 1);
+}
 
 /*Mobil og tablet design*/
 
