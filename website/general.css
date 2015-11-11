@@ -653,6 +653,7 @@ th, td {
     font-family: libelSuit;
     font-size: 25px;
     text-align: center;
+    letter-spacing:2px;
 }
 
 .mellomtittel {
