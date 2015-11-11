@@ -42,6 +42,8 @@ var handleHrefClick = function(event) {
   // Lager den endrede page-variabelen i page, hvor jeg har fjernet .html fra slutten
   page = page.split("/#/")[1];
 
+  console.log("page from split: ", page);
+
   if (!page) {
     page = "home";
   }
@@ -69,6 +71,9 @@ window.addEventListener('popstate', loadPage);
 $(function () {
   loadPage();
 
+  // Lytter på header 
+  $('#header a[href]').click(handleHrefClick);
+
   // Last inn navigasjonen inn i nav elementet
   $("#navBar").load(startPath + "/html/nav.html", function () {
     // Ventet til nav har lastet inn
@@ -90,11 +95,13 @@ $(function () {
   });
 });
 
+// Oppdaterer navbar (hvilken side vi er på)
 var updateNavbar = function(page) {
 
   console.log("updating navbar: ", page);
   //Fjerner klassen highlight fra listeelementet med den klassen 
   $("li.highlight").removeClass("highlight");
+  //Ser om siden er home eller udefiniert for så å markere home som aktuell side
   if (page == "home" || page == undefined) {
     $("[href='/']").closest(".navButton").addClass("highlight");
   } else {
@@ -105,7 +112,7 @@ var updateNavbar = function(page) {
 
 //Holder navbaren fiksert i toppen ved å legge til classen fixed om det er lengre til toppen enn headerContents hoyde
 $(window).bind('scroll', function () {
-    if ($(window).scrollTop() > $("#headerContent").outerHeight()) {
+    if ($(window).scrollTop() > $("#header").outerHeight()) {
         $('#navBar').addClass('fixed');
     } else {
         $('#navBar').removeClass('fixed');
@@ -116,7 +123,6 @@ $(window).bind('scroll', function () {
 //Legge til listeners til ankerne
 var addAnchorEventListeners = function() {
   var anchors = document.getElementsByClassName("anchor");
-  console.log(anchors);
   for (var i = 0; i < anchors.length; i++) {
       anchors[i].addEventListener("click", scrollToAnchor);
   }  

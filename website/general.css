@@ -708,18 +708,19 @@ th, td {
 @media screen and (max-width: 993px) {
 }
 
-/*#ankerMeny {
+#ankerMeny {
     width: 200px;
     position: fixed;
     float: left;
     background-color: #FFF;
     margin: 0 auto;
-}*/
+}
 
-/*.fixed {
+/*For å holde menyen på plass når en scroller*/
+.fixed {
     position: fixed;
     top: 0;
-}*/
+}
 
 /* Slagord i footer 
 .slagord {
