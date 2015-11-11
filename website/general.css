@@ -1,3 +1,10 @@
+/*
+    Filnavn: general.css
+    Skrevet av: Aasne ...., Dora Oline Eriksrud, Julie ....., Katrine FYLL INN ETTERNAVN
+    Når: November 2015
+    Hensikt: css nødvendig for å få ønsket design
+*/
+
 /* Design av hovedelementer. */
 html {
     height: 100%;
@@ -27,8 +34,9 @@ p {
     text-align: justify;
 }
 
+/*Laster inn font-en*/
 @font-face {
-    font-family: 'libelSuit'; /*a name to be used later*/
+    font-family: 'libelSuit'; /* Navn for å bruke senere*/
     src: url(libelsuit.woff);
 }
 
@@ -81,6 +89,12 @@ h3 {
 #navBar {
     width: 100%;
     font-family: sans-serif;
+}
+
+/*For å holde menyen på plass når en scroller*/
+.fixed {
+    position: fixed;
+    top: 0;
 }
 
 #navList {
@@ -139,6 +153,7 @@ h3 {
 }
 
 #navList li:hover {
+    /*Slik at overgangen skjer gradivs */
     transition: 0.2s;
     color: black;
     background: white;
@@ -417,9 +432,10 @@ li {
     margin-bottom: 8px;
 }
 
-
+/* Til de store bildene når en åpner oppskrifta*/
 .meksikanskGryteBg {
 	background-image: url("oppskriftsbilder/meksikanskbonnegryte2.jpg");
+    /*Hvor på bildet "fokuset" er/hva av bildet som viser i glippen */
 	background-position-y: 55%;
 }
 
@@ -440,6 +456,7 @@ li {
 
 .BLT-sandwichBg {
 	background-image: url("oppskriftsbilder/BLT-sandwich.jpg");
+    background-position-y: 40%; /* FYLL INN */
 }
 .ostskinkemuffinsBg {
 	background-image: url("oppskriftsbilder/ostskinkemuffins.jpg");
@@ -464,6 +481,7 @@ li {
 	background-position-y: 40%;
 
 }
+
 /* alltidHa.html */
 .underSeksjon {
         width: 261px;
@@ -497,68 +515,36 @@ figcaption a {
 	color: black;
 }
 
-/*Alt med div her har � gj�re med �pne/lukke divene*/
-.divSmallOko {
-	overflow: hidden;
-	transition: 0.2s;
-	height: auto;
-	display: block;
-}
 
-.divSmallOko:hover {
-	cursor: pointer;
-	background-color: #544B4B;
-	color: white;
-	transition: 0.2s;
-}
 
-.divBigOko {
-   	margin: 0 auto;
-	overflow: hidden;
-	height: 0;
-	transition: height 0.5s;
-	display: none;
+/* Matlagingstips */
+iframe {
+    width: 420px;
+    height: 315px;
+    margin-top: 24px;
 }
-
-.active {
-	display: block;
-	height: auto;
-	transition: height 0.5s;
+.tips_oppsett {
+    width: auto;
+    display: block;
 }
-
-.hidden {
-	display: none;
-	height: auto;
-	transistion: height 0.5s;
+.tips_left {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.5em;
 }
-
-iframe{
-        width: 420px;
-        height: 315px;
-        margin-top: 24px;
-}
-.tips_oppsett{
-        width: auto;
-        display: block;
-}
-.tips_left{
-        display: inline-block;
-        vertical-align: top;
-        line-height: 1.5em;
-}
-.tips_right{
-        display: inline-block;
-        width: 420px;
-        margin-left: 40px;
-        vertical-align: top;
-        line-height: 1.5em;
+.tips_right {
+    display: inline-block;
+    width: 420px;
+    margin-left: 40px;
+    vertical-align: top;
+    line-height: 1.5em;
 }
 .tips_fremgangsmate {
-        vertical-align: top;
-        width: 500px;
-        line-height: 1.5em;
-        margin-left: 40px;
-        display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    line-height: 1.5em;
+    margin-left: 40px;
+    display: inline-block;
 }
 
 /* Kontaktskjema */
@@ -575,7 +561,7 @@ iframe{
     line-height: 25px;
 }
 
-#formwrap .form-field  input{
+#formwrap .form-field input{
     display: block;
     width: 600px;
     height: 25px;
@@ -625,8 +611,7 @@ iframe{
     color: rgba(130, 176, 84, 1);
 }
 
-/*Style for økonomi og planlegging og lagrin*/
-
+/*For økonomi og planlegging, og lagring*/
 .num {
     list-style: decimal;
 }
@@ -678,7 +663,7 @@ th, td {
     border: 2px solid rgba(130, 176, 84, 0.5);
 }
 
-/*Til andreSider.html*/
+/*Til linker-siden*/
 #linkerSide a:link, #linkerSide a:visited{
 	display: block;
 	font-style: normal;
@@ -697,8 +682,7 @@ th, td {
 	color: rgba(52, 76, 56, 1);
 }
 
-/*Mobil og tablet design*/
-
+/*Mobil og tablet design FYLL INN*/
 @media screen and (max-width: 481px) {
 }
 
@@ -716,12 +700,8 @@ th, td {
     margin: 0 auto;
 }
 
-/*For å holde menyen på plass når en scroller*/
-.fixed {
-    position: fixed;
-    top: 0;
-}
 
+/* SJEKK UT Hva trengs her? */
 /* Slagord i footer 
 .slagord {
 	text-align: center;
@@ -778,3 +758,40 @@ li.listBullet {
     color: #B2CDC9;
     background: #B2CDC9;
 }*/
+
+/* Brukes noe av dette? SJEKK
+.divSmallOko {
+    overflow: hidden;
+    transition: 0.2s;
+    height: auto;
+    display: block;
+}
+
+.divSmallOko:hover {
+    cursor: pointer;
+    background-color: #544B4B;
+    color: white;
+    transition: 0.2s;
+}
+
+.divBigOko {
+    margin: 0 auto;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s;
+    display: none;
+}
+
+.active {
+    display: block;
+    height: auto;
+    transition: height 0.5s;
+}
+
+.hidden {
+    display: none;
+    height: auto;
+    transistion: height 0.5s;
+}
+
+*/

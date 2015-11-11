@@ -1,27 +1,40 @@
+/*
+  Filnavn: script.js
+  Skrevet av: Dora Oline Eriksrud og Katrine FYLL INN
+  Når: November 2015
+  Hensikt: samling av Jquery og Javascript funksjoner nødvendig for å få ønsket funksjonalitet
+*/
+// Lagrer hvilken div med oppskrift som er åpen
 var openDiv = null;
-// For å kunne kjøre den på folk-side
+
+// For å kunne kjøre den på folk-side, henter jeg pathen jeg starter med (f.eks. doraoe/studmat/)
 if (window.location.hostname === "folk.ntnu.no") {
-  var startPath = "/doraoe/studmat/";
+  var startPath = "/doraoe/studmat/"; // SJekk om kan gjøres om til window.location.pathName
 } else {
   var startPath = "";
 }
 
+// Laster opp siden
 var loadPage = function() {
-  console.log("loading page and scrolling to top");
   
+  // Setter openDiv til å være null (ingen div skal være åpne da)
   openDiv = null;
+  // Går til toppen av siden
   $(window).scrollTop(0) ;
 
-  console.log("loading page and scrolling to top");
-
+  // Kallre funksjonen findPage() for å få siden vi er på
   var page = findPage();
+
   // Kaller addAnchorEventListeners etter at siden er lastet ned/inn
   $("#main").load(startPath + "/html/" + page + ".html", addAnchorEventListeners);
+
+  // Oppdaterer navBaren
   updateNavbar(page);
 }
 
 //Finner hvilken side en er på
 var findPage = function() {
+  // Hvis det er en #/ i pathen (altså ikke er på index)
   if (window.location.href.indexOf("#/") > -1 ) {
     return window.location.href.split("#/")[1];
   } else {
@@ -29,6 +42,7 @@ var findPage = function() {
   }
 }
 
+// Takler "click" events som lyttes til
 var handleHrefClick = function(event) {
   console.log("handleHrefClick");
 
@@ -38,6 +52,7 @@ var handleHrefClick = function(event) {
   // Finn addressen (verdien til href) som var lenket til
   var page = $(this).attr("href");
 
+  // Hvis vi ikke skal forflytte oss
   if (page === "#") {
      return false;
   }
@@ -45,8 +60,7 @@ var handleHrefClick = function(event) {
   // Lager den endrede page-variabelen i page, hvor jeg har fjernet .html fra slutten
   page = page.split("/#/")[1];
 
-  console.log("page from split: ", page);
-
+  // Hvis vi f.eks. bare har fått /, ergo ikke får noe element etter /#/ i split
   if (!page) {
     page = "home";
   }
@@ -56,8 +70,6 @@ var handleHrefClick = function(event) {
   // Last inn den adressen inn i main
   var path = startPath +  "/html/" + page + ".html";
   $("#main").load(path);
-
-  //updateNavbar(page);
   
   loadPage();
 
@@ -67,13 +79,11 @@ var handleHrefClick = function(event) {
 //Laster ei ny side når vi klikker tilbake
 window.addEventListener('popstate', loadPage);   
 
-// Kortversjon for document.onload
-// Laster inn rett html-dokument i rett tag
+// Laster inn rett html-dokument i rett tag når vi laster inn siden (kortversjon for document.onload)
 $(function () {
   console.log("on onload");
  
-
-  // Lytter på header 
+  // Lytter på a-tagger i header 
   $('#header a[href]').click(handleHrefClick);
 
   // Last inn navigasjonen inn i nav elementet
@@ -90,7 +100,7 @@ $(function () {
  
   $()
   // Last inn footer inn i footer elementet
-  $("#footer").load(startPath +  "/html/footer.html", function () {
+  $("#footer").load(startPath + "/html/footer.html", function () {
 
     // Lytt på alle "a" elementer som har en "href" adresse
     $('#footer a[href]').click(handleHrefClick);
@@ -104,9 +114,10 @@ $(function () {
 var updateNavbar = function(page) {
 
   console.log("updating navbar: ", page);
+
   //Fjerner klassen highlight fra listeelementet med den klassen 
   $("li.highlight").removeClass("highlight");
-  //Ser om siden er home eller udefiniert for så å markere home som aktuell side
+  //Ser om siden er home eller undefiniert for så å markere home som aktuell side
   if (page == "home" || page == undefined) {
     $("[href='/']").closest(".navButton").addClass("highlight");
   } else {
@@ -114,7 +125,7 @@ var updateNavbar = function(page) {
   }
 }
 
-//Holder navbaren fiksert i toppen ved å legge til classen fixed om det er lengre til toppen enn headerContents hoyde
+//Holder navbaren fiksert i toppen ved å legge til classen fixed om det er lengre til toppen enn headers hoyde
 $(window).bind('scroll', function () {
     if ($(window).scrollTop() > $("#header").outerHeight()) {
         $('#navBar').addClass('fixed');
@@ -127,28 +138,35 @@ $(window).bind('scroll', function () {
 var addAnchorEventListeners = function() {
   var anchors = document.getElementsByClassName("anchor");
   for (var i = 0; i < anchors.length; i++) {
+      // Når de trykkes på, kjører funkjsonen scrollToAnchor som scroller til rett plass på siden
       anchors[i].addEventListener("click", scrollToAnchor);
   }  
 };
 
-//For ankermenyen
+//For ankermenyen, slik at en scroller til rett plass
 var scrollToAnchor = function () {
+
   console.log("scroll to Anchor");
+  
+  // Henter "iden" en skal scrolle til
   var id = $(this).attr("data-anchor");
-  console.log("id:", id);
+
+  // Finner elementet med den iden
   var el = document.getElementById(id);
+
   // Finner posisjonen til elementet
   var offset = $(el).offset();
 
-  // Scroller elegant ned til elementet
+  // Scroller elegant ned til elementet, ikke brått og brutalt
   $("html, body").animate({
     // Finner posisjonen minus høyden til navbaren
     scrollTop: offset.top - $("#navBar").height()*2
   }, 100);
 };
 
-// Åpner og lukker divs
+// Åpner og lukker divs, tar inn ideen til elementet som har de ulike divene til barn, og om den kalles på en liten/stor div
 visDiv = function (divId, smallOrBig) {
+  // SJEKK kan forenkles
 
   // Vis det er divSmall funksjonen kjøres på
   if (smallOrBig == "divSmall") {
