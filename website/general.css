@@ -1,22 +1,30 @@
-/* Generelt desing */
-
+/* Design av hovedelementer. */
 html {
-	height: 100%;
+    height: 100%;
 }
 
 body {
-	font-size: 14pt;
-	margin: 0px;
-	padding: 0px;
-	height: 100%;
-	width: 100%;
-        line-height: 30px;
+    font-size: 14pt;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    line-height: 30px;
 }
 
+#page{
+    position: absolute;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    background-color: rgba(131,174,84,0.2);
+}
+
+/* Tekst, fonts og skrift.*/
 p {
-	font-family:"Georgia", serif;
-	font-size: 14pt;
-	text-align: justify;
+    font-family:"Georgia", serif;
+    font-size: 14pt;
+    text-align: justify;
 }
 
 @font-face {
@@ -25,14 +33,14 @@ p {
 }
 
 .textStyle {
-	font-family:"Georgia", serif;
-	font-size: 14pt;
+    font-family:"Georgia", serif;
+    font-size: 14pt;
 }
 
 h1, h2, h3 {
-	font-family: libelSuit;
-	text-align: center;
-	letter-spacing: 0.05em;
+    font-family: libelSuit;
+    text-align: center;
+    letter-spacing: 0.05em;
 }
 
 h1 {
@@ -41,175 +49,163 @@ h1 {
 }
 
 h2 {
-	font-size: 27pt;
+    font-size: 27pt;
 }
 
 h3 {
-	font-size: 22pt;
+    font-size: 22pt;
 }
 
-#page{
-	position: absolute;
-	min-height: 100%;
-	height: auto;
-	width: 100%;
-	background-color: rgba(131,174,84,0.2);
-}
-
+/* Header og innhold i header. */
 #headerContent{
-	font-family: sans-serif;
-	text-align: center;
-	margin-top: 0px;
-	padding-top: 0px;
-	width: 100%;
-	background-color: rgba(130, 176, 84,1);
-	height: 350px;
-	color: white;
-	overflow: hidden;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 100%;
+    background-color: rgba(129, 176, 82,1);
+    height: 375px;
+    color: white;
+    overflow: hidden;
 }
 
-.fixed {
-	position: fixed;
-	top: 0;
+#logo {
+    margin-top: -15px;
 }
 
-/* Til navigasjonsbaren */
+/* Navigasjonsbar */
 .navfooterColor {
-	background-color: rgba(64, 74, 38,1);
+    background-color: rgba(52, 76, 56, 1);
 }
 
 #navBar {
-	width: 100%;
-	font-family: sans-serif;
+    width: 100%;
+    font-family: sans-serif;
 }
 
 #navList {
-	font-size: 15pt;
-	width: 1000px;
-	margin: 0 auto;
-	padding-left: 0;
+    font-size: 15pt;
+    width: 1000px;
+    margin: 0 auto;
+    padding-left: 0;
 }
 
 #navlist ul {
-	list-style: none;
-  	padding: 0;
-  	margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 #navList > li {
-	text-align: center;
-	padding-left: 0;
-	display: inline-block;
-	margin: 0 auto;
+    text-align: center;
+    padding-left: 0;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 #navList > li > a{
-	text-align: center;
-	padding-left: 0;
-	display: inline-block;
-	color: #FFFFFF;
-	width: 250px;
-	margin: 0 auto;
-	text-transform: uppercase;
-	padding: 10px 0;
+    text-align: center;
+    padding-left: 0;
+    display: inline-block;
+    color: #FFFFFF;
+    width: 250px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 10px 0;
 }
 
 #navList > li.highlight > a{
-	color: #544B4B;
+    color: #544B4B;
 }
 
 .highlight {
-	background-color: white;
+    background-color: white;
 }
 
 #navList a {
-	text-decoration: none;
-	color: #FFFFFF;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 #navlist a:hover {
-	font-style: normal;
+    font-style: normal;
 }
 
 #navList li ul {
-	position: absolute;
-	display: none;
-	z-index: 999;
-	opacity: 0.8;
+    position: absolute;
+    display: none;
+    z-index: 999;
+    opacity: 0.8;
 }
 
 #navList li:hover {
-	transition: 0.2s;
-	color: black;
-	background: white;
+    transition: 0.2s;
+    color: black;
+    background: white;
 }
 
 #navList li:hover > a{
-	transition: 0.2s;
-	color: #544B4B;
+    transition: 0.2s;
+    color: #544B4B;
 	
 }
 
 #navList li:hover ul {
-	display: block;
-	/*background-color: rgb(129, 165, 148);*/
-        background-color: rgb(64,73,38);
-	width: 250px;
-  	padding: 5px 0;
-  	margin-top: 0px;
-	font-size: 20px;
+    display: block;
+    background-color: rgb(52, 76, 56);
+    width: 250px;
+    padding: 5px 0;
+    margin-top: 0px;
+    font-size: 20px;
 }
 
 li > ul.underMeny {
-	display: none;
-	visibility: hidden;
-	height: auto;
-	padding-top: 5px;
+    display: none;
+    visibility: hidden;
+    height: auto;
+    padding-top: 5px;
 }
 
 #navList li ul li {
-	display: block;
-	height: 30px;
-	background-color: rgb(64,73,38);
-	padding: 5px 0px;
-	margin: 10px;
+    display: block;
+    height: 30px;
+    background-color: rgb(52, 76, 56);
+    padding: 5px 0px;
+    margin: 10px;
 }
 
-#ankerMeny {
-	width: 200px;
-	position: fixed;
-	float: left;
-	background-color: #FFF;
-	margin: 0 auto;
-}
-
-/*Til hovedboksen */
+/* Hovedboksen */
 #main {
-	font-family: "Georgia", serif;
-	font-size: 14pt;
-	background-color: white;
-	margin: 0 auto;
-	padding: 30px;
-	width: 940px;
-	min-height: 1000px;
-	height: auto !important;
-	height: 100%;
-	box-shadow: 0 2px 2px 2px rgba(131,174,84,0.6);
+    font-family: "Georgia", serif;
+    font-size: 14pt;
+    background-color: white;
+    margin: 0 auto;
+    padding: 30px;
+    width: 940px;
+    min-height: 1000px;
+    height: auto !important;
+    height: 100%;
+    box-shadow: 0 2px 2px 2px rgba(131,174,84,0.6);
 }
 
 #main a:link{
-	font-style: italic;
+    font-style: italic;
 }
 
 #main a:hover{
-	text-decoration: none;
+    text-decoration: none;
 }
 
 #mainHeading {
-	font-family: sans-serif;
+    font-family: sans-serif;
 }
 
-/* Til footer */
+/* Footer og innhold i footer. */
+#footerLogo {
+    margin-top: 50px;
+    margin-left: -50px;
+}
+
 #footer{
     left: 0;
     bottom: 0;
@@ -217,131 +213,160 @@ li > ul.underMeny {
 }
 
 #footerContent {
-	margin: 0 auto;
-	width: 1000px;
-	color: white;
-	line-height: 1.2em;
+    margin: 0 auto;
+    width: 1000px;
+    color: white;
+    line-height: 1.2em;
+}
+
+#footerContent p {
+    font-size: 12pt;
 }
 
 #footerContent a {
-	color: white;
-	font-style: italic;
+    color: white;
+    font-style: italic;
 }
 
 #footerContent a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
-
 
 .footerBox {
-	vertical-align: top;
-	display: inline-block;
-	width: 300px;
-	margin: 0 5px;
-	padding: 10px 10px;
-	line-height: 1.2em;
+    vertical-align: top;
+    display: inline-block;
+    padding: 10px 10px;
+    line-height: 1.2em;
 }
 
-/* Til sidekart i footer */
+#footerBox1 {
+    width: 270px;
+    margin-left: 10px;
+}
+
+#footerBox2 {
+    width: 320px;
+    margin-left: 40px;
+    position: relative;
+}
+
+#footerBox3 {
+    width: 270px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.footerBottom {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #FFF;
+}
+
+#footerIconBox a:hover{
+    text-decoration: none;
+}
+
+#footerLogo{
+    margin-top: 0;
+}
+
+/* Sidekart i footer */
 #sidekart {
-	margin-top: 0;
+    margin-top: 0;
+    font-size: 15px;
 }
 
 #sidekart li, #sidekart a{
-	text-decoration: none;
-	color: white; 
-	list-style-type: none;
-	text-align: left;
-}
-
-/* Slagord i footer */
-.slagord {
-	text-align: center;
-	font-size: 1.5em;
+    text-decoration: none;
+    color: white; 
+    list-style-type: none;
+    text-align: left;
 }
 
 /* Til diver med apne og lukke-mekanisme */
 .divSmall {
-	overflow: hidden;
-	transition: 0.2s;
-	height: auto;
-	display: block;
+    overflow: hidden;
+    transition: 0.2s;
+    height: auto;
+    display: block;
 }
 
 .divSmall:hover {
-	cursor: pointer;
-	background-color: #544B4B;
-	color: white;
-	transition: 0.2s;
+    cursor: pointer;
+    background-color: rgb(52, 76, 56);
+    color: white;
+    transition: 0.2s;
 }
 
 .divBig {
-   	margin: 0 auto;
-	overflow: hidden;
-	height: 0;
-	transition: height 0.5s;
-	display: none;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s;
+    display: none;
 }
 
 .active {
-	display: block;
-	height: auto;
-	transition: height 0.5s;
+    display: block;
+    height: auto;
+    transition: height 0.5s;
 }
 
 .divSmallBilde {
-	float: left;
-	margin-right: 20px;
+    float: left;
+    margin-right: 20px;
 }
 
 .beskrivelse {
-	font-style: italic;
-	vertical-align: top;
-	padding: 0 5px;
+    font-style: italic;
+    vertical-align: top;
+    padding: 0 5px;
 }
 
 .divTekst {
-	float: left;
-	width: 580px;
+    float: left;
+    width: 580px;
 }
 
 .divBig img {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .hidden {
-	display: none;
-	height: auto;
-	transistion: height 0.5s;
+    display: none;
+    height: auto;
+    transistion: height 0.5s;
 }
 
 .divTips, .kilde {
 	padding-left: 36px;
+	color: black;
 }
 
 
 .listHeading {
-	font-size: 16pt;
+    font-size: 16pt;
 }
 
 .rightCol {
-	display: inline-block;
-	width: 600px;
+    display: inline-block;
+    width: 600px;
 }
 
 a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
 
 li > ul.underMeny {
-	display: none;
-	visibility: hidden;
+    display: none;
+    visibility: hidden;
 }
 
 li {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 .divBigImg {
@@ -354,111 +379,112 @@ li {
 
 /* Til oppskrifter */
 .oppskrift {
-	width: auto;
-	margin: 0 -30px;
-	display: block;
+    width: auto;
+    margin: 0 -30px;
+    display: block;
 }
 
 .oppSkriftsInnhold {
-	padding: 30px;
-	width: 900px;
+    padding: 30px;
+    width: 900px;
 }
 
 .oppskriftStorrelse {
-	font-size: 12pt;
-	font-style: italic;
+    font-size: 12pt;
+    font-style: italic;
 }
 
 .ingredienser {
-	list-style-type: none;
-	display: inline-block;
-	width: 300px;
-	vertical-align: top;
+    list-style-type: none;
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
 }
 
 .ingredienser li {
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
 }
 
 .fremgangsmate {
-	vertical-align: top;
-	width: 500px;
-	line-height: 1.5em;
-	list-style-type: none;
+    vertical-align: top;
+    width: 500px;
+    line-height: 1.5em;
+    list-style-type: none;
 }
 
 .fremgangsmate li {
-	margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 
 .meksikanskGryteBg {
-	background-image: url("../oppskriftsbilder/meksikanskbonnegryte2.jpg");
+	background-image: url("oppskriftsbilder/meksikanskbonnegryte2.jpg");
 	background-position-y: 55%;
 }
 
 .gulrotSuppeBg {
-	background-image: url("../oppskriftsbilder/gulrotsuppe.jpg");
+	background-image: url("oppskriftsbilder/gulrotsuppe.jpg");
 	background-position-y: 40%;
 }
 
 .falaflerBg {
-	background-image: url("../oppskriftsbilder/falafler.jpg");
+	background-image: url("oppskriftsbilder/falafler.jpg");
 	background-position-y: 40%;
 }
 
 .kyllingfrikasseBg {
-	background-image: url("../oppskriftsbilder/kyllingfrikasse2.jpg");
+	background-image: url("oppskriftsbilder/kyllingfrikasse2.jpg");
 	background-position-y:  51%;
 }
 
 .BLT-sandwichBg {
-	background-image: url("../oppskriftsbilder/BLT-sandwich.jpg");
+	background-image: url("oppskriftsbilder/BLT-sandwich.jpg");
 }
 .ostskinkemuffinsBg {
-	background-image: url("../oppskriftsbilder/ostskinkemuffins.jpg");
+	background-image: url("oppskriftsbilder/ostskinkemuffins.jpg");
 	background-position-y: 40%;
 }
 .pastasalatBg {
-	background-image: url("../oppskriftsbilder/pastasalat.jpg");
+	background-image: url("oppskriftsbilder/pastasalat.jpg");
 	background-position-y: 40%;
 
 }
 .pitaMedKremostBg {
-	background-image: url("../oppskriftsbilder/pitaMedKremost.jpg");
+	background-image: url("oppskriftsbilder/pitaMedKremost.jpg");
 	background-position-y: 40%;
 }
 .pizzasnurrerBg {
-	background-image: url("../oppskriftsbilder/Pizzasnurrer.jpg");
+	background-image: url("oppskriftsbilder/Pizzasnurrer.jpg");
 	background-position-y: 40%;
 }
 
 .tortillapizzaBg {
-	background-image: url("../oppskriftsbilder/tortillapizza.jpg");
+	background-image: url("oppskriftsbilder/tortillapizza.jpg");
 	background-position-y: 40%;
+
 }
-/* Design til alltidHa */
+/* alltidHa.html */
 .underSeksjon {
-	width: 261px;
-	height: 880px;
-	padding: 10px;
-	margin: 10px;
-	border: 1px solid grey;
-	border-radius: 4px;
-	display: inline-table;
-	text-align: left;
+        width: 261px;
+        height: 880px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        display: inline-table;
+        text-align: left;
 }
 
 .underSeksjon > figure > img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	height: 120px;
-	width: 120px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 120px;
+        width: 120px;
 }
 .underSeksjon h3 {
-	text-align: center;	
+        text-align: center;	
 }
 
 figcaption {
@@ -467,6 +493,9 @@ figcaption {
 	line-height: 1em;
 }
 
+figcaption a {
+	color: black;
+}
 
 /*Alt med div her har � gj�re med �pne/lukke divene*/
 .divSmallOko {
@@ -532,22 +561,11 @@ iframe{
         display: inline-block;
 }
 
-ul.listBullet {
-    line-height: 1.5em;
-    font-family:"Georgia", serif;
-    width: 900px;
-    margin-left: -10px;
-}
-
-li.listBullet {
-    padding: 20px;
-}
-
+/* Kontaktskjema */
 #formwrap {
     width: 700px;
     margin: 0 auto;
 }
-
 
 #formwrap .form {
     width: 600px;
@@ -556,7 +574,6 @@ li.listBullet {
     font-family: sans-serif;
     line-height: 25px;
 }
-
 
 #formwrap .form-field  input{
     display: block;
@@ -573,7 +590,6 @@ li.listBullet {
     height: 25px;
     width: 600px;
 }
-
 
 #formMelding {
 	margin: 0 auto;
@@ -596,19 +612,13 @@ li.listBullet {
 	color: #FFF;
 }
 
-/*Style for ankerbar*/
-
+/* Ankerbar */
 #meny {
     text-align: center;
     font-family:"Georgia", serif;
     margin-top: -10px;
     margin-bottom: 30px;
     font-style: oblique;
-}
-
-.linje {
-    color: #B2CDC9;
-    background: #B2CDC9;
 }
 
 .anchor:hover {
@@ -656,9 +666,36 @@ th, td {
 .mellomtittel {
     font-weight: normal;
     font-style: oblique;
-    margin-bottom: -13px;
+    margin-bottom: 0px;
+    margin-top: 10px;
 }
 
+.okonomi > #sifo {
+    margin-top: 30px;
+    margin-left: 30px;
+    float: right;
+    text-align: center;
+    border: 2px solid rgba(130, 176, 84, 0.5);
+}
+
+/*Til andreSider.html*/
+#linkerSide a:link, #linkerSide a:visited{
+	display: block;
+	font-style: normal;
+	height: 30px;
+	width: 170px;
+	padding: 3px;
+	text-align: center;
+	background-color: rgba(130, 176, 84,1);
+	border: 2px solid rgba(52, 76, 56, 1);
+	color: #FFF;
+}
+
+#linkerSide a:hover {
+	background-color: #FFF;
+	border: 2px solid rgba(130, 176, 84,1);
+	color: rgba(52, 76, 56, 1);
+}
 
 /*Mobil og tablet design*/
 
@@ -670,3 +707,74 @@ th, td {
 
 @media screen and (max-width: 993px) {
 }
+
+#ankerMeny {
+    width: 200px;
+    position: fixed;
+    float: left;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+/*For å holde menyen på plass når en scroller*/
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+/* Slagord i footer 
+.slagord {
+	text-align: center;
+	font-size: 1.5em;
+}*/
+
+/*Alt med div her har � gj�re med �pne/lukke divene
+.divSmallOko {
+        overflow: hidden;
+        transition: 0.2s;
+        height: auto;
+        display: block;
+}
+
+.divSmallOko:hover {
+        cursor: pointer;
+        background-color: #544B4B;
+        color: white;
+        transition: 0.2s;
+}
+
+.divBigOko {
+        margin: 0 auto;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.5s;
+        display: none;
+}
+
+.active {
+        display: block;
+        height: auto;
+        transition: height 0.5s;
+}
+
+.hidden {
+        display: none;
+        height: auto;
+        transistion: height 0.5s;
+}*/
+
+/*ul.listBullet {
+    line-height: 1.5em;
+    font-family:"Georgia", serif;
+    width: 900px;
+    margin-left: -10px;
+}
+
+li.listBullet {
+    padding: 20px;
+}*/
+
+/*.linje {
+    color: #B2CDC9;
+    background: #B2CDC9;
+}*/
