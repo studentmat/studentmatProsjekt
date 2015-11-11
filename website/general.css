@@ -599,7 +599,7 @@ iframe {
 }
 
 /* Ankerbar */
-#meny {
+.meny {
     text-align: center;
     font-family:"Georgia", serif;
     margin-top: -10px;
@@ -668,6 +668,10 @@ th, td {
     float: right;
     text-align: center;
     border: 2px solid rgba(130, 176, 84, 0.5);
+}
+
+#planlegging,#annet,#Perfekte_egg {
+    margin-bottom: 30px;
 }
 
 /*Til linker-siden*/
