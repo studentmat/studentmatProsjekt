@@ -1,6 +1,6 @@
 /*
     Filnavn: general.css
-    Skrevet av: Aasne ...., Dora Oline Eriksrud, Julie ....., Katrine FYLL INN ETTERNAVN
+    Skrevet av: Aasne Livik Natesrtad, Dora Oline Eriksrud, Julie ....., Katrine FYLL INN ETTERNAVN
     Når: November 2015
     Hensikt: css nødvendig for å få ønsket design
 */
@@ -482,7 +482,7 @@ li {
 
 }
 
-/* alltidHa.html */
+/* Alltid ha */
 .underSeksjon {
         width: 261px;
         height: 880px;
@@ -611,7 +611,14 @@ iframe {
     color: rgba(130, 176, 84, 1);
 }
 
-/*For økonomi og planlegging, og lagring*/
+#ankerMeny {
+    width: 200px;
+    position: fixed;
+    float: left;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+/*Økonomi og planlegging, og lagring*/
 .num {
     list-style: decimal;
 }
@@ -691,107 +698,3 @@ th, td {
 
 @media screen and (max-width: 993px) {
 }
-
-#ankerMeny {
-    width: 200px;
-    position: fixed;
-    float: left;
-    background-color: #FFF;
-    margin: 0 auto;
-}
-
-
-/* SJEKK UT Hva trengs her? */
-/* Slagord i footer 
-.slagord {
-	text-align: center;
-	font-size: 1.5em;
-}*/
-
-/*Alt med div her har � gj�re med �pne/lukke divene
-.divSmallOko {
-        overflow: hidden;
-        transition: 0.2s;
-        height: auto;
-        display: block;
-}
-
-.divSmallOko:hover {
-        cursor: pointer;
-        background-color: #544B4B;
-        color: white;
-        transition: 0.2s;
-}
-
-.divBigOko {
-        margin: 0 auto;
-        overflow: hidden;
-        height: 0;
-        transition: height 0.5s;
-        display: none;
-}
-
-.active {
-        display: block;
-        height: auto;
-        transition: height 0.5s;
-}
-
-.hidden {
-        display: none;
-        height: auto;
-        transistion: height 0.5s;
-}*/
-
-/*ul.listBullet {
-    line-height: 1.5em;
-    font-family:"Georgia", serif;
-    width: 900px;
-    margin-left: -10px;
-}
-
-li.listBullet {
-    padding: 20px;
-}*/
-
-/*.linje {
-    color: #B2CDC9;
-    background: #B2CDC9;
-}*/
-
-/* Brukes noe av dette? SJEKK
-.divSmallOko {
-    overflow: hidden;
-    transition: 0.2s;
-    height: auto;
-    display: block;
-}
-
-.divSmallOko:hover {
-    cursor: pointer;
-    background-color: #544B4B;
-    color: white;
-    transition: 0.2s;
-}
-
-.divBigOko {
-    margin: 0 auto;
-    overflow: hidden;
-    height: 0;
-    transition: height 0.5s;
-    display: none;
-}
-
-.active {
-    display: block;
-    height: auto;
-    transition: height 0.5s;
-}
-
-.hidden {
-    display: none;
-    height: auto;
-    transistion: height 0.5s;
-}
-
-*/
