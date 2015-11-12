@@ -352,7 +352,7 @@ li > ul.underMeny {
 .hidden {
     display: none;
     height: auto;
-    transistion: height 0.5s;
+/*    transistion: height 0.5s; DENNE ER SKREVET FEIL OG NÅR JEG RETTER OPP SER DET RART UT NÅR JEG ÅPNER EN OPPSKRIFT   */
 }
 
 .divTips, .kilde {
