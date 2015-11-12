@@ -636,7 +636,7 @@ table, th, td {
 
 th, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     font-size: 14pt;
     font-family:"Georgia", serif;
 }
