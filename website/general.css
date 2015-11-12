@@ -78,7 +78,7 @@ h3 {
 }
 
 #logo {
-    margin-top: -15px;
+    margin-top: 0px;
 }
 
 /* Navigasjonsbar */
@@ -156,12 +156,12 @@ h3 {
     /*Slik at overgangen skjer gradivs */
     transition: 0.2s;
     color: black;
-    background: white;
+    background: #D3EABB;
 }
 
 #navList li:hover > a{
     transition: 0.2s;
-    color: #544B4B;
+    color: rgb(52, 76, 56);
 	
 }
 
