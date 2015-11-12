@@ -363,6 +363,7 @@ li > ul.underMeny {
 
 .listHeading {
     font-size: 16pt;
+    border-bottom: none !important;
 }
 
 .rightCol {
@@ -407,6 +408,7 @@ li {
 .oppskriftStorrelse {
     font-size: 12pt;
     font-style: italic;
+    border-bottom: none !important;
 }
 
 .ingredienser {
