@@ -101,13 +101,18 @@
                     <b>Hjem:</b> Inneholder nå en boks som plukker ut en tilfeldig oppskrift fra basen av oppskrifter. FYLL INN
                 </p>
                 <p>
-                    <b>Alltid ha på kjøkkenet:</b>
+                    <b>Alltid ha på kjøkkenet:</b> Overskriften har h1-egenskaper. Boksene ble 261px bred og 880px høy. De har alle en padding og margin på 10px, samt en solid, grå border på 1px med radius 4px. Teksten i dem er venstrestilt. 
+                    Iconene ble 120x120px, og fikk en bildetekst på 8pt, som er senter-stilt og har en linjehøyde på 1em.
                 </p>
                 <p>
-                    <b>Middagsretter:</b>
+                    <b>Middagsretter:</b> 
+                        Liten div: boksen med oppskriftnavn og beskrivelse (til høyre for bilde), ble 580px bred. Ved hoover blir fargen rgb(52, 76, 56) SJEKK UT SAMME SOM NAVBAR?, og overgangen til/fra fargen på er 0.2s.
+                        Overgangen til/fra stor og liten div er på 0.5s. 
+                        Stor div: y-posisjonen til det store bildet varierer fra bildet til bildet, men er normalt 40 eller 50%, ca.
+                        Boksen med fremgangsmåte og ingredienser er på 900px og med 30px padding, hvorav fremgangsmåte er på 600px og ingredienser på 300px. Liste-elementene i ingredienser har en solid 1px svart border i bunn med fargen #ccc. Hvert listeelement i fremgangsmåter har en linjeavstand på 1.5em, og elementene i både fremgangsmåte og ingredienser har en 8px bunn-margin.
                 </p>
                 <p>
-                    <b>Matpakkeoppskrifter:</b>
+                    <b>Matpakkeoppskrifter:</b> Samme endringene som for middagsoppskrifter
                 </p>
                 <p>
                     <b>Matlagingstips:</b> Videoene er ikke lenger midtstilt, 
@@ -190,7 +195,7 @@
                                     <p>icons/</p>
                                     <ul class="listeBullet">
                                         <li><p>cabinet.png</p></li>
-                                        <li><p>facebook.jpg</p></li>
+                                        <li><p>facebook.jpg</p></li> SETT INN trenger bare en
                                         <li><p>facebook.png</p></li>
                                         <li><p>instagram.png</p></li>
                                         <li><p>freezer.png</p></li>
@@ -223,11 +228,11 @@
                 <tr>
                     <th scope="col">nav.html</th>
                     <td>Navigasjonsliste med linker til alle sider, med unntak av kontaktskjema, da den linkes til fra footer og ikke navigasjonsbaren.</td>
-                    <td>Alle</td>
+                    <td>Dora Oline</td>
                 </tr>
                 <tr>
                     <th scope="col">alltidHa.html</th>
-                    <td>Vil inneholder tre kolonner med tips til ingredienser/matvarer en bør ha i kjøleskap, fryser eller kjøkkenskapet.</td>
+                    <td>Vil inneholder tre kolonner med tips til ingredienser/matvarer en bør ha i kjøleskap, fryser og kjøkkenskapet.</td>
                     <td>Dora Oline</td>
                 </tr>
                 <tr>
@@ -281,7 +286,7 @@
             <section class="box"> <!-- Punkt 4-->
             <h2>Notater</h2>
             <p>
-                Feilmelding på matlagingstips
+                <b>Feilmelding på matlagingstips:<b> På matlagingstips dukker det opp flere feilmeldinger i consollen. <a href="(http://stackoverflow.com/questions/24490323/google-chrome-cast-sender-error-if-chrome-cast-extension-is-not-installed-or-usi">Denne</a>siden har en tråd angående disse feilmeldingene, hvor det blir fortalt at det er en kjent bug i det offesielle Chromecast Javascript bibllioteket. Google har erkjent feilen, men mener de ikek kan gjøre noe da det er en standard Google nettverk feil, men de jobber med en langtidsløsning.  
             </p>
             
         </section>
