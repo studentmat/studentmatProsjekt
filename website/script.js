@@ -8,6 +8,7 @@
 var openDiv = null;
 
 // For å kunne kjøre den på folk-side, henter jeg pathen jeg starter med (f.eks. doraoe/studmat/)
+// REN JAVASCRIPT
 if (window.location.hostname === "folk.ntnu.no") {
   var startPath = "/doraoe/studmat/"; // SJekk om kan gjøres om til window.location.pathName
 } else {
@@ -33,6 +34,7 @@ var loadPage = function() {
 }
 
 //Finner hvilken side en er på
+//// REN JAVASCRIPT
 var findPage = function() {
   // Hvis det er en #/ i pathen (altså ikke er på index)
   if (window.location.href.indexOf("#/") > -1 ) {
@@ -77,6 +79,7 @@ var handleHrefClick = function(event) {
 }
 
 //Laster ei ny side når vi klikker tilbake
+// REN JAVASCRIPT
 window.addEventListener('popstate', loadPage);   
 
 // Laster inn rett html-dokument i rett tag når vi laster inn siden (kortversjon for document.onload)
@@ -98,7 +101,6 @@ $(function () {
     $('#navBar a[href]').click(handleHrefClick);
   });
  
-  $()
   // Last inn footer inn i footer elementet
   $("#footer").load(startPath + "/html/footer.html", function () {
 
@@ -135,6 +137,7 @@ $(window).bind('scroll', function () {
 });
 
 //Legge til listeners til ankerne
+// REN JAVASCRIPT
 var addAnchorEventListeners = function() {
   var anchors = document.getElementsByClassName("anchor");
   for (var i = 0; i < anchors.length; i++) {
@@ -210,11 +213,13 @@ visDiv = function (divId, smallOrBig) {
 }
 
 //Gir feilmelding for kundens "fake" linker
+// REN JAVASCRIPT
 errorMessage = function () {
   alert("Beklager, siden eksisterer ikke");
 }
 
 //Kode for å hente inn tilfeldig oppskrift til home siden
+// REN JAVASCRIPT
 randomOppskrift = function() { 
   var nummer = Math.floor(Math.random()*10);
   oppskrift = document.getElementById(nummer);
@@ -222,6 +227,7 @@ randomOppskrift = function() {
 }
 
 //Form validering
+// REN JAVASCRIPT
 function validateForm(){
   var nm = document.getElementById("name");
   console.log(nm)
@@ -237,60 +243,46 @@ function validateForm(){
     console.log(mld.value)
 
 
-if(nameLength(nm))
-{
-if(emailFormat(em))
-{
-
-if(selectTopic(tp))
-{
-
-if(meldingLength(mld))
-{
-  if(writeToFile(nm, em, tp, mld))
-  {
-    nm.value= "";
-    em.value= "";
-    tp.value= "";
-    mld.value="";
+if(nameLength(nm)) {
+  if(emailFormat(em)) {
+    if(selectTopic(tp)) {
+      if(meldingLength(mld)) {
+        if(writeToFile(nm, em, tp, mld)) {
+            nm.value= "";
+            em.value= "";
+            tp.value= "";
+            mld.value="";
+        }
+      }
+    }
   }
-
-
-
-}}}}
+}
 return false;
 }
 
-function nameLength(nm)
-{   
-var nmLength = nm.value.length;
-console.log(nmLength)
+function nameLength(nm) {   
+  var nmLength = nm.value.length;
+  console.log(nmLength);
 
-if(nmLength > 30)
-{
-  console.log("hmm")
-  document.getElementById("formMelding").innerHTML = 
-    "<div id='no'>Navnet kan ikke ha flere enn 30 tegn.</div>";
-    return false; 
-}
-else
-{
-  return true;
-}
+  if(nmLength > 30) {
+    console.log("hmm");
+    document.getElementById("formMelding").innerHTML = 
+      "<div id='no'>Navnet kan ikke ha flere enn 30 tegn.</div>";
+      return false; 
+  }
+  else {
+    return true;
+  }
 }
 
-function emailFormat(em)
-{
-if(!em.value)
-{
-  document.getElementById("formMelding").innerHTML = 
-    "<div id='no'>Du må skrive inn E-mail.</div>";
-    return false; 
-}
-else 
-{
-return true;  
-}    
+function emailFormat(em) {
+  if(!em.value) {
+    document.getElementById("formMelding").innerHTML = 
+      "<div id='no'>Du må skrive inn E-mail.</div>";
+      return false; 
+  } else {
+    return true;  
+  }    
 }
 
 function selectTopic(tp)
