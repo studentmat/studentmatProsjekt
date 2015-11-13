@@ -89,6 +89,9 @@ $(function () {
   // Lytter på a-tagger i header 
   $('#header a[href]').click(handleHrefClick);
 
+  // Og i footerboksen med logo
+  $('#footer #footerBox2 a[href]').click(handleHrefClick);
+
   // Last inn navigasjonen inn i nav elementet
   $("#navBar").load(startPath + "/html/nav.html", function () {
     // Ventet til nav har lastet inn
