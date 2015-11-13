@@ -29,19 +29,19 @@ body {
 
 /* Tekst, fonts og skrift.*/
 p {
-    font-family:"Georgia", serif;
+    font-family:sans-serif;
     font-size: 14pt;
     text-align: justify;
 }
 
-/*Laster inn font-en*/
+/*Laster inn font*/
 @font-face {
     font-family: 'libelSuit'; /* Navn for å bruke senere*/
     src: url(libelsuit.woff);
 }
 
 .textStyle {
-    font-family:"Georgia", serif;
+    font-family:sans-serif;
     font-size: 14pt;
 }
 
@@ -192,7 +192,7 @@ li > ul.underMeny {
 
 /* Hovedboksen */
 #main {
-    font-family: "Georgia", serif;
+    font-family: sans-serif;
     font-size: 14pt;
     background-color: white;
     margin: 0 auto;
@@ -217,10 +217,6 @@ li > ul.underMeny {
 }
 
 /* Footer og innhold i footer. */
-#footerLogo {
-    margin-top: 50px;
-    margin-left: -50px;
-}
 
 #footer{
     left: 0;
@@ -233,15 +229,17 @@ li > ul.underMeny {
     width: 1000px;
     color: white;
     line-height: 1.2em;
-}
-
-#footerContent p {
-    font-size: 12pt;
+    font-family: sans-serif;
 }
 
 #footerContent a {
     color: white;
     font-style: italic;
+    font-size: 12pt;
+}
+
+#footerContent p {
+    font-size: 12pt;
 }
 
 #footerContent a:hover {
@@ -258,18 +256,36 @@ li > ul.underMeny {
 #footerBox1 {
     width: 270px;
     margin-left: 10px;
+    line-height: 25px;
 }
 
 #footerBox2 {
     width: 320px;
-    margin-left: 40px;
+    margin: auto;
     position: relative;
+    text-align: left;
 }
 
 #footerBox3 {
-    width: 270px;
-    margin-left: 20px;
-    position: relative;
+    width: 1100px;
+    text-align: center;
+    margin: auto;
+    margin-left: -50px;
+}
+
+#footerBox3 a:hover {
+    font-size: 11pt;
+    text-decoration: none;
+}
+
+#footerBox3 > .noLink:hover {
+    font-size: 14pt;
+}
+
+#footerBox4 {
+    width: 250px;
+    margin-top: -275px;
+    margin-left: 710px;
 }
 
 .footerBottom {
@@ -277,27 +293,12 @@ li > ul.underMeny {
     height: auto;
     text-align: center;
     color: #FFF;
+    font-size: 12pt;
 }
 
-#footerIconBox a:hover{
-    text-decoration: none;
-}
 
-#footerLogo{
-    margin-top: 0;
-}
-
-/* Sidekart i footer */
-#sidekart {
-    margin-top: 0;
-    font-size: 15px;
-}
-
-#sidekart li, #sidekart a{
-    text-decoration: none;
-    color: white; 
-    list-style-type: none;
-    text-align: left;
+#footerLink:hover {
+    text-decoration: underline;
 }
 
 /* Til diver med apne og lukke-mekanisme */
