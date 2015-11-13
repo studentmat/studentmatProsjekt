@@ -274,12 +274,12 @@ li > ul.underMeny {
 }
 
 #footerBox3 a:hover {
-    font-size: 11pt;
+    font-size: 14pt;
     text-decoration: none;
 }
 
 #footerBox3 > .noLink:hover {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 #footerBox4 {
