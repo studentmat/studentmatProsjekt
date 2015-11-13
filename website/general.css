@@ -443,7 +443,7 @@ li {
 
 /* Til de store bildene når en åpner oppskrifta*/
 .meksikanskGryteBg {
-	background-image: url("oppskriftsbilder/meksikanskbonnegryte2.jpg");
+	background-image: url("oppskriftsbilder/meksikanskbonnegryte.jpg");
     /*Hvor på bildet "fokuset" er/hva av bildet som viser i glippen */
 	background-position-y: 55%;
 }
@@ -459,13 +459,13 @@ li {
 }
 
 .kyllingfrikasseBg {
-	background-image: url("oppskriftsbilder/kyllingfrikasse2.jpg");
+	background-image: url("oppskriftsbilder/kyllingfrikasse.jpg");
 	background-position-y:  51%;
 }
 
 .BLT-sandwichBg {
 	background-image: url("oppskriftsbilder/BLT-sandwich.jpg");
-    background-position-y: 40%; /* FYLL INN */
+    background-position-y: 40%;
 }
 .ostskinkemuffinsBg {
 	background-image: url("oppskriftsbilder/ostskinkemuffins.jpg");

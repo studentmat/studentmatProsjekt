@@ -58,3 +58,11 @@ figcaption {
 	margin-left: 120px;
 
 }
+
+table th:first-child {
+	max-width: 5px;
+}
+
+table tr th + td {
+	max-width: 5px;
+}
