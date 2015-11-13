@@ -149,14 +149,15 @@ h3 {
     position: absolute;
     display: none;
     z-index: 999;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #navList li:hover {
     /*Slik at overgangen skjer gradivs */
     transition: 0.2s;
     color: black;
-    background: #D3EABB;
+    /*background-color: #D3EABB;*/
+    background-color: rgba(225,252,195,0.8);
 }
 
 #navList li:hover > a{
@@ -612,6 +613,7 @@ iframe {
 
 .anchor:hover {
     color: rgba(130, 176, 84, 1);
+    cursor: pointer;
 }
 
 #ankerMeny {
