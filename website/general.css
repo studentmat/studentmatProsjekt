@@ -24,13 +24,13 @@ body {
     min-height: 100%;
     height: auto;
     width: 100%;
-    background-color: rgba(131,174,84,0.2);
+    background-color: rgba(131, 174, 84, 0.2);
 }
 
 /* Tekst, fonts og skrift.*/
 p {
     font-family:sans-serif;
-    font-size: 14pt;
+    /*font-size: 14pt; SETTES FLERE GANGER */
     text-align: justify;
 }
 
@@ -40,10 +40,13 @@ p {
     src: url(libelsuit.woff);
 }
 
+/* TROLIG IKKE NØDVENDIG DA DET LIGGER I STYLE FOR MAIN
+SJEKK UT
 .textStyle {
     font-family:sans-serif;
     font-size: 14pt;
 }
+*/
 
 h1, h2, h3 {
     font-family: libelSuit;
@@ -88,7 +91,7 @@ h3 {
 
 #navBar {
     width: 100%;
-    font-family: sans-serif;
+    font-family: sans-serif; /*FYLL UT */
 }
 
 /*For å holde menyen på plass når en scroller*/
@@ -97,6 +100,7 @@ h3 {
     top: 0;
 }
 
+/* Delen av navbaren med knapper */
 #navList {
     font-size: 15pt;
     width: 1000px;
@@ -104,20 +108,15 @@ h3 {
     padding-left: 0;
 }
 
-#navlist ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#navList > li {
+/* Knappene */
+#navList .navButton {
     text-align: center;
     padding-left: 0;
     display: inline-block;
     margin: 0 auto;
 }
-
-#navList > li > a{
+/* Linkene i navbaren som ikke er i dropdown-meny */
+#navList > li > a {
     text-align: center;
     padding-left: 0;
     display: inline-block;
@@ -128,64 +127,72 @@ h3 {
     padding: 10px 0;
 }
 
+/* Teksten i en knapp når vi er på dens side */
 #navList > li.highlight > a{
     color: #544B4B;
 }
 
+/* Knappen til siden vi er på er hvit */
 .highlight {
     background-color: white;
 }
 
+/* Linkene i menyen */
 #navList a {
     text-decoration: none;
     color: #FFFFFF;
 }
 
+/* Linkene i menyen når vi hovrer over dem */
 #navlist a:hover {
     font-style: normal;
 }
 
-#navList li ul {
-    position: absolute;
-    display: none;
-    z-index: 999;
-    opacity: 0.9;
-}
-
+/* Når vi hovrer over en side i navbaren */
 #navList li:hover {
     /*Slik at overgangen skjer gradivs */
     transition: 0.2s;
     color: black;
-    /*background-color: #D3EABB;*/
     background-color: rgba(225,252,195,0.8);
-}
 
+}
+/* Når vi hovrer over et listeelement med en link */
 #navList li:hover > a{
     transition: 0.2s;
-    color: rgb(52, 76, 56);
-	
+    color: rgb(52, 76, 56); 
+    cursor: pointer;
 }
 
-#navList li:hover ul {
+/* Dropdown menyene */
+#navList .dropdown {
+    position: absolute;
+    display: none;
+    z-index: 999;
+    opacity: 0.9;
+
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+
+    visibility: hidden;
+    height: auto;
+    padding-top: 5px;
+}
+
+/* Når vi hovrer over en knapp med dropdown meny */
+#navList .navButton:hover .dropdown {
     display: block;
+    visibility: visible;
     background-color: rgb(52, 76, 56);
     width: 250px;
     padding: 5px 0;
     margin-top: 0px;
     font-size: 20px;
 }
-
-li > ul.underMeny {
-    display: none;
-    visibility: hidden;
-    height: auto;
-    padding-top: 5px;
-}
-
-#navList li ul li {
+/* Elemtenene i dropdown menyen */
+#navList .dropdown li {
     display: block;
     height: 30px;
-    background-color: rgb(52, 76, 56);
     padding: 5px 0px;
     margin: 10px;
 }
@@ -274,8 +281,8 @@ li > ul.underMeny {
 }
 
 #footerBox3 a:hover {
-    font-size: 14pt;
-    text-decoration: none;
+    /*font-size: 14pt;*/
+    text-decoration: underline;
 }
 
 #footerBox3 > .noLink {
@@ -285,12 +292,18 @@ li > ul.underMeny {
 #footerBox3 > .noLink:hover {
     font-size: 12pt;
     font-style: normal;
+    text-decoration: none;
 }
 
 #footerBox4 {
     width: 250px;
     margin-top: -275px;
     margin-left: 710px;
+}
+
+/* Slik at det ikke blir underline på siden av bildene når vi hovrer på dem*/
+.iconLink:hover {
+    text-decoration: none !important;
 }
 
 .footerBottom {
@@ -301,7 +314,6 @@ li > ul.underMeny {
     font-size: 12pt;
 }
 
-
 #footerLink:hover {
     text-decoration: underline;
 }
@@ -309,7 +321,6 @@ li > ul.underMeny {
 /* Til diver med apne og lukke-mekanisme */
 .divSmall {
     overflow: hidden;
-    transition: 0.2s;
     height: auto;
     display: block;
 }
@@ -318,21 +329,24 @@ li > ul.underMeny {
     cursor: pointer;
     background-color: rgb(52, 76, 56);
     color: white;
-    transition: 0.2s;
+    transition: .5s;
 }
 
 .divBig {
     margin: 0 auto;
     overflow: hidden;
     height: 0;
-    transition: height 0.5s;
     display: none;
 }
 
 .active {
     display: block;
     height: auto;
-    transition: height 0.5s;
+}
+
+.hidden {
+    display: none;
+    height: auto;
 }
 
 .divSmallBilde {
@@ -344,6 +358,7 @@ li > ul.underMeny {
     font-style: italic;
     vertical-align: top;
     padding: 0 5px;
+    text-align: left;
 }
 
 .divTekst {
@@ -354,12 +369,6 @@ li > ul.underMeny {
 .divBig img {
     display: block;
     margin: 0 auto;
-}
-
-.hidden {
-    display: none;
-    height: auto;
-/*    transistion: height 0.5s; DENNE ER SKREVET FEIL OG NÅR JEG RETTER OPP SER DET RART UT NÅR JEG ÅPNER EN OPPSKRIFT   */
 }
 
 .divTips, .kilde {
@@ -383,7 +392,7 @@ a {
     color: black;
 }
 
-li > ul.underMeny {
+li > ul.dropdown {
     display: none;
     visibility: hidden;
 }
@@ -394,7 +403,7 @@ li {
 
 .divBigImg {
     height: 400px;
-    background-position-y: 114%;
+    background-position-y: 40%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -450,12 +459,10 @@ li {
 
 .gulrotSuppeBg {
 	background-image: url("oppskriftsbilder/gulrotsuppe.jpg");
-	background-position-y: 40%;
 }
 
 .falaflerBg {
 	background-image: url("oppskriftsbilder/falafler.jpg");
-	background-position-y: 40%;
 }
 
 .kyllingfrikasseBg {
@@ -465,55 +472,51 @@ li {
 
 .BLT-sandwichBg {
 	background-image: url("oppskriftsbilder/BLT-sandwich.jpg");
-    background-position-y: 40%;
 }
 .ostskinkemuffinsBg {
 	background-image: url("oppskriftsbilder/ostskinkemuffins.jpg");
-	background-position-y: 40%;
 }
 .pastasalatBg {
 	background-image: url("oppskriftsbilder/pastasalat.jpg");
-	background-position-y: 40%;
 
 }
 .pitaMedKremostBg {
 	background-image: url("oppskriftsbilder/pitaMedKremost.jpg");
-	background-position-y: 40%;
 }
 .pizzasnurrerBg {
 	background-image: url("oppskriftsbilder/Pizzasnurrer.jpg");
-	background-position-y: 40%;
 }
 
 .tortillapizzaBg {
 	background-image: url("oppskriftsbilder/tortillapizza.jpg");
-	background-position-y: 40%;
-
 }
 
 /* Alltid ha */
 .underSeksjon {
-        width: 261px;
-        height: 880px;
-        padding: 10px;
-        margin: 10px;
-        border: 1px solid grey;
-        border-radius: 4px;
-        display: inline-table;
-        text-align: left;
+    width: 261px;
+    height: 880px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    display: inline-table;
+    text-align: left;
 }
 
+/* Iconene */
 .underSeksjon > figure > img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 120px;
-        width: 120px;
-}
-.underSeksjon h3 {
-        text-align: center;	
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 120px;
+    width: 120px;
 }
 
+.underSeksjon h3 {
+    text-align: center;	
+}
+
+/* Bildetekst til iconene */
 figcaption {
 	font-size: 8pt;
 	text-align: center;
@@ -523,7 +526,6 @@ figcaption {
 figcaption a {
 	color: black;
 }
-
 
 
 /* Matlagingstips */
@@ -629,6 +631,7 @@ iframe {
     background-color: #FFF;
     margin: 0 auto;
 }
+
 /*Økonomi og planlegging, og lagring*/
 .num {
     list-style: decimal;
@@ -685,7 +688,7 @@ th, td {
     float: right;
 }
 
-#planlegging,#annet,#Perfekte_egg {
+#planlegging, #annet, #Perfekte_egg {
     margin-bottom: 30px;
 }
 
