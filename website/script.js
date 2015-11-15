@@ -12,7 +12,7 @@ var startPath;
 // For å kunne kjøre den på folk-side, henter jeg pathen jeg starter med (f.eks. doraoe/studmat/)
 if (window.location.hostname === "folk.ntnu.no") {
   // var startPath = "/doraoe/studmat/"; 
-  startPath = window.location.pathName; // SJEKK UT
+  startPath = window.location.pathname; // SJEKK UT
 } else {
   startPath = "";
 }
