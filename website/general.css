@@ -75,7 +75,8 @@ h3 {
     padding-top: 0px;
     width: 100%;
     background-color: rgba(129, 176, 82,1);
-    height: 375px;
+    /*background-color: rgba(102,155,102,1);*/
+    /*height: 330px;*/
     color: white;
     overflow: hidden;
 }
@@ -694,6 +695,7 @@ th, td {
 
 .punkt {
     color: rgba(52, 76, 56, .7);
+    font-style: italic;
 }
 
 .listLeft {
