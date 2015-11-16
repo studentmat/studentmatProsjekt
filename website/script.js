@@ -20,6 +20,7 @@ if (window.location.hostname === "folk.ntnu.no") {
 // Laster opp siden
 var loadPage = function() {
   
+  console.log("loadPage");
   // Setter openDiv til å være null (ingen div skal være åpne da)
   openDiv = null;
   // Går til toppen av siden
@@ -175,6 +176,7 @@ var scrollToAnchor = function () {
 
 // Åpner og lukker divs, tar inn ideen til elementet som har de ulike divene til barn, og om den kalles på en liten/stor div
 visDiv = function (divId, smallOrBig) {
+  console.log("open ", divId," from ", smallOrBig);
   var divToOpen;
   // Finner ut hvilken type div som skal åpnes 
   if (smallOrBig == "divSmall") {
@@ -193,12 +195,13 @@ visDiv = function (divId, smallOrBig) {
   $("#"+divId + " ." + smallOrBig).toggleClass("hidden");
 
   if (smallOrBig == "divBig") {
+    console.log("openDiv = null");
     openDiv = null;
-
   }
 
   //Lukker tidligere åpnet div
   if (openDiv !== null) {
+    console.log("openDiv lukkes");
     //Lukker diven
     var bigDiv = openDiv.getElementsByClassName("divBig")[0];
     bigDiv.classList.remove("active");
@@ -211,6 +214,7 @@ visDiv = function (divId, smallOrBig) {
 
   //Legger diven i openDiv hvis funksjonen ble kalt på divSmall
   if (smallOrBig == "divSmall") {
+    console.log("det re en liten div");
     openDiv = document.getElementById(divId);
 
     // Finner posisjonen til elementet
@@ -232,10 +236,34 @@ errorMessage = function () {
 }
 
 //Kode for å hente inn tilfeldig oppskrift til home siden
+/*
 randomOppskrift = function() { 
+  var 
   var nummer = Math.floor(Math.random()*10);
   oppskrift = document.getElementById(nummer);
   oppskrift.style.display = "block";
+}
+*/
+
+randomOppskrift = function() {
+  console.log("random oppskrift");
+  // Legger alle oppskriftene i ei liste
+  var oppskriftList = document.getElementsByClassName("oppskrift");
+  console.log("Oppskriftliste: ", oppskriftList);
+  // Finner et tilfeldig nummer
+  var nummer = Math.floor(Math.random()*10);
+  var oppskrift = oppskriftList[nummer];
+  oppskrift.style.display = "block";
+}
+
+tilOppskrift = function(type, id, callback) {
+  // Naviger til rett side
+  window.history.pushState({},"", startPath + "/#/" + type);
+
+  // Last inn den adressen inn i main
+  var path = startPath +  "/html/" + type + ".html";
+  $("#main").load(path, function() { updateNavbar(type), visDiv(id, "divSmall")});
+  
 }
 
 //Form validering
@@ -254,21 +282,21 @@ function validateForm(){
     console.log(mld.value)
 
 
-if(nameLength(nm)) {
-  if(emailFormat(em)) {
-    if(selectTopic(tp)) {
-      if(meldingLength(mld)) {
-        if(writeToFile(nm, em, tp, mld)) {
-            nm.value= "";
-            em.value= "";
-            tp.value= "";
-            mld.value="";
+  if(nameLength(nm)) {
+    if(emailFormat(em)) {
+      if(selectTopic(tp)) {
+        if(meldingLength(mld)) {
+          if(writeToFile(nm, em, tp, mld)) {
+              nm.value= "";
+              em.value= "";
+              tp.value= "";
+              mld.value="";
+          }
         }
       }
     }
   }
-}
-return false;
+  return false;
 }
 
 function nameLength(nm) {   
