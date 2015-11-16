@@ -533,14 +533,12 @@ iframe {
 .tips_left {
     display: inline-block;
     vertical-align: top;
-    line-height: 1.5em;
 }
 .tips_right {
     display: inline-block;
     width: 420px;
     margin-left: 40px;
     vertical-align: top;
-    line-height: 1.5em;
 }
 .tips_fremgangsmate {
     vertical-align: top;
