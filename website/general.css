@@ -1,6 +1,6 @@
 /*
     Filnavn: general.css
-    Skrevet av: Aasne Livik Natesrtad, Dora Oline Eriksrud, Julie Davidsen, Katrine FYLL INN ETTERNAVN
+    Skrevet av: Aasne Livik Natesrtad, Dora Oline Eriksrud, Julie Davidsen, Katrine Tunkvist Jordheim
     Når: November 2015
     Hensikt: css nødvendig for å få ønsket design
 */
@@ -55,8 +55,8 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 33pt;
-	padding: 10px 0;
+    font-size: 33pt;
+    padding: 10px 0;
 }
 
 h2 {
@@ -373,8 +373,8 @@ h3 {
 }
 
 .divTips, .kilde {
-	padding-left: 36px;
-	color: black;
+    padding-left: 36px;
+    color: black;
 }
 
 
@@ -519,13 +519,13 @@ li {
 
 /* Bildetekst til iconene */
 figcaption {
-	font-size: 8pt;
-	text-align: center;
-	line-height: 1em;
+    font-size: 8pt;
+    text-align: center;
+    line-height: 1em;
 }
 
 figcaption a {
-	color: black;
+    color: black;
 }
 
 
@@ -591,24 +591,24 @@ iframe {
 }
 
 #formMelding {
-	margin: 0 auto;
-	width: 600px;
-	height: 30px;
-	overflow: hidden;
+    margin: 0 auto;
+    width: 600px;
+    height: 30px;
+    overflow: hidden;
 }
 
 #no {
-	width: inherit;
-	height: inherit;
-	background-color: red;
-	color: #FFF;
+    width: inherit;
+    height: inherit;
+    background-color: red;
+    color: #FFF;
 }
 
 #yes {
-	background-color: green;
-	width: inherit;
-	height: inherit;
-	color: #FFF;
+    background-color: green;
+    width: inherit;
+    height: inherit;
+    color: #FFF;
 }
 
 /* Ankerbar */
@@ -708,21 +708,21 @@ th, td {
 
 /*Til linker-siden*/
 #linkerSide a:link, #linkerSide a:visited{
-	display: block;
-	font-style: normal;
-	height: 30px;
-	width: 170px;
-	padding: 3px;
-	text-align: center;
-	background-color: rgba(130, 176, 84,1);
-	border: 2px solid rgba(52, 76, 56, 1);
-	color: #FFF;
+    display: block;
+    font-style: normal;
+    height: 30px;
+    width: 170px;
+    padding: 3px;
+    text-align: center;
+    background-color: rgba(130, 176, 84,1);
+    border: 2px solid rgba(52, 76, 56, 1);
+    color: #FFF;
 }
 
 #linkerSide a:hover {
-	background-color: #FFF;
-	border: 2px solid rgba(130, 176, 84,1);
-	color: rgba(52, 76, 56, 1);
+    background-color: #FFF;
+    border: 2px solid rgba(130, 176, 84,1);
+    color: rgba(52, 76, 56, 1);
 }
 
 /*Mobil og tablet design FYLL INN*/
