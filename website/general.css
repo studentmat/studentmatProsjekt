@@ -29,7 +29,7 @@ body {
 
 /* Tekst, fonts og skrift.*/
 p {
-    font-family:sans-serif;
+    font-family: "Verdana", sans-serif;
     /*font-size: 14pt; SETTES FLERE GANGER */
     text-align: justify;
 }
