@@ -66,3 +66,7 @@ table th:first-child {
 table tr th + td {
 	max-width: 5px;
 }
+
+img {
+	align: middel;
+}
