@@ -15,7 +15,7 @@
         <header>
             <h1>P3 endringer</h1>
             <h2>Aasne, Dora Oline, Julie, Katrine</h2>
-            <h3>IT2805, 10. November, 2015</h3>
+            <h3>IT2805, 16. November, 2015</h3>
         </header>
 
         <section class="box"> <!-- Punkt 1-->
@@ -27,7 +27,7 @@
                 Websidens navn: StudentMat
             </p>
             <p>
-                Kontaktperson: Katrine Jordheim
+                Kontaktperson: Dora Oline Eriksrud
             </p>
             <p> 
                 Link til siden: <a href="http://folk.ntnu.no/doraoe/studmat/">klikk her</a>
@@ -42,12 +42,14 @@
             <h3>Navigasjonsstruktur</h3>
                 <p>
                     Det er markert i navbaren hvilken side vi er på, ved at knappen til tilhørende side (eller som har undermenyen hvor siden er) er farget hvit når vi er på siden. 
-                    I tillegg kommer vi til home ved å trykke på headeren eller på logoen i footer. 
+                    I tillegg kommer vi til home ved å trykke på logo i headeren eller i footer. 
+
+                    SETT INN LINJEAVSTAND O.L.
                 </p>
             <h3>Oppsett og utseende</h3>
                 <p>
                     Det ble gjort noen større endringer i fargevalg, skrift og lignende på siden. <br>
-                    Spesifikasjoner som gjelder alle sider er som følgende:
+                    Endringer angående spesifikasjoner som gjelder alle sider er som følgende:
                 <ul>
                     <li>Font:
                         <ul class="listeBullet">
@@ -60,8 +62,9 @@
                                 </ul>
                             <li>Navigasjonsbar: Ingen forandring</li>
                             </strike>
-                            <li>Brødtekst: FYLL INN JULIE</li>
+                            <li>Brødtekst: "Lucida Sans Unicode", sans-serif</li>
                         </ul>
+                        LEGG TIL AT VI HAR ENDRET LINEHEIGHT OG AVSTAND MELLOM BOKSTAVER
                     </li>
                     <li>Fargetema: 
                         <ul class="listeBullet">
@@ -109,7 +112,7 @@
             <h3>Sidens innhold</h3>
                 <strike>
                 <p>
-                    <b>Index:</b> Ingen endringer.
+                    <b>Index:</b> Ingen endringer/se over på generelle endringer.
                 </p>
                 </strike>
                 <p>
@@ -122,38 +125,31 @@
 
                     <strike>
                     Overskriften har h1-egenskaper. 
-                    Boksene ble 261px bred og 880px høy. De har alle en padding og margin på 10px, samt en solid, grå border på 1px med radius 4px. Teksten i dem er venstrestilt. 
+                    Boksene ble 261px bred og 880px høy. De har alle en padding og margin på 10px, samt en solid, grå border på 1px med radius 4px. 
                     </strike>
                 </p>
                 <p>
                     <b>Middagsretter:</b> 
-                        Liten div: boksen med oppskriftnavn og beskrivelse (til høyre for bilde), ble 580px bred. Ved hoover blir fargen rgb(52, 76, 56) SJEKK UT SAMME SOM NAVBAR?, og overgangen til/fra fargen på er 0.2s.
-                        Overgangen til/fra stor og liten div er på 0.5s. 
-                        Stor div: y-posisjonen til det store bildet varierer fra bildet til bildet, men er normalt 40 eller 50%, ca.
+                        Når oppskriften er boksen med innholdt 580px bred. Ved hoover blir fargen rgb(52, 76, 56) SJEKK UT SAMME SOM NAVBAR?, med en overgang på 0.2s.
+                        Overgangen til/fra stor og liten div ble fjernet av visuelle årsaker da det trolig ville flytte for mye på innholdet underveis.
+                        Når oppskriften åpnes er et lagt inn funksjonalitet slik at en scroller til toppen av oppskriften. Dette ble lagt til da det ved testing ble oppdaget at det ble opplevd rotete når en åpnet en oppskrift og en annen ble lukket lengre opp, og en da endte opp med å se på bunnen av den nye oppskriften. 
+                        <strike>
+                        er y-posisjonen til det store bildet noe ulikt fra bildet til bilde, slik at bildene ser best ut totalt sett.
                         Boksen med fremgangsmåte og ingredienser er på 900px og med 30px padding, hvorav fremgangsmåte er på 600px og ingredienser på 300px. Liste-elementene i ingredienser har en solid 1px svart border i bunn med fargen #ccc. Hvert listeelement i fremgangsmåter har en linjeavstand på 1.5em, og elementene i både fremgangsmåte og ingredienser har en 8px bunn-margin. IKKE FERDIG
+                        Av visuelle årsaker ble det ingen overgang fra/til åpen/lukket xiv
+                        </strike>
                 </p>
                 <p>
                     <b>Matpakkeoppskrifter:</b> Samme endringene som for middagsoppskrifter.
                 </p>
                 <p>
-                    <b>Matlagingstips:</b> Videoene er ikke lenger midtstilt, 
-                    men sidestilt til venstre med beskrivende tekst ved siden av. 
-                    Vi gikk vekk fra åpne/lukke mekanismen med javascript, vi ble enige med kunden om at 
-                    en ankerbar like under tittelen, gir et mer pent og ryddig inntrykk.
+                    <b>Matlagingstips:</b> Videoene er ikke lenger midtstilt, men sidestilt til venstre med beskrivende tekst ved siden av. Vi gikk vekk fra åpne/lukke mekanismen med javascript, vi ble enige med kunden om at en ankerbar like under tittelen, gir et penere og mer ryddig inntrykk.
                 </p>
                 <p>
-                    <b>Økonomi og planlegging:</b> Bredden på tabellen er endret til 850px for å kunne skape mer luft og oversiktlighet i tabellen. Med det ble paddingen satt opp til 10px. For å gi siden litt 
-                    mer variasjon så er rammen endret til 2 px med farge #82B054. Bakgrunnsfargen i header-cellene er satt til #82B054 med gjennomsiktighet satt til 0.5. Innholdet er midtstilt i cellene, 
-                    og selve tabellen er midtstilt på siden. Økonomitipsene er ikke lengre markert med discs. Listen med tips til hvordan man kan leve etter budsjett er nå nummerert, da dette føles mer intuitivt 
-                    i denne sammenhengen. Listen med hvordan man ordner budsjett har overskrift i libelSuit. Innholdet kan ikke lengre åpnes og lukkes som bokser, dette virket ikke hensiktsmessig da innholdet 
-                    ikke er veldig stort. Funksjonen er erstattet med en ankerbar på topp som referer til overskriftene på siden, og en ankerbar på bunn som referer til toppen av siden. Siden har fått et bilde
-                    med figcaption som linker til siden bildet er fra, dette skaper mer variasjon i innholdet.
+                    <b>Økonomi og planlegging:</b> Bredden på tabellen er endret til 850px for å kunne skape mer luft og oversiktlighet i tabellen. Med det ble paddingen satt opp til 10px. For å gi siden litt mer variasjon så er rammen endret til 2 px med farge #82B054. Bakgrunnsfargen i header-cellene er satt til #82B054 med gjennomsiktighet satt til 0.5. Innholdet er midtstilt i cellene, og selve tabellen er midtstilt på siden. Økonomitipsene er ikke lengre markert med discs. Listen med tips til hvordan man kan leve etter budsjett er nå nummerert, da dette føles mer intuitivt i denne sammenhengen. Listen med hvordan man ordner budsjett har overskrift i libelSuit. Innholdet kan ikke lengre åpnes og lukkes som bokser, dette virket ikke hensiktsmessig da innholdet ikke er veldig stort. Funksjonen er erstattet med en ankerbar på topp som referer til overskriftene på siden, og en ankerbar på bunn som referer til toppen av siden. Siden har fått et bilde med figcaption som linker til siden bildet er fra, dette skaper mer variasjon i innholdet.
                 </p>
                 <p>
-                    <b>Lagring:</b> Bredden på tabellen er endret til 850px for å kunne skape mer luft og oversiktlighet i tabellen. Med det ble paddingen satt opp til 10px. For å gi siden litt mer variasjon 
-                    så er rammen endret til 2 px med farge #82B054. Bakgrunnsfargen i header-cellene er satt til #82B054 med gjennomsiktighet satt til 0.5. Innholdet er midtstilt i cellene, og tabellen er 
-                    midtstilt på siden. Det er satt inn ankerbar på topp som referer til overskrifter for å gjøre siden enklere å navigere, og mer oversiktlig. I tillegg er det satt inn ankerbar som linker til 
-                    toppen. Listene har nå "overskrift" i kursiv i fargen rgba(52, 76, 56, .7). Formatet på listen har blitt endret slik at den har innrykk på nivå med resten av teksten, altså ingen.
+                    <b>Lagring:</b> Bredden på tabellen er endret til 850px for å kunne skape mer luft og oversiktlighet i tabellen. Med det ble paddingen satt opp til 10px. For å gi siden litt mer variasjon så er rammen endret til 2 px med farge #82B054. Bakgrunnsfargen i header-cellene er satt til #82B054 med gjennomsiktighet satt til 0.5. Innholdet er midtstilt i cellene, og tabellen er midtstilt på siden. Det er satt inn ankerbar på topp som referer til overskrifter for å gjøre siden enklere å navigere, og mer oversiktlig. I tillegg er det satt inn ankerbar som linker til toppen. Listene har nå "overskrift" i kursiv i fargen rgba(52, 76, 56, .7). Formatet på listen har blitt endret slik at den har innrykk på nivå med resten av teksten, altså ingen.
                 </p>
                 <p>
                     <b>Andre nyttige sider:</b>
@@ -173,7 +169,7 @@
                             FYLL INN
                         </li>
                         <li>
-                            <b>Highligting i navbar</b>
+                            <b>Highlighting i navbar</b>
                             Navbaren vil hele tiden oppdateres slik at siden vi er på (eller knappen som har underlisten med siden) vil være hvit når vi er på siden. Dette gjør at det er lett for gjesten å se hvilken side vi er på.
                         </li>
                         <li>
@@ -182,42 +178,33 @@
                         </li>
                         <li>
                             <b>Innlasting av innhold</b>
-                            FYLL INN
-                        </li>
-                        <li>
-                            <b>Navigasjonsbar med drop-down meny</b>
-                            FYLL INN
-                        </li>
-                        <li>
-                            Fiksert navigasjonsbar
+                            Innholdet/de ulike sidene lastes fortsatt inn slik som planlagt, men det er blitt lagt til at en scroller til toppen når en ny side åpnes.  
                         </li>
                         <li>
                             <b>Håndtere href-klikk</b>
-                            Endre hva som vises i browser-adresse-vinduet
-                            Hente rett adresse
-                            Laste inn siden, oppdatere navbar, oppdatere historie
+                            På grunn av bruken av .load, måtte klikk på href-linker ment til å navigere oss inne på siden, bli håndtert, ved at vi måtte forhindre å navigere oss vekk fra siden (som normalt vil skje), måtte finne ut hvilken side vi skulle navigere oss til, og så både hente side, endre historien, oppdatere adressefeltet i browser, oppdatere navBar, scrolle oss til toppen og ikke minst: laste inn rett side. 
+                        </li>
+                        <li>
+                            <b>Fiksert navigasjonsbar med drop-down meny</b>
+                            Det ble ikke gjort store endringer til navigasjonsmenyen. Den oppdateres som nevnt når siden lastes opp slik at det vises i navbaren hvilken side en er på. Selve drop-down funksjonaliteten ble løst med css, men å finne hvilken "foreldreknapp" som skulle markeres avhengig av hvilken side en er på, ble løst med Javascript og JQuery.
                         </li>
                         <li>
                             <b>Listeners til ankerbar</b>
-                            Grunnet ankerbaren ble det behov for å legge til listerens på disse, som henter ideen til a-elementet, finner elementet i dokumentet med rett id og så scroller ned dit
+                            Grunnet ankerbaren ble det behov for å legge til listerens på disse, som henter id-en til linkene, finner elementet i dokumentet med rett id og så scroller ned dit
                         </li>
                         <li>
                             <b>Åpne og lukke oppskrifter</b>
-                            Det ble i tillegg en javascriptfunksjon hvor en ved klikk på den lille diven med oppskriftsnavn, lite bilde og beskrivelse, går over til å vise den store diven istedenfor. I starten ble den store diven lukket uansett hvor i diven en trykket, men dette ble gjort om til å gjelde bare bildet (for stor div). 
-                            Det er maks en div åpen om gangen, slik at når en åpner en ny vil den som ble åpnet før bli lukket. Dette holder siden oversiktelig og kort.
+                            Her ble det lagt til funksjonalitet slik at en tidligere åpnet oppskrift automatisk lukkes når en åpner en ny. Dette gjør siden mer oversiktelig, og holder den kort. I den opprinnelige planen ville oppskriften lukkes uavhengig av hvor på oppskriften en trykket, men dette førte til mye feil lukking og ble derfor gjort om til å bare gjelde trykk på bildet (når oppskriften er åpen).
                         </li>
                         <li>
                             <b>Feilmelding ved ikke-eksisterende sider</b>
                             Per dags dato eksisterer ikke facebook eller instagram side, og det vil derfor bli gitt en alert når disse linkene trykkes på. I tillegg er det lagt inn funksjnalitet slik at en ikke beveger seg til toppen av siden eller skifter side, men ganske enkelt får en alert.
                         </li>
-
-
-
                 </p>
 
             <h3>Modularitet</h3>
                 <p>
-
+                    For å slippe å skrive samme kode flere steder, ble footer og navbar lagt i egne, respektive dokumenter (footer.html og nav.html), og ble lastet inn i index.html med bruk av Javascript og JQuery. Vi valgte også å laste inn alle sidene, slik at vi primært bare kunne ha innholdet i body-tagen i hver fil, og slapp å ha hele header-taggen med linker til alle de ulike sidene. Grunnet krav i prosjektet er det likevel lagt inn en head-tag i alle dokumentene med title og charset. 
                 </p>
         </section>
             
@@ -226,7 +213,7 @@
             <p></p>
             <h3>Organisatorisk oppsett</h3>
             <p>
-                Vi har samlet alle filene våre i en mappe som heter studentmatProsjekt som vil bli opprettet når vi når kodingsfasen av prosjektet.
+                Alle filene er i undermappen "website" til studentmatProsjekt.
             </p>
             <p>
                 Liste over filer og mapper: MÅ OPPDATERES SJEKK UT
@@ -254,9 +241,11 @@
                             </ul>
                         </li>
                         <li>
-                            <p>bilder/</p>
+                            <p>images/</p>
                             <ul>
-                                <li>header.jpg</li>
+                                <li>logo.jpg</li>
+                                <li>sifo.jpg</li>
+                                <li>footerlogo.jpg</li>
                                 <li><p>oppskriftsbilder/</p></li>
                                     <ul class="listeBullet">    
                                         <li><p>BLT-sandwich.jpg</p></li>
@@ -274,7 +263,6 @@
                                     <p>icons/</p>
                                     <ul class="listeBullet">
                                         <li><p>cabinet.png</p></li>
-                                        <li><p>facebook.jpg</p></li> SETT INN trenger bare en
                                         <li><p>facebook.png</p></li>
                                         <li><p>instagram.png</p></li>
                                         <li><p>freezer.png</p></li>

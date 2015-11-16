@@ -4,15 +4,17 @@
   Når: November 2015
   Hensikt: samling av Jquery og Javascript funksjoner nødvendig for å få ønsket funksjonalitet
 */
+
 // Lagrer hvilken div med oppskrift som er åpen
 var openDiv = null;
+var startPath;
 
 // For å kunne kjøre den på folk-side, henter jeg pathen jeg starter med (f.eks. doraoe/studmat/)
-// REN JAVASCRIPT
 if (window.location.hostname === "folk.ntnu.no") {
-  var startPath = "/doraoe/studmat/"; // SJekk om kan gjøres om til window.location.pathName
+  // var startPath = "/doraoe/studmat/"; 
+  startPath = window.location.pathname; // SJEKK UT
 } else {
-  var startPath = "";
+  startPath = "";
 }
 
 // Laster opp siden
@@ -21,20 +23,22 @@ var loadPage = function() {
   // Setter openDiv til å være null (ingen div skal være åpne da)
   openDiv = null;
   // Går til toppen av siden
-  $(window).scrollTop(0) ;
+  // $(window).scrollTop(0); JQUERY
 
   // Kallre funksjonen findPage() for å få siden vi er på
   var page = findPage();
 
   // Kaller addAnchorEventListeners etter at siden er lastet ned/inn
-  $("#main").load(startPath + "/html/" + page + ".html", addAnchorEventListeners);
+  $("#main").load(startPath + "/html/" + page + ".html", function() {
+    addAnchorEventListeners();
+    window.scrollTo(0, 0);
+  });
 
   // Oppdaterer navBaren
   updateNavbar(page);
 }
 
 //Finner hvilken side en er på
-//// REN JAVASCRIPT
 var findPage = function() {
   // Hvis det er en #/ i pathen (altså ikke er på index)
   if (window.location.href.indexOf("#/") > -1 ) {
@@ -79,16 +83,16 @@ var handleHrefClick = function(event) {
 }
 
 //Laster ei ny side når vi klikker tilbake
-// REN JAVASCRIPT
 window.addEventListener('popstate', loadPage);   
 
-// Laster inn rett html-dokument i rett tag når vi laster inn siden (kortversjon for document.onload)
-$(function () {
+// Laster inn rett html-dokument i rett tag når vi laster inn siden
+//$(function () { JQUERY
+window.onload = function() {
   console.log("on onload");
  
   // Lytter på a-tagger i header 
   $('#header a[href]').click(handleHrefClick);
-
+  
   // Og i footerboksen med logo
   $('#footer #footerBox2 a[href]').click(handleHrefClick);
 
@@ -113,15 +117,17 @@ $(function () {
 
   loadPage();
 
-});
+}
 
 // Oppdaterer navbar (hvilken side vi er på)
 var updateNavbar = function(page) {
 
   console.log("updating navbar: ", page);
 
-  //Fjerner klassen highlight fra listeelementet med den klassen 
+  //Fjerner klassen highlight fra listeelementet med den klassen
+  // Ved bruk av javascript her måtte jeg gått gjennom hvert li elementet jeg fikk og sett om det hadde highlight klassen
   $("li.highlight").removeClass("highlight");
+
   //Ser om siden er home eller undefiniert for så å markere home som aktuell side
   if (page == "home" || page == undefined) {
     $("[href='/']").closest(".navButton").addClass("highlight");
@@ -133,14 +139,13 @@ var updateNavbar = function(page) {
 //Holder navbaren fiksert i toppen ved å legge til classen fixed om det er lengre til toppen enn headers hoyde
 $(window).bind('scroll', function () {
     if ($(window).scrollTop() > $("#header").outerHeight()) {
-        $('#navBar').addClass('fixed');
+      $('#navBar').addClass('fixed');
     } else {
-        $('#navBar').removeClass('fixed');
+      $('#navBar').removeClass('fixed');
     }
 });
 
 //Legge til listeners til ankerne
-// REN JAVASCRIPT
 var addAnchorEventListeners = function() {
   var anchors = document.getElementsByClassName("anchor");
   for (var i = 0; i < anchors.length; i++) {
@@ -151,8 +156,6 @@ var addAnchorEventListeners = function() {
 
 //For ankermenyen, slik at en scroller til rett plass
 var scrollToAnchor = function () {
-
-  console.log("scroll to Anchor");
   
   // Henter "iden" en skal scrolle til
   var id = $(this).attr("data-anchor");
@@ -167,35 +170,32 @@ var scrollToAnchor = function () {
   $("html, body").animate({
     // Finner posisjonen minus høyden til navbaren
     scrollTop: offset.top - $("#navBar").height()*2
-  }, 100);
+  }, 500);
 };
 
 // Åpner og lukker divs, tar inn ideen til elementet som har de ulike divene til barn, og om den kalles på en liten/stor div
 visDiv = function (divId, smallOrBig) {
-  // SJEKK kan forenkles
-
-  // Vis det er divSmall funksjonen kjøres på
+  var divToOpen;
+  // Finner ut hvilken type div som skal åpnes 
   if (smallOrBig == "divSmall") {
-    $("#"+divId + " .divBig").toggleClass("active");
-    $("#"+divId + " .divBig").removeClass("hidden");
-
-    //Skjuler den lille visningen av oppskriften
-    $("#"+divId + " .divSmall").removeClass("active");
-    $("#"+divId + " .divSmall").toggleClass("hidden");
+    divToOpen = "divBig"; 
+  }
+  else {
+    divToOpen = "divSmall";
   }
 
-  //Hvis det er divBig
-  else if (smallOrBig == "divBig") {
-    $("#"+divId + " .divSmall").toggleClass("active");
-    $("#"+divId + " .divSmall").removeClass("hidden");
+  // Setter rett div til å være åpen og rett til å være lukket
+  $("#"+divId + " ." + divToOpen).toggleClass("active");
+  $("#"+divId + " ." + divToOpen).removeClass("hidden");
 
-    //Skjuler den lille visningen av oppskriften
-    $("#"+divId + " .divBig").removeClass('active');
-    $("#"+divId + " .divBig").toggleClass('hidden');
+  //Skjuler den lille visningen av oppskriften
+  $("#"+divId + " ." + smallOrBig).removeClass("active");
+  $("#"+divId + " ." + smallOrBig).toggleClass("hidden");
 
+  if (smallOrBig == "divBig") {
     openDiv = null;
-  }
 
+  }
 
   //Lukker tidligere åpnet div
   if (openDiv !== null) {
@@ -212,17 +212,26 @@ visDiv = function (divId, smallOrBig) {
   //Legger diven i openDiv hvis funksjonen ble kalt på divSmall
   if (smallOrBig == "divSmall") {
     openDiv = document.getElementById(divId);
+
+    // Finner posisjonen til elementet
+    var offset = $(openDiv).offset();
+
+    console.log("scrolling to Div");
+
+    // Scroller til toppen av diven
+    $("html, body").animate({
+      // Finner posisjonen minus høyden til navbaren + 4 pixler for å ha det tett i toppen
+      scrollTop: offset.top - $("#navBar").height()+4
+    }, 500);
   }
 }
 
 //Gir feilmelding for kundens "fake" linker
-// REN JAVASCRIPT
 errorMessage = function () {
   alert("Beklager, siden eksisterer ikke");
 }
 
 //Kode for å hente inn tilfeldig oppskrift til home siden
-// REN JAVASCRIPT
 randomOppskrift = function() { 
   var nummer = Math.floor(Math.random()*10);
   oppskrift = document.getElementById(nummer);
@@ -230,7 +239,6 @@ randomOppskrift = function() {
 }
 
 //Form validering
-// REN JAVASCRIPT
 function validateForm(){
   var nm = document.getElementById("name");
   console.log(nm)
@@ -278,6 +286,7 @@ function nameLength(nm) {
   }
 }
 
+//Funker ikke SJEKK UT
 function emailFormat(em) {
   if(!em.value) {
     document.getElementById("formMelding").innerHTML = 
