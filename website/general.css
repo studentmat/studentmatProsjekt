@@ -30,7 +30,6 @@ body {
 /* Tekst, fonts og skrift.*/
 p {
     font-family: "Lucida Sans Unicode", sans-serif;
-    /*font-size: 14pt; SETTES FLERE GANGER */
     text-align: justify;
 }
 
@@ -39,14 +38,6 @@ p {
     font-family: 'libelSuit'; /* Navn for å bruke senere*/
     src: url(libelsuit.woff);
 }
-
-/* TROLIG IKKE NØDVENDIG DA DET LIGGER I STYLE FOR MAIN
-SJEKK UT
-.textStyle {
-    font-family:sans-serif;
-    font-size: 14pt;
-}
-*/
 
 h1, h2, h3 {
     font-family: libelSuit;
@@ -74,7 +65,6 @@ h3 {
     margin-top: 0px;
     padding-top: 0px;
     width: 100%;
-/*    background-color: rgba(129, 176, 82,1);*/
     background-color: rgba(102,155,102,1);
     height: 330px;
     color: white;
@@ -171,11 +161,9 @@ h3 {
     display: none;
     z-index: 999;
     opacity: 0.95;
-
     list-style: none;
     padding: 0; 
     margin: 0;
-
     visibility: hidden;
     height: auto;
     padding-top: 5px;
@@ -226,7 +214,6 @@ h3 {
 }
 
 /* Footer og innhold i footer. */
-
 #footer{
     left: 0;
     bottom: 0;
@@ -532,15 +519,6 @@ figcaption a {
     color: black;
 }
 
-/* Home */
-tilfeldigOppskrift {
-    border: 2px solid black;
-}
-
-tilfeldigOppskrift:hover {
-    border: 4px solid black;
-}
-
 /* Matlagingstips */
 iframe {
     width: 420px;
@@ -731,7 +709,6 @@ th, td {
 
 }
 
-
 .linkerBox {
     display: block;
     padding: 10px;
@@ -742,7 +719,6 @@ th, td {
     width: 300px;
     height: auto;
 }
-
 
 /*Design for Mobil, de fleste duplikatene her er nødvendige. */
 @media screen and (max-width: 481px) {
@@ -771,7 +747,6 @@ th, td {
     /* Tekst, fonts og skrift.*/
     p {
         font-family: "Lucida Sans Unicode", sans-serif;
-        /*font-size: 14pt; SETTES FLERE GANGER */
         text-align: justify;
     }
 
@@ -780,14 +755,6 @@ th, td {
         font-family: 'libelSuit'; /* Navn for å bruke senere*/
         src: url(libelsuit.woff);
     }
-
-    /* TROLIG IKKE NØDVENDIG DA DET LIGGER I STYLE FOR MAIN
-    SJEKK UT
-    .textStyle {
-        font-family:sans-serif;
-        font-size: 14pt;
-    }
-    */
 
     h1, h2, h3 {
         font-family: libelSuit;
@@ -815,7 +782,6 @@ th, td {
         margin-top: 0px;
         padding-top: 0px;
         width: 480px;
-/*        background-color: rgba(129, 176, 82,1);*/
         background-color: rgba(102,155,102,1);
         height: 330px;
         color: white;
@@ -830,132 +796,133 @@ th, td {
     .navfooterColor {
         background-color: rgba(52, 76, 56, 1);
     }
-#navBar {
-    width: 480px;
-    font-family: sans-serif; /*FYLL UT */
-}
+    
+    #navBar {
+        width: 480px;
+        font-family: sans-serif;
+    }
 
-/*For å holde menyen på plass når en scroller*/
-.fixed {
-    position: fixed;
-    top: 0;
-}
+    /*For å holde menyen på plass når en scroller*/
+    .fixed {
+        position: fixed;
+        top: 0;
+    }
 
-/* Delen av navbaren med knapper */
-#navList {
-    font-size: 15pt;
-    width: 480px;
-    margin: 0 auto;
-    padding-left: 0;
-}
+    /* Delen av navbaren med knapper */
+    #navList {
+        font-size: 15pt;
+        width: 480px;
+        margin: 0 auto;
+        padding-left: 0;
+    }
 
-/* Knappene */
-#navList .navButton {
-    text-align: center;
-    padding-left: 0;
-    display: block;
-    margin: 0 auto;
-}
-   /* Delen av navbaren med knapper */
-#navList {
-    font-size: 15pt;
-    width: 480px;
-    margin: 0 auto;
-    padding-left: 0;
-}
+    /* Knappene */
+    #navList .navButton {
+        text-align: center;
+        padding-left: 0;
+        display: block;
+        margin: 0 auto;
+    }
+       /* Delen av navbaren med knapper */
+    #navList {
+        font-size: 15pt;
+        width: 480px;
+        margin: 0 auto;
+        padding-left: 0;
+    }
 
-/* Knappene */
-#navList .navButton {
-    text-align: left;
-    padding-left: 0;
-    display: block;
-    margin: 0 auto;
-}
-/* Linkene i navbaren som ikke er i dropdown-meny */
-#navList > li > a {
-    text-align: center;
-    padding-left: 0;
-    display: block;
-    color: #FFFFFF;
-    width: 250px;
-    margin: 0 auto;
-    text-transform: uppercase;
-    padding: 10px 0;
-}
+    /* Knappene */
+    #navList .navButton {
+        text-align: left;
+        padding-left: 0;
+        display: block;
+        margin: 0 auto;
+    }
+    /* Linkene i navbaren som ikke er i dropdown-meny */
+    #navList > li > a {
+        text-align: center;
+        padding-left: 0;
+        display: block;
+        color: #FFFFFF;
+        width: 250px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        padding: 10px 0;
+    }
 
-/* Teksten i en knapp når vi er på dens side */
-#navList > li.highlight > a{
-    color: #544B4B;
-}
+    /* Teksten i en knapp når vi er på dens side */
+    #navList > li.highlight > a{
+        color: #544B4B;
+    }
 
-/* Knappen til siden vi er på er hvit */
-.highlight {
-    background-color: white;
-}
+    /* Knappen til siden vi er på er hvit */
+    .highlight {
+        background-color: white;
+    }
 
-/* Linkene i menyen */
-#navList a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
+    /* Linkene i menyen */
+    #navList a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
 
-/* Linkene i menyen når vi hovrer over dem */
-#navlist a:hover {
-    font-style: normal;
-}
+    /* Linkene i menyen når vi hovrer over dem */
+    #navlist a:hover {
+        font-style: normal;
+    }
 
-/* Når vi hovrer over en side i navbaren */
-#navList li:hover {
-    /*Slik at overgangen skjer gradivs */
-    transition: 0.2s;
-    color: black;
-    background-color: rgba(138,181,138,1);
+    /* Når vi hovrer over en side i navbaren */
+    #navList li:hover {
+        /*Slik at overgangen skjer gradivs */
+        transition: 0.2s;
+        color: black;
+        background-color: rgba(138,181,138,1);
 
-}
-/* Når vi hovrer over et listeelement med en link */
-#navList li:hover > a{
-    transition: 0.2s;
-    color: rgb(52, 76, 56); 
-    cursor: pointer;
-}
+    }
+    /* Når vi hovrer over et listeelement med en link */
+    #navList li:hover > a{
+        transition: 0.2s;
+        color: rgb(52, 76, 56); 
+        cursor: pointer;
+    }
 
-/* Dropdown menyene */
-#navList .dropdown {
-    position: relative;
-    display: none;
-    z-index: 999;
-    opacity: 0.95;
+    /* Dropdown menyene */
+    #navList .dropdown {
+        position: relative;
+        display: none;
+        z-index: 999;
+        opacity: 0.95;
 
-    list-style: none;
-    padding: 0; 
-    margin: 0;
+        list-style: none;
+        padding: 0; 
+        margin: 0;
 
-    visibility: hidden;
-    height: auto;
-    padding-top: 5px;
-}
+        visibility: hidden;
+        height: auto;
+        padding-top: 5px;
+    }
 
-/* Når vi hovrer over en knapp med dropdown meny */
-#navList .navButton:hover .dropdown {
-    display: block;
-    visibility: visible;
-    background-color: rgb(52, 76, 56);
-    width: 470px;
-    padding: 5px 0;
-    margin-top: 0px;
-    font-size: 20px;
-}
-/* Elemtenene i dropdown menyen */
-#navList .dropdown li {
-    display: block;
-    height: 30px;
-    padding: 5px 0px;
-    margin: 0px;
-}
+    /* Når vi hovrer over en knapp med dropdown meny */
+    #navList .navButton:hover .dropdown {
+        display: block;
+        visibility: visible;
+        background-color: rgb(52, 76, 56);
+        width: 470px;
+        padding: 5px 0;
+        margin-top: 0px;
+        font-size: 20px;
+    }
+    /* Elemtenene i dropdown menyen */
+    #navList .dropdown li {
+        display: block;
+        height: 30px;
+        padding: 5px 0px;
+        margin: 0px;
+    }
 
-#navList .dropdown a {
-    text-align: center;
-}
+    #navList .dropdown a {
+        text-align: center;
+    }
 
     /* Hovedboksen */
     #main {
@@ -1038,7 +1005,6 @@ th, td {
     }
 
     #footerBox3 a:hover {
-        /*font-size: 14pt;*/
         text-decoration: underline;
     }
 
@@ -1061,7 +1027,7 @@ th, td {
     
     p > .attr {
     font-size: 10px !important; 
-}
+    }
 
     /* Slik at det ikke blir underline på siden av bildene når vi hovrer på dem*/
     .iconLink:hover {

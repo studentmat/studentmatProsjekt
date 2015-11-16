@@ -1,6 +1,6 @@
 /*
   Filnavn: script.js
-  Skrevet av: Dora Oline Eriksrud og Katrine FYLL INN
+  Skrevet av: Dora Oline Eriksrud og Katrine Jordheim
   Når: November 2015
   Hensikt: samling av Jquery og Javascript funksjoner nødvendig for å få ønsket funksjonalitet
 */
@@ -12,7 +12,7 @@ var startPath;
 // For å kunne kjøre den på folk-side, henter jeg pathen jeg starter med (f.eks. doraoe/studmat/)
 if (window.location.hostname === "folk.ntnu.no") {
   // var startPath = "/doraoe/studmat/"; 
-  startPath = window.location.pathname; // SJEKK UT
+  startPath = window.location.pathname;
 } else {
   startPath = "";
 }
@@ -20,7 +20,6 @@ if (window.location.hostname === "folk.ntnu.no") {
 // Laster opp siden
 var loadPage = function() {
   
-  console.log("loadPage");
   // Setter openDiv til å være null (ingen div skal være åpne da)
   openDiv = null;
   // Går til toppen av siden
@@ -51,7 +50,6 @@ var findPage = function() {
 
 // Takler "click" events som lyttes til
 var handleHrefClick = function(event) {
-  console.log("handleHrefClick");
 
   // Stopp klikket fra å navigere oss bort
   event.preventDefault();
@@ -88,9 +86,7 @@ window.addEventListener('popstate', loadPage);
 
 // Laster inn rett html-dokument i rett tag når vi laster inn siden
 //$(function () { JQUERY
-window.onload = function() {
-  console.log("on onload");
- 
+window.onload = function() { 
   // Lytter på a-tagger i header 
   $('#header a[href]').click(handleHrefClick);
   
@@ -123,8 +119,6 @@ window.onload = function() {
 // Oppdaterer navbar (hvilken side vi er på)
 var updateNavbar = function(page) {
 
-  console.log("updating navbar: ", page);
-
   //Fjerner klassen highlight fra listeelementet med den klassen
   // Ved bruk av javascript her måtte jeg gått gjennom hvert li elementet jeg fikk og sett om det hadde highlight klassen
   $("li.highlight").removeClass("highlight");
@@ -139,7 +133,6 @@ var updateNavbar = function(page) {
 
 //Holder navbaren fiksert i toppen ved å legge til classen fixed om det er lengre til toppen enn headers hoyde
 $(window).bind('scroll', function () {
-    console.log("Screen widht: ", screen.width);
     // Hvis vi har scrollet lengre ned enn headerens høyde, og det ikke er en mobiltelefon vi er på
     if ($(window).scrollTop() > $("#header").outerHeight() && screen.width >= 769) {
       $('#navBar').addClass('fixed');
@@ -178,7 +171,6 @@ var scrollToAnchor = function () {
 
 // Åpner og lukker divs, tar inn ideen til elementet som har de ulike divene til barn, og om den kalles på en liten/stor div
 visDiv = function (divId, smallOrBig) {
-  console.log("open ", divId," from ", smallOrBig);
   var divToOpen;
   // Finner ut hvilken type div som skal åpnes 
   if (smallOrBig == "divSmall") {
@@ -197,13 +189,11 @@ visDiv = function (divId, smallOrBig) {
   $("#"+divId + " ." + smallOrBig).toggleClass("hidden");
 
   if (smallOrBig == "divBig") {
-    console.log("openDiv = null");
     openDiv = null;
   }
 
   //Lukker tidligere åpnet div
   if (openDiv !== null) {
-    console.log("openDiv lukkes");
     //Lukker diven
     var bigDiv = openDiv.getElementsByClassName("divBig")[0];
     bigDiv.classList.remove("active");
@@ -216,13 +206,10 @@ visDiv = function (divId, smallOrBig) {
 
   //Legger diven i openDiv hvis funksjonen ble kalt på divSmall
   if (smallOrBig == "divSmall") {
-    console.log("det re en liten div");
     openDiv = document.getElementById(divId);
 
     // Finner posisjonen til elementet
     var offset = $(openDiv).offset();
-
-    console.log("scrolling to Div");
 
     // Scroller til toppen av diven
     $("html, body").animate({
@@ -248,10 +235,8 @@ randomOppskrift = function() {
 */
 // Henter en tilfeldig oppskrift til forsiden
 randomOppskrift = function() {
-  console.log("random oppskrift");
   // Legger alle oppskriftene i ei liste
   var oppskriftList = document.getElementsByClassName("oppskrift");
-  console.log("Oppskriftliste: ", oppskriftList);
   // Finner et tilfeldig nummer
   var nummer = Math.floor(Math.random()*10);
   var oppskrift = oppskriftList[nummer];
@@ -300,10 +285,8 @@ function validateForm(){
 //Validerer lengden på navn
 function nameLength(nm) {   
   var nmLength = nm.value.length;
-  console.log(nmLength);
 
   if(nmLength > 30) {
-    console.log("hmm");
     document.getElementById("formMelding").innerHTML = 
       "<div id='no'>Navnet kan ikke ha flere enn 30 tegn.</div>";
       return false; 
