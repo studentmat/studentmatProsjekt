@@ -27,10 +27,10 @@
                 Websidens navn: StudentMat
             </p>
             <p>
-                Kontaktperson: Dora Oline Eriksrud
+                Kontaktperson: Dora Oline
             </p>
             <p> 
-                Link til siden: <a href="http://folk.ntnu.no/doraoe/studmat/">klikk her</a>
+                Link til siden: <a href="http://folk.ntnu.no/doraoe/studentMat/">klikk her</a>
             </p>
         </section>
         
@@ -125,39 +125,39 @@
                 <p>
                     <ul> 
                         <li>
-                            <b>Skjemavalidering</b>
+                            <b>Skjemavalidering:</b>
                             Hvert felt i skjemaet vil valideres en etter en i en nøstet funksjon og vil ikke gå videre før man har fikset på det feltet man har glemt å fylle inn eller skrevet feil. Man vil få en tilbakemelding når det er fyllt inn riktig. Det er desverre ikke mulig å skrive informasjonen inn i en fil slik planen var, da javascript ikke støtter dette (Må bruke PHP, Python, AJAX eller lignende, noe som ligger utenfor pensum).  
                         </li>
                         <li>
-                            <b>Highlighting i navbar</b>
+                            <b>Highlighting i navbar:</b>
                             Navbaren vil hele tiden oppdateres slik at siden vi er på (eller knappen som har siden i dropdown-menyen) vil være hvit når vi er på siden. Dette gjør at det er lett for gjesten å se hvilken side vi er på.
                         </li>
                         <li>
-                            <b>Randomisert oppskrift på forsiden</b>
+                            <b>Randomisert oppskrift på forsiden:</b>
                             Løsningen her er ikke optimal, men det mest optimale med tanke på kunnskapsnivå. Den lille diven til alle oppskriftene ble lagt i home.html i hver sin a-tag, samt i ei liste over oppskriftene. Det blir generert et tilfeldig tall som velger hvilke oppskrift basert på oppskriften som ligger i indeksen i lista. En blir så manøvrert til matpakker eller middager, hvor rett oppskrift åpnes og en blir scrollet ned til den.
                         </li>
                         <li>
-                            <b>Innlasting av innhold</b>
+                            <b>Innlasting av innhold:</b>
                             Innholdet/de ulike sidene lastes fortsatt inn slik som planlagt, men det er blitt lagt til at det scrolles til toppen når en ny side åpnes.  
                         </li>
                         <li>
-                            <b>Håndtere href-klikk</b>
+                            <b>Håndtere href-klikk:</b>
                             På grunn av bruken av .load, måtte klikk på href-linker ment til å navigere oss mellom interne dokumenter/sider håndteres. Dette innebar blant annet å forhindre at vi navigerer oss vekk fra index.html (som normalt vil skje), finne ut hvilke side vi skal laste inn i main-boksen, og så hente side, endre historien, oppdatere adressefeltet i browser, oppdatere navBar og scrolle oss til toppen.. 
                         </li>
                         <li>
-                            <b>Fiksert navigasjonsbar med drop-down meny</b>
+                            <b>Fiksert navigasjonsbar med drop-down meny:</b>
                             Det ble ikke gjort store endringer til navigasjonsmenyen. Den oppdateres som nevnt når siden lastes opp slik at det vises i navbaren hvilken side en er på. Selve drop-down funksjonaliteten ble løst med css, men å finne hvilken "foreldreknapp" som skulle markeres avhengig av hvilken side en er på, ble løst med Javascript og JQuery.
                         </li>
                         <li>
-                            <b>Listeners til ankerbar</b>
+                            <b>Listeners til ankerbar:</b>
                             Grunnet ankerbaren ble det behov for å legge til listerens på disse, som henter id-en til linkene, finner elementet i dokumentet med rett id og så scroller ned dit
                         </li>
                         <li>
-                            <b>Åpne og lukke oppskrifter</b>
+                            <b>Åpne og lukke oppskrifter:</b>
                             Her ble det lagt til funksjonalitet slik at en tidligere åpnet oppskrift automatisk lukkes når en åpner en ny. Dette gjør siden mer oversiktelig, og holder den kort. I den opprinnelige planen ville oppskriften lukkes uavhengig av hvor på oppskriften en trykket, men dette førte til mye feil lukking og ble derfor gjort om til å bare gjelde trykk på bildet (når oppskriften er åpen).
                         </li>
                         <li>
-                            <b>Feilmelding ved ikke-eksisterende sider</b>
+                            <b>Feilmelding ved ikke-eksisterende sider:</b>
                             Per dags dato eksisterer ikke facebook eller instagram side, og det vil derfor bli gitt en alert når disse linkene trykkes på. I tillegg er det lagt inn funksjonalitet slik at en ikke beveger seg til toppen av siden eller skifter side, men ganske enkelt får en alert.
                         </li>
                     </ul>
