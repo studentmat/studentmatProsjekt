@@ -246,7 +246,7 @@ randomOppskrift = function() {
   oppskrift.style.display = "block";
 }
 */
-
+// Henter en tilfeldig oppskrift til forsiden
 randomOppskrift = function() {
   console.log("random oppskrift");
   // Legger alle oppskriftene i ei liste
@@ -270,29 +270,25 @@ tilOppskrift = function(type, id, callback) {
 
 //Form validering
 function validateForm(){
+  //Feltene i formen
   var nm = document.getElementById("name");
-  console.log(nm)
-  console.log(nm.value)
   var em = document.getElementById("email");
-  console.log(em)
-  console.log(em.value)
   var tp = document.getElementById("melding");
-    console.log(tp)
-    console.log(tp.value)
   var mld = document.getElementById("comments");
-    console.log(mld)
-    console.log(mld.value)
 
 
+//Nested validering, går ikke videre før feltet er OK.
   if(nameLength(nm)) {
-    if(emailFormat(em)) {
-      if(selectTopic(tp)) {
-        if(meldingLength(mld)) {
-          if(writeToFile(nm, em, tp, mld)) {
+    if(emailFilled(em)) {
+      if(emailFormat(em)){
+        if(selectTopic(tp)) {
+          if(meldingLength(mld)) {
+            if(writeToFile(nm, em, tp, mld)) {
               nm.value= "";
               em.value= "";
               tp.value= "";
               mld.value="";
+            }
           }
         }
       }
@@ -301,6 +297,7 @@ function validateForm(){
   return false;
 }
 
+//Validerer lengden på navn
 function nameLength(nm) {   
   var nmLength = nm.value.length;
   console.log(nmLength);
@@ -316,8 +313,8 @@ function nameLength(nm) {
   }
 }
 
-//Funker ikke SJEKK UT
-function emailFormat(em) {
+//Validerer at E-mail er fyllt ut.
+function emailFilled(em) {
   if(!em.value) {
     document.getElementById("formMelding").innerHTML = 
       "<div id='no'>Du må skrive inn E-mail.</div>";
@@ -326,7 +323,19 @@ function emailFormat(em) {
     return true;  
   }    
 }
-
+//Validerer Email format
+function emailFormat(em) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if(!regex.test(em.value)){
+    document.getElementById("formMelding").innerHTML = 
+    "<div id='no'>Du må skrive inn riktig E-mail-format.</div>";
+    return false; 
+  }
+  else {
+      return true;
+  }    
+}
+//Må velge noe annet enn default
 function selectTopic(tp)
 {
 if(tp.value == "Velg")
@@ -340,7 +349,7 @@ else
   return true;
 }
 }
-
+//Validerer at melding er skrevet inn.
 function meldingLength(mld)
 {
 var mldLength = mld.value.length;
@@ -362,16 +371,11 @@ else
 }
 
 }
+//Skal skrive til fil, men trenger noe annet Javascript grunnet sikkerhet.
 function writeToFile(nm, em, tp, mld) {
-    //var fil = "text.txt";
-    //fil.open("w");
-    //fil.writeln("------------------------------------------------");
-    //fil.writeln("name: " + nm.value);
-    //fil.writeln("Mail: " + em.value);
-    //fil.writeln("Topic: " + tp.value);
-    //fil.writeln("Melding: " + mld.value);
-    //fil.writeln("------------------------------------------------");
-    //fil.Close();
+  /*Umulig å skrive info til fil med Javascript eller andre ting i 
+  pensum. Her trengs PHP, Python eller annet server-side script som er
+  utenfor pensum :( */
     document.getElementById("formMelding").innerHTML = 
     "<div id='yes'>Din melding ble sendt!</div>";
     return true;
