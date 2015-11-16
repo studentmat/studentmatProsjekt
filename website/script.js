@@ -141,7 +141,7 @@ var updateNavbar = function(page) {
 $(window).bind('scroll', function () {
     console.log("Screen widht: ", screen.width);
     // Hvis vi har scrollet lengre ned enn headerens høyde, og det ikke er en mobiltelefon vi er på
-    if ($(window).scrollTop() > $("#header").outerHeight() && screen.width <= 769) {
+    if ($(window).scrollTop() > $("#header").outerHeight() && screen.width >= 769) {
       $('#navBar').addClass('fixed');
     } else {
       $('#navBar').removeClass('fixed');
