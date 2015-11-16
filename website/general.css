@@ -1053,7 +1053,8 @@ th, td {
     }
 
     #footerBox4 {
-        width: 250px;
+        width: 440px;
+        text-align: center;
         margin-top: -5px;
         margin-left: 10px;
     }
