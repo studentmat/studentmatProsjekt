@@ -194,6 +194,7 @@ visDiv = function (divId, smallOrBig) {
 
   if (smallOrBig == "divBig") {
     openDiv = null;
+
   }
 
   //Lukker tidligere åpnet div
@@ -211,6 +212,17 @@ visDiv = function (divId, smallOrBig) {
   //Legger diven i openDiv hvis funksjonen ble kalt på divSmall
   if (smallOrBig == "divSmall") {
     openDiv = document.getElementById(divId);
+
+    // Finner posisjonen til elementet
+    var offset = $(openDiv).offset();
+
+    console.log("scrolling to Div");
+
+    // Scroller til toppen av diven
+    $("html, body").animate({
+      // Finner posisjonen minus høyden til navbaren + 4 pixler for å ha det tett i toppen
+      scrollTop: offset.top - $("#navBar").height()+4
+    }, 500);
   }
 }
 
