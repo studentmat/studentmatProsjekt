@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-size: 14pt;
+    font-size: 12pt;
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -24,7 +24,7 @@ body {
     min-height: 100%;
     height: auto;
     width: 100%;
-    background-color: rgba(131, 174, 84, 0.2);
+    background-color: rgba(102,155,102,0.2);
 }
 
 /* Tekst, fonts og skrift.*/
@@ -74,9 +74,9 @@ h3 {
     margin-top: 0px;
     padding-top: 0px;
     width: 100%;
-    background-color: rgba(129, 176, 82,1);
-    /*background-color: rgba(102,155,102,1);*/
-    /*height: 330px;*/
+/*    background-color: rgba(129, 176, 82,1);*/
+    background-color: rgba(102,155,102,1);
+    height: 330px;
     color: white;
     overflow: hidden;
 }
@@ -154,13 +154,14 @@ h3 {
     /*Slik at overgangen skjer gradivs */
     transition: 0.2s;
     color: black;
-    background-color: rgba(225,252,195,0.8);
+    /*background-color: rgba(225,252,195,0.8);*/
+    background-color: rgba(138,181,138,1);
 
 }
 /* Når vi hovrer over et listeelement med en link */
 #navList li:hover > a{
     transition: 0.2s;
-    color: rgb(52, 76, 56); 
+    color: rgb(52, 76, 56);
     cursor: pointer;
 }
 
@@ -169,7 +170,7 @@ h3 {
     position: absolute;
     display: none;
     z-index: 999;
-    opacity: 0.9;
+    opacity: 0.95;
 
     list-style: none;
     padding: 0; 
@@ -201,7 +202,7 @@ h3 {
 /* Hovedboksen */
 #main {
     font-family: "Lucida Sans Unicode", sans-serif;
-    font-size: 14pt;
+    font-size: 12pt;
     background-color: white;
     margin: 0 auto;
     padding: 30px;
@@ -209,7 +210,7 @@ h3 {
     min-height: 1000px;
     height: auto !important;
     height: 100%;
-    box-shadow: 0 2px 2px 2px rgba(131,174,84,0.6);
+    box-shadow: 0 2px 2px 2px rgba(102,155,102,0.6);
 }
 
 #main a:link{
@@ -247,7 +248,7 @@ h3 {
 }
 
 #footerContent p {
-    font-size: 12pt;
+    text-align: left;
 }
 
 #footerContent a:hover {
@@ -277,28 +278,31 @@ h3 {
 #footerBox3 {
     width: 1100px;
     text-align: center;
-    margin: auto;
-    margin-left: -50px;
+    margin-top: 20px;
+    margin-left: -55px;
+    margin-bottom: -15px;
 }
 
 #footerBox3 a:hover {
-    /*font-size: 14pt;*/
     text-decoration: underline;
 }
 
-#footerBox3 > .noLink {
-    font-style: normal;
+#footerBox3 > a {
+    font-size: 13px;
 }
 
-#footerBox3 > .noLink:hover {
-    font-size: 12pt;
+#footerBox3 > .noLink, noLink:hover{
     font-style: normal;
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+.disc {
+    font-size: 8px;
 }
 
 #footerBox4 {
     width: 250px;
-    margin-top: -275px;
+    margin-top: -308px;
     margin-left: 710px;
 }
 
@@ -631,7 +635,7 @@ iframe {
 }
 
 .anchor:hover {
-    color: rgba(130, 176, 84, 1);
+    color: rgba(102,155,102,1);
     cursor: pointer;
 }
 
@@ -655,19 +659,17 @@ table, th, td {
     margin-right: auto;
     font-style: normal;
     font-weight: normal;
-    border: solid 2px rgba(130, 176, 84, 1);
+    border: solid 2px rgba(102,155,102,1);
     border-collapse: collapse;
 }
 
 th, td {
     padding: 10px;
     text-align: center;
-    font-size: 14pt;
-    font-family: "Lucida Sans Unicode", sans-serif;
 }
 
 .cell1, .cell2 {
-    background-color: rgba(130, 176, 84, 0.5);
+    background-color: rgba(102,155,102,0.5);
 }
 
 th, td {
@@ -687,10 +689,11 @@ th, td {
     font-weight: normal;
     margin-bottom: 0px;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 #sifo {
-    box-shadow: 2px 2px 5px rgba(130, 176, 84, 0.7);
+    box-shadow: 2px 2px 5px rgba(102,155,102,0.7);
 }
 
 #sifoBoks {
@@ -750,7 +753,7 @@ th, td {
     }
 
     body {
-        font-size: 14pt;
+        font-size: 12pt;
         margin: 0px;
         padding: 0px;
         width: 480px;
@@ -812,9 +815,9 @@ th, td {
         margin-top: 0px;
         padding-top: 0px;
         width: 480px;
-        background-color: rgba(129, 176, 82,1);
-        /*background-color: rgba(102,155,102,1);*/
-        /*height: 330px;*/
+/*        background-color: rgba(129, 176, 82,1);*/
+        background-color: rgba(102,155,102,1);
+        height: 330px;
         color: white;
         overflow: hidden;
     }
@@ -906,7 +909,7 @@ th, td {
     /*Slik at overgangen skjer gradivs */
     transition: 0.2s;
     color: black;
-    background-color: rgba(225,252,195,0.8);
+    background-color: rgba(138,181,138,1);
 
 }
 /* Når vi hovrer over et listeelement med en link */
@@ -921,7 +924,7 @@ th, td {
     position: relative;
     display: none;
     z-index: 999;
-    opacity: 0.9;
+    opacity: 0.95;
 
     list-style: none;
     padding: 0; 
@@ -957,7 +960,7 @@ th, td {
     /* Hovedboksen */
     #main {
         font-family: "Lucida Sans Unicode", sans-serif;
-        font-size: 14pt;
+        font-size: 12pt;
         background-color: white;
         margin: 0 auto;
         padding: 0px;
@@ -1054,6 +1057,10 @@ th, td {
         margin-top: -5px;
         margin-left: 10px;
     }
+    
+    p > .attr {
+    font-size: 10px !important; 
+}
 
     /* Slik at det ikke blir underline på siden av bildene når vi hovrer på dem*/
     .iconLink:hover {
@@ -1400,7 +1407,7 @@ th, td {
         margin-right: auto;
         font-style: normal;
         font-weight: normal;
-        border: solid 2px rgba(130, 176, 84, 1);
+        border: solid 2px rgba(102,155,102,1);
         border-collapse: collapse;
     }
 
@@ -1412,7 +1419,7 @@ th, td {
     }
 
     .cell1, .cell2 {
-        background-color: rgba(130, 176, 84, 0.5);
+        background-color: rgba(102,155,102,0.5);
     }
 
     .cell1 {
@@ -1430,16 +1437,17 @@ th, td {
         letter-spacing:2px;
     }
 
-    .mellomtittel {
+    h4 > .mellomtittel {
         font-family: libelSuit;
         letter-spacing: 1px;
         font-weight: normal;
         margin-bottom: 0px;
         margin-top: 10px;
+        font-size: 30px !important;
     }
 
     #sifo {
-        box-shadow: 2px 2px 5px rgba(130, 176, 84, 0.7);
+        box-shadow: 2px 2px 5px rgba(102,155,102,0.7);
     }
 
     #sifoBoks {
