@@ -44,6 +44,12 @@
                     Det er markert i navbaren hvilken side vi er på, ved at knappen til tilhørende side (eller som har undermenyen hvor siden er) er farget hvit når vi er på siden. 
                     I tillegg kommer vi til home ved å trykke på logo i headeren eller i footer.
                 </p>
+                <p>
+                    I tillegg til navigasjonsbaren på toppen av siden, er på på to av sidene også lagt inn en ankerbar på toppen og anker på bunn som bringer en til toppen av siden.
+                </p>
+                <p>
+                    I footer har vi fortsatt et sidekart.
+                </p>
             <h3>Oppsett og utseende</h3>
                 <p>
                     Det ble gjort noen større endringer i fargevalg, skrift og lignende på siden. <br>
@@ -55,9 +61,7 @@
                             
                             <li>Overskrifter:</li>
                                 <ul>
-                                    <li>H1: letter-spacing: 0.05em</li>
-                                    <li>H2: letter-spacing: 0.05em</li>
-                                    <li>H3: letter-spacing: 0.05em</li>
+                                    <li>H1, H2 og H3: letter-spacing: 0.05em</li>
                                 </ul>
                             <li>Brødtekst: "Lucida Sans Unicode", sans-serif, str: 12pt</li>
                         </ul>
@@ -70,7 +74,7 @@
                             <li>Bakgrunnsfarge på navigasjonsbar (hovrer): rgba(138,181,138,1</li>
                             <li>Bakgrunnsfarge på footer: rgba(52, 76, 56, 1)</li>
                             <li>Skyggelegging av hovedinnhold: rgba(102,155,102,0.6)</li>
-                            <li>Bakgrunnsfarge på bokser som kan åpnes og lukkes (hovrer): rgba(52, 76, 56, 1) USIKKER SPØR JULIE</li>
+                            <li>Bakgrunnsfarge på bokser som kan åpnes og lukkes (hovrer): rgb(52, 76, 56)</li>
                         </ul>
                     </li>
                     <li>Linker: 
@@ -80,45 +84,28 @@
                         </ul>
                     </li>
                     <li>Navigasjonsbar (hovering): Små bokstaver, endring i farger (se under fargetema). Gjennomsiktigheten i dropdown-menyen er endret fra 0.8 til 0.95.</li>
-                    <strike>
-                    <li>Header: Høyde satt til 330px.</li>
-                    <li>Footer: Inneholder i tillegg en egen logo laget for footer, og attribution til vektorer. </li>
-                    </strike>
                 </ul>
            
             <h3>Footer</h3>
                 <p>
-                    Ordtak ble byttet ut med logo, som flytter gjesten til home når logoen trykkes på. Endrede ikoner for facebook og instagram. Sidekart er nå horisontalt.
+                    Ordtak ble byttet ut med logo, som flytter gjesten til home når logoen trykkes på. Endrede ikoner og plassering for facebook og instagram. Sidekart er nå horisontalt.
                 </p>
             <h3>Sidens innhold</h3>
-                <strike>
+               
                 <p>
-                    <b>Index:</b> Ingen endringer/se over på generelle endringer.
-                </p>
-                </strike>
-                <p>
-                    <b>Hjem:</b> Inneholder nå en boks som plukker ut en tilfeldig oppskrift fra basen av oppskrifter. Denne boksen linker videre til oppskriftsiden den ble hentet fra og har en ankerlenke. På den ferdige siden har ikke denne boksen en kant rundt seg, ellers er den helt lik.
+                    <b>Hjem:</b> 
+                    Inneholder nå en boks som plukker ut en tilfeldig oppskrift fra basen av oppskrifter. Denne boksen linker videre til oppskriftsiden den ble hentet fra. På den ferdige siden har ikke denne boksen en kant rundt seg, ellers er den helt lik.
                 </p>
                 <p>
                     <b>Alltid ha på kjøkkenet:</b> 
                     Boksene ble gjort like høye/lange, og teksten ble venstrestilt. 
                     Iconene ble 120x120px, og fikk en bildetekst på 8pt, som er senter-stilt og har en linjehøyde på 1em.
-
-                    <strike>
-                    Overskriften har h1-egenskaper. 
-                    Boksene ble 261px bred og 880px høy. De har alle en padding og margin på 10px, samt en solid, grå border på 1px med radius 4px. 
-                    </strike>
+                    Boksene ble 261px bred og 880px høy.
                 </p>
                 <p>
                     <b>Middagsretter:</b> 
-                        Når oppskriften er boksen med innholdt 580px bred. Ved hoover blir fargen rgb(52, 76, 56) SJEKK UT SAMME SOM NAVBAR?, med en overgang på 0.2s.
-                        Overgangen til/fra stor og liten div ble fjernet av visuelle årsaker da det trolig ville flytte for mye på innholdet underveis.
-                        Når oppskriften åpnes er et lagt inn funksjonalitet slik at en scroller til toppen av oppskriften. Dette ble lagt til da det ved testing ble oppdaget at det ble opplevd rotete når en åpnet en oppskrift og en annen ble lukket lengre opp, og en da endte opp med å se på bunnen av den nye oppskriften. 
-                        <strike>
-                        er y-posisjonen til det store bildet noe ulikt fra bildet til bilde, slik at bildene ser best ut totalt sett.
-                        Boksen med fremgangsmåte og ingredienser er på 900px og med 30px padding, hvorav fremgangsmåte er på 600px og ingredienser på 300px. Liste-elementene i ingredienser har en solid 1px svart border i bunn med fargen #ccc. Hvert listeelement i fremgangsmåter har en linjeavstand på 1.5em, og elementene i både fremgangsmåte og ingredienser har en 8px bunn-margin. IKKE FERDIG
-                        Av visuelle årsaker ble det ingen overgang fra/til åpen/lukket xiv
-                        </strike>
+                        Når oppskriften er boksen med innholdt 580px bred. Ved hoover blir fargen rgb(52, 76, 56), med en overgang på 0.2s. Overgangen til/fra stor og liten div ble fjernet av visuelle årsaker.
+                        Når oppskriften åpnes er det lagt inn funksjonalitet slik at en scroller til toppen av oppskriften, slik at en ikke ser på bunnen av oppskriften når en åpner den.
                 </p>
                 <p>
                     <b>Matpakkeoppskrifter:</b> Samme endringene som for middagsretter.
@@ -127,7 +114,7 @@
                     <b>Matlagingstips:</b> Videoene er ikke lenger midtstilt, men sidestilt til venstre med beskrivende tekst ved siden av. Vi gikk vekk fra åpne/lukke mekanismen med javascript, vi ble enige med kunden om at en ankerbar like under tittelen, gir et penere og mer ryddig inntrykk.
                 </p>
                 <p>
-                    <b>Økonomi og planlegging:</b> Bredden på tabellen er endret til 850px for å kunne skape mer luft og oversiktlighet i tabellen. Med det ble paddingen satt opp til 10px. For å gi siden litt mer variasjon så er rammen endret til 2 px med farge rgba(102,155,102,1). Bakgrunnsfargen i header-cellene er satt til rgba(102,155,102,0.5). Innholdet er midtstilt i cellene, og selve tabellen er midtstilt på siden. Økonomitipsene er ikke lengre markert med discs. Listen med tips til hvordan man kan leve etter budsjett er nå nummerert, da dette føles mer intuitivt i denne sammenhengen. Listen med hvordan man ordner budsjett har overskrift i libelSuit strl. 20px. Innholdet kan ikke lengre åpnes og lukkes som bokser, dette virket ikke hensiktsmessig da innholdet ikke er veldig stort. Funksjonen er erstattet med en ankerbar på topp som referer til overskriftene på siden, og en ankerbar på bunn som referer til toppen av siden. Siden har fått et bilde med figcaption som linker til siden bildet er fra, dette skaper mer variasjon i innholdet. Bildet har fått en skygge med farge rgba(102,155,102,0.7).
+                    <b>Økonomi og planlegging:</b> Bredden på tabellen er endret til 850px for å kunne skape mer luft og oversiktlighet i tabellen. Med det ble paddingen satt opp til 10px. For å gi siden litt mer variasjon så er rammen endret til 2 px med farge rgba(102,155,102,1). Bakgrunnsfargen i header-cellene er satt til rgba(102,155,102,0.5). Innholdet er midtstilt i cellene, og selve tabellen er midtstilt på siden. Økonomitipsene er ikke lengre markert med discs. Listen med tips til hvordan man kan leve etter budsjett er nå nummerert, da dette føles mer intuitivt i denne sammenhengen. Listen med hvordan man ordner budsjett har overskrift i libelSuit str. 20px. Innholdet kan ikke lengre åpnes og lukkes som bokser, dette virket ikke hensiktsmessig da innholdet ikke er veldig stort. Funksjonen er erstattet med en ankerbar på topp som referer til overskriftene på siden, og en ankerbar på bunn som referer til toppen av siden. Siden har fått et bilde med figcaption som linker til siden bildet er fra, dette skaper mer variasjon i innholdet. Bildet har fått en skygge med farge rgba(102,155,102,0.7).
                 </p>
                 <p>
                     <b>Lagring:</b> Bredden på tabellen er endret til 850px for å kunne skape mer luft og oversiktlighet i tabellen. Med det ble paddingen satt opp til 10px. For å gi siden litt mer variasjon så er rammen endret til 2 px med farge rgba(102,155,102,1). Bakgrunnsfargen i header-cellene er satt til rgba(102,155,102,0.5). Innholdet er midtstilt i cellene, og tabellen er midtstilt på siden. Det er satt inn ankerbar på topp som referer til overskrifter for å gjøre siden enklere å navigere, og mer oversiktlig. I tillegg er det satt inn ankerbar som linker til toppen. Listene har nå "overskrift" i kursiv i fargen rgba(52, 76, 56, .7). Formatet på listen har blitt endret slik at den har innrykk på nivå med resten av teksten, altså ingen.
@@ -147,19 +134,19 @@
                         </li>
                         <li>
                             <b>Highlighting i navbar</b>
-                            Navbaren vil hele tiden oppdateres slik at siden vi er på (eller knappen som har underlisten med siden) vil være hvit når vi er på siden. Dette gjør at det er lett for gjesten å se hvilken side vi er på.
+                            Navbaren vil hele tiden oppdateres slik at siden vi er på (eller knappen som har siden i dropdown-menyen) vil være hvit når vi er på siden. Dette gjør at det er lett for gjesten å se hvilken side vi er på.
                         </li>
                         <li>
                             <b>Randomisert oppskrift på forsiden</b>
-                            Denne funksjonen vil hente inn oppskrifter i en liste, gi dem et nummer og så velge ett av dem tilfeldig. Den oppskriften som velges vil også lenke til oppskriftssiden den opprinnelig sto på. 
+                            Løsningen her er ikke optimal, men det mest optimale med tanke på kunnskapsnivå. Den lille diven til alle oppskriftene ble lagt i home.html i hver sin a-tag, samt i ei liste over oppskriftene. Det blir generert et tilfeldig tall som velger hvilke oppskrift basert på oppskriften som ligger i indeksen i lista. En blir så manøvrert til matpakker eller middager, hvor rett oppskrift åpnes og en blir scrollet ned til den.
                         </li>
                         <li>
                             <b>Innlasting av innhold</b>
-                            Innholdet/de ulike sidene lastes fortsatt inn slik som planlagt, men det er blitt lagt til at en scroller til toppen når en ny side åpnes.  
+                            Innholdet/de ulike sidene lastes fortsatt inn slik som planlagt, men det er blitt lagt til at det scrolles til toppen når en ny side åpnes.  
                         </li>
                         <li>
                             <b>Håndtere href-klikk</b>
-                            På grunn av bruken av .load, måtte klikk på href-linker ment til å navigere oss inne på siden, bli håndtert, ved at vi måtte forhindre å navigere oss vekk fra siden (som normalt vil skje), måtte finne ut hvilken side vi skulle navigere oss til, og så både hente side, endre historien, oppdatere adressefeltet i browser, oppdatere navBar, scrolle oss til toppen og ikke minst: laste inn rett side. 
+                            På grunn av bruken av .load, måtte klikk på href-linker ment til å navigere oss mellom interne dokumenter/sider håndteres. Dette innebar blant annet å forhindre at vi navigerer oss vekk fra index.html (som normalt vil skje), finne ut hvilke side vi skal laste inn i main-boksen, og så hente side, endre historien, oppdatere adressefeltet i browser, oppdatere navBar og scrolle oss til toppen.. 
                         </li>
                         <li>
                             <b>Fiksert navigasjonsbar med drop-down meny</b>
@@ -175,13 +162,13 @@
                         </li>
                         <li>
                             <b>Feilmelding ved ikke-eksisterende sider</b>
-                            Per dags dato eksisterer ikke facebook eller instagram side, og det vil derfor bli gitt en alert når disse linkene trykkes på. I tillegg er det lagt inn funksjnalitet slik at en ikke beveger seg til toppen av siden eller skifter side, men ganske enkelt får en alert.
+                            Per dags dato eksisterer ikke facebook eller instagram side, og det vil derfor bli gitt en alert når disse linkene trykkes på. I tillegg er det lagt inn funksjonalitet slik at en ikke beveger seg til toppen av siden eller skifter side, men ganske enkelt får en alert.
                         </li>
                     </ul>
 
             <h3>Modularitet</h3>
                 <p>
-                    For å slippe å skrive samme kode flere steder, ble footer og navbar lagt i egne, respektive dokumenter (footer.html og nav.html), og ble lastet inn i index.html med bruk av Javascript og JQuery. Vi valgte også å laste inn alle sidene, slik at vi primært bare kunne ha innholdet i body-tagen i hver fil, og slapp å ha hele header-taggen med linker til alle de ulike sidene. Grunnet krav i prosjektet er det likevel lagt inn en head-tag i alle dokumentene med title og charset. 
+                    For å slippe å skrive samme kode flere steder, ble footer og navbar lagt i egne, respektive dokumenter (footer.html og nav.html), og ble lastet inn i index.html med bruk av Javascript og JQuery. Vi valgte også å laste inn alle sidene, slik at vi primært bare kunne ha innholdet i body-taggen i hver fil, og slapp å ha hele header-taggen med linker til alle de ulike sidene. Grunnet krav i prosjektet er det likevel lagt inn en head-tag i alle dokumentene med title og charset. 
                 </p>
         </section>
             
@@ -221,14 +208,14 @@
                             <ul>
                                 <li><p>logo.jpg</p></li>
                                 <li><p>sifo.jpg</p></li>
-                                <li><p>footerlogo.jpg</p></li>
+                                <li><p>footerlogo1.jpg</p></li>
                                 <li><p>oppskriftsbilder/</p></li>
                                     <ul>    
                                         <li><p>BLT-sandwich.jpg</p></li>
                                         <li><p>falafler.jpg</p></li>
                                         <li><p>gulrotsuppe.jpg</p></li>
                                         <li><p>kyllingfrikasse.jpg</p></li>
-                                        <li><p>meksikanskbondegryte.jpg</p></li>
+                                        <li><p>meksikanskbonnegryte.jpg</p></li>
                                         <li><p>ostskinkemuffins.jpg</p></li>
                                         <li><p>pastasalat.jpg</p></li>
                                         <li><p>pitaMedKremost.jpg</p></li>
@@ -268,7 +255,7 @@
                 <tr>
                     <th scope="col">home.html</th>
                     <td> Kort info om sidens bakgrunn, innhold og en tilfeldig oppskrift brukeren kan starte med.</td>
-                    <td>Katrine</td>
+                    <td>Katrine og Dora Oline</td>
                 </tr>
                 <tr>
                     <th scope="col">index.html</th>
@@ -277,7 +264,7 @@
                 </tr>
                 <tr>
                     <th scope="col">nav.html</th>
-                    <td>Navigasjonsliste med linker til alle sider, med unntak av kontaktskjema, da den linkes til fra footer og ikke navigasjonsbaren.</td>
+                    <td>Navigasjonsbar med linker til alle sider, med unntak av kontaktskjema, da den linkes til fra footer og ikke navigasjonsbaren.</td>
                     <td>Dora Oline</td>
                 </tr>
                 <tr>
@@ -292,12 +279,12 @@
                 </tr>
                 <tr>
                     <th scope="col">middager.html</th>
-                    <td>Vil inneholde ca. 5 oppskrifter på gode og rimelige middagsretter for studenter.</td>
+                    <td>Vil inneholde 5 oppskrifter på gode og rimelige middagsretter for studenter.</td>
                     <td>Dora Oline</td>
                 </tr>
                 <tr>
                     <th scope="col">matpakker.html</th>
-                    <td>Vil inneholde ca. 5 oppskrifter på gode matpakker.</td>
+                    <td>Vil inneholde 5 oppskrifter på gode matpakker.</td>
                     <td>Dora Oline</td>
                 </tr>
                 <tr>
@@ -313,7 +300,7 @@
                 <tr>
                     <th scope="col">linker.html</th>
                     <td>Linker til andre sider, for eksempel om en ønsker flere/andre oppskrifter, andre tips og lignende.</td>
-                    <td>Katrine</td>
+                    <td>Katrine og Julie</td>
                 </tr>
                 <tr>
                     <th scope="col">kontakt.html</th>
@@ -322,14 +309,14 @@
                 </tr>
                 <tr>
                     <th scope="col">footer.html</th>
-                    <td>Skjema for tilbakemelding, nyttig for videre drift av siden.</td>
-                    <td>Katrine</td>
+                    <td>Logo, link til kontaktskjema, facebook og instragram, samt sidekart.</td>
+                    <td>Katrine og Aasne</td>
                 </tr>
                 <tr>
                     <th scope="col">script.js</th>
                     <td>Javascriptkoden nødvendig for å få de nevnte javascript-funksjonene til å fungere.</td>
-                    <td>Alle <strike>Dora Oline og Aasne: highligting i navbar, innlasting av innhold, navigasjonsbar med dropdown meny, håndtere href-klikk. 
-                    Katrine og Julie: listeners i navbar, skjemavalidering, randomisert oppskrift, feilmelding ved ikke-ekeisterende sider.</strike>
+                    <td>Alle <strike>Dora Oline og Aasne: highlighting i navbar, innlasting av innhold, navigasjonsbar med dropdown meny, håndtere href-klikk og randomisert oppskrift. 
+                    Katrine og Julie: listeners i navbar, skjemavalidering, feilmelding ved ikke-ekeisterende sider.</strike>
                     </td>
                 </tr>
                 <tr>
@@ -343,7 +330,7 @@
             <section class="box"> <!-- Punkt 4-->
             <h2>Kommentar</h2>
             <p>
-                <b>Feilmelding på matlagingstips:</b> På matlagingstips dukker det opp flere feilmeldinger i consollen. <a href="http://stackoverflow.com/questions/24490323/google-chrome-cast-sender-error-if-chrome-cast-extension-is-not-installed-or-usi">Denne</a> siden har en tråd angående disse feilmeldingene, hvor det blir fortalt at det er en kjent bug i det offesielle Chromecast Javascript bibllioteket. Google har erkjent feilen, men mener de ikek kan gjøre noe da det er en standard Google nettverk feil, men de jobber med en langtidsløsning.  
+                <b>Feilmelding på matlagingstips:</b> På matlagingstips dukker det opp flere feilmeldinger i consollen. <a href="http://stackoverflow.com/questions/24490323/google-chrome-cast-sender-error-if-chrome-cast-extension-is-not-installed-or-usi">Denne</a> siden har en tråd angående disse feilmeldingene, hvor det blir fortalt at det er en kjent bug i det offesielle Chromecast Javascript biblioteket. Google har erkjent feilen, men mener de ikke kan gjøre noe da det er en standard Google nettverk feil, men de jobber med en langtidsløsning.  
             </p>
         </section>
     </section>
