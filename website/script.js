@@ -139,7 +139,9 @@ var updateNavbar = function(page) {
 
 //Holder navbaren fiksert i toppen ved å legge til classen fixed om det er lengre til toppen enn headers hoyde
 $(window).bind('scroll', function () {
-    if ($(window).scrollTop() > $("#header").outerHeight()) {
+    console.log("Screen widht: ", screen.width);
+    // Hvis vi har scrollet lengre ned enn headerens høyde, og det ikke er en mobiltelefon vi er på
+    if ($(window).scrollTop() > $("#header").outerHeight() && screen.width <= 769) {
       $('#navBar').addClass('fixed');
     } else {
       $('#navBar').removeClass('fixed');
