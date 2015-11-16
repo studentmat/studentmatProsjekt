@@ -29,7 +29,7 @@ body {
 
 /* Tekst, fonts og skrift.*/
 p {
-    font-family: "Verdana", sans-serif;
+    font-family: "Lucida Sans Unicode", sans-serif;
     /*font-size: 14pt; SETTES FLERE GANGER */
     text-align: justify;
 }
@@ -200,7 +200,7 @@ h3 {
 
 /* Hovedboksen */
 #main {
-    font-family: sans-serif;
+    font-family: "Lucida Sans Unicode", sans-serif;
     font-size: 14pt;
     background-color: white;
     margin: 0 auto;
@@ -221,7 +221,7 @@ h3 {
 }
 
 #mainHeading {
-    font-family: sans-serif;
+    font-family: "Lucida Sans Unicode", sans-serif;
 }
 
 /* Footer og innhold i footer. */
@@ -237,7 +237,7 @@ h3 {
     width: 1000px;
     color: white;
     line-height: 1.2em;
-    font-family: sans-serif;
+    font-family: "Lucida Sans Unicode", sans-serif;
 }
 
 #footerContent a {
@@ -570,7 +570,7 @@ iframe {
     width: 600px;
     margin: 0 auto;
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: "Lucida Sans Unicode", sans-serif;
     line-height: 25px;
 }
 
@@ -614,7 +614,7 @@ iframe {
 /* Ankerbar */
 .meny {
     text-align: center;
-    font-family:"Georgia", serif;
+    font-family: "Lucida Sans Unicode", sans-serif;
     margin-top: -10px;
     margin-bottom: 30px;
     font-style: oblique;
@@ -653,7 +653,7 @@ th, td {
     padding: 10px;
     text-align: center;
     font-size: 14pt;
-    font-family:"Georgia", serif;
+    font-family: "Lucida Sans Unicode", sans-serif;
 }
 
 .cell1, .cell2 {
