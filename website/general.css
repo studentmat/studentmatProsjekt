@@ -710,21 +710,19 @@ th, td {
 
 /*Til linker-siden*/
 #linkerSide a:link, #linkerSide a:visited{
-    display: block;
-    font-style: normal;
-    height: 30px;
-    width: 170px;
-    padding: 3px;
-    text-align: center;
-    background-color: rgba(130, 176, 84,1);
-    border: 2px solid rgba(52, 76, 56, 1);
-    color: #FFF;
+    text-decoration: none;
+    text-transform: none;
 }
 
 #linkerSide a:hover {
-    background-color: #FFF;
-    border: 2px solid rgba(130, 176, 84,1);
-    color: rgba(52, 76, 56, 1);
+    text-decoration: none;
+    text-transform: none;
+
+}
+
+.linkLogo {
+    width: 300px;
+    height: auto;
 }
 
 /*Mobil og tablet design FYLL INN*/
@@ -813,112 +811,128 @@ th, td {
     .navfooterColor {
         background-color: rgba(52, 76, 56, 1);
     }
+#navBar {
+    width: 480px;
+    font-family: sans-serif; /*FYLL UT */
+}
 
-    #navBar {
-        width: 100%;
-        font-family: sans-serif; /*FYLL UT */
-    }
+/*For å holde menyen på plass når en scroller*/
+.fixed {
+    position: fixed;
+    top: 0;
+}
 
-    /*For å holde menyen på plass når en scroller*/
-    .fixed {
-        position: fixed;
-        top: 0;
-    }
+/* Delen av navbaren med knapper */
+#navList {
+    font-size: 15pt;
+    width: 480px;
+    margin: 0 auto;
+    padding-left: 0;
+}
 
-    /* Delen av navbaren med knapper */
-    #navList {
-        font-size: 15pt;
-        width: 480px;
-        margin: 0 auto;
-        padding-left: 0;
-    }
+/* Knappene */
+#navList .navButton {
+    text-align: center;
+    padding-left: 0;
+    display: block;
+    margin: 0 auto;
+}
+   /* Delen av navbaren med knapper */
+#navList {
+    font-size: 15pt;
+    width: 480px;
+    margin: 0 auto;
+    padding-left: 0;
+}
 
-    /* Knappene */
-    #navList .navButton {
-        text-align: center;
-        padding-left: 0;
-        margin: 0 auto;
-    }
-    /* Linkene i navbaren som ikke er i dropdown-meny */
-    #navList > li > a {
-        text-align: center;
-        padding-left: 0;
-        color: #FFFFFF;
-        width: 480px;
-        margin: 0 auto;
-        text-transform: uppercase;
-        padding: 10px 0;
-    }
+/* Knappene */
+#navList .navButton {
+    text-align: left;
+    padding-left: 0;
+    display: block;
+    margin: 0 auto;
+}
+/* Linkene i navbaren som ikke er i dropdown-meny */
+#navList > li > a {
+    text-align: center;
+    padding-left: 0;
+    display: block;
+    color: #FFFFFF;
+    width: 250px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
 
-    /* Teksten i en knapp når vi er på dens side */
-    #navList > li.highlight > a{
-        color: #544B4B;
-    }
+/* Teksten i en knapp når vi er på dens side */
+#navList > li.highlight > a{
+    color: #544B4B;
+}
 
-    /* Knappen til siden vi er på er hvit */
-    .highlight {
-        background-color: white;
-    }
+/* Knappen til siden vi er på er hvit */
+.highlight {
+    background-color: white;
+}
 
-    /* Linkene i menyen */
-    #navList a {
-        text-decoration: none;
-        color: #FFFFFF;
-    }
+/* Linkene i menyen */
+#navList a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
-    /* Linkene i menyen når vi hovrer over dem */
-    #navlist a:hover {
-        font-style: normal;
-    }
+/* Linkene i menyen når vi hovrer over dem */
+#navlist a:hover {
+    font-style: normal;
+}
 
-    /* Når vi hovrer over en side i navbaren */
-    #navList li:hover {
-        /*Slik at overgangen skjer gradivs */
-        transition: 0.2s;
-        color: black;
-        background-color: rgba(225,252,195,0.8);
+/* Når vi hovrer over en side i navbaren */
+#navList li:hover {
+    /*Slik at overgangen skjer gradivs */
+    transition: 0.2s;
+    color: black;
+    background-color: rgba(225,252,195,0.8);
 
-    }
-    /* Når vi hovrer over et listeelement med en link */
-    #navList li:hover > a{
-        transition: 0.2s;
-        color: rgb(52, 76, 56); 
-        cursor: pointer;
-    }
+}
+/* Når vi hovrer over et listeelement med en link */
+#navList li:hover > a{
+    transition: 0.2s;
+    color: rgb(52, 76, 56); 
+    cursor: pointer;
+}
 
-    /* Dropdown menyene */
-    #navList .dropdown {
-        position: absolute;
-        display: none;
-        z-index: 999;
-        opacity: 0.9;
+/* Dropdown menyene */
+#navList .dropdown {
+    position: relative;
+    display: none;
+    z-index: 999;
+    opacity: 0.9;
 
-        list-style: none;
-        padding: 0; 
-        margin: 0;
+    list-style: none;
+    padding: 0; 
+    margin: 0;
 
-        visibility: hidden;
-        height: auto;
-        padding-top: 5px;
-    }
+    visibility: hidden;
+    height: auto;
+    padding-top: 5px;
+}
 
-    /* Når vi hovrer over en knapp med dropdown meny */
-    #navList .navButton:hover .dropdown {
-        display: block;
-        visibility: visible;
-        background-color: rgb(52, 76, 56);
-        width: 480px;
-        padding: 5px 0;
-        margin-top: 0px;
-        font-size: 20px;
-    }
-    /* Elemtenene i dropdown menyen */
-    #navList .dropdown li {
-        display: block;
-        height: 30px;
-        padding: 5px 0px;
-        margin: 10px;
-    }
+/* Når vi hovrer over en knapp med dropdown meny */
+#navList .navButton:hover .dropdown {
+    display: block;
+    visibility: visible;
+    background-color: rgb(52, 76, 56);
+    width: 470px;
+    padding: 5px 0;
+    margin-top: 0px;
+    font-size: 20px;
+}
+/* Elemtenene i dropdown menyen */
+#navList .dropdown li {
+    display: block;
+    height: 30px;
+    padding: 5px 0px;
+    margin: 10px;
+}
 
     /* Hovedboksen */
     #main {
@@ -1275,7 +1289,7 @@ th, td {
     }
     .tips_fremgangsmate {
         vertical-align: top;
-        width: 460px;
+        width: 420px;
         line-height: 1.5em;
         margin-left: 40px;
         display: inline-block;
@@ -1371,7 +1385,7 @@ th, td {
     }
 
     th, td {
-        padding: 10px;
+        padding: 5px;
         text-align: center;
         font-size: 14pt;
         font-family: "Lucida Sans Unicode", sans-serif;
@@ -1379,6 +1393,10 @@ th, td {
 
     .cell1, .cell2 {
         background-color: rgba(130, 176, 84, 0.5);
+    }
+
+    .cell1 {
+        width: 200px;
     }
 
     th, td {
@@ -1429,23 +1447,19 @@ th, td {
 
     /*Til linker-siden*/
     #linkerSide a:link, #linkerSide a:visited{
-        display: block;
-        font-style: normal;
-        height: 30px;
-        width: 170px;
-        padding: 3px;
-        text-align: center;
-        background-color: rgba(130, 176, 84,1);
-        border: 2px solid rgba(52, 76, 56, 1);
-        color: #FFF;
+    text-decoration: none;
+    text-transform: none;
     }
 
     #linkerSide a:hover {
-        background-color: #FFF;
-        border: 2px solid rgba(130, 176, 84,1);
-        color: rgba(52, 76, 56, 1);
-    }
+    text-decoration: none;
+    text-transform: none;
 
+    }
+    .linkLogo {
+        width: 300px;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 769px) {
