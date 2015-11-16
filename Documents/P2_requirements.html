@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <title>
+    	StudentMat
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    </head>
+
+    <body>
+    <section id="content">
+      
+        <header>
+            <h1>P2 Designdetaljer</h1>
+            <h2>Aasne, Dora Oline, Julie, Katrine</h2>
+            <h3>IT2805, 7. Oktober, 2015</h3>
+        </header>
+
+        <section class="box"> <!-- Punkt 2-->
+            <h2>Administreringsinformasjon</h2>
+            <p>
+                Klient: Studentforeningen i Trondheim (SfiT)
+            </p>
+            <p>
+                Websidens navn: StudentMat
+            </p>
+            <p>
+                Kontaktperson: Katrine Jordheim
+            </p>
+        </section>
+
+        <section class="box"> <!-- Punkt 3-->
+            <h2>Hensikt, mål og publikum</h2>
+            <p>
+                Hensikten med siden er å gi studenter en matside rettet mot deres behov. 
+                Studenter er ofte nye på kjøkkenet, med lite erfaring, penger og tid og 
+                dette kan lett føre til en nuddel- eller grandiosa-diett. SfiT ønsker av 
+                denne grunn å lage en side med tips til økonomi, middagsretter og matpakker, matlagingstips, basisingredienser og lignende, for å gjøre studenttilværelsen lettere på matfronten. Publikum er hovedsakelig studenter, men inkluderer også alle andre som finner siden nyttig.
+            </p>
+        </section>
+
+        <section class="box"> <!-- Punkt 4-->
+            <h2>Navigasjonsstruktur</h2>
+            <p> 
+                Siden vil ha en navigasjonsbar på toppen av siden som vil være fiksert 
+                når man scroller, og som følger med til alle sidene. Denne viser fire av sidene (hjem, tips, oppskrifter og andre linker). Når man holder musen over en  av dem eller klikker, vil en drop-down meny dukke opp hvor man  kan navigere seg til andre sider.
+            </p>
+            <p>
+                Vi vil med dette få en enkel og oversiktelig manøvrering, hvor en lett kan navigere seg mellom sider med få klikk. Dette passer godt med studenters travle hverdag og høye forventninger til effektivitet og brukergrensesnitt. Dette vil også gjøre siden oversiktelig med tanke på hvor en finner hva og hva siden kan tilby.
+                Om en nettside ikke klarer å oppnå denne brukervennligheten, er det fare for at brukeren vil substituere den med en annen side.
+            </p>
+            <img src="sitestructure.jpg" alt="Sidestruktur">
+            <figcaption>Figur 1: Mockup for sidestruktur</figcaption>
+        </section>
+
+        <section class="box"> <!-- Punkt 5-->
+            <h2>Oppsett og utseende</h2> 
+            <p>
+                Det vil være et enkelt og behagelig design som er felles for alle sidene. I toppen vil det være en header med logo gitt av klienten. Trykk på headeren vil bringe en tilbake til "hjem". 
+
+                Under headeren er navigasjonsbaren med et enkelt og stilrent design. Denne vil forbli fiksert på toppen av siden når en scroller nedover, og også være på alle sidene, og gir dermed enkel navigasjon. Headeren følger ikke med nedover ved scrolling. Dette gir både mer plass til selve innholdet på små skjermer, og sørger for minimalt med støymomenter. 
+                
+                Selve sideinnholdet (som er ulikt for hver side) vil være i en midtstilt boks, med samme bredde som innholdet i footer og navigasjonsmenyen. Dette gjør det enklere å lese innholdet, samt gir et responsivt design med tanke på ulike skjermstørrelser og enheter, enklere å implementere. 
+
+                På bunnen vil det være en footer med motto, sidekart og linker til kontakt-skjema, facebook, instagram o.l. Footeren kommer til syne når en når bunnen av siden.
+            </p>
+            <img src="mockups/generalmockup.png" alt="Mockup" class="mockup">
+            <figcaption>Figur 2: Mockup for generelt utseendet</figcaption>
+            <p>
+                Det generelle designet på siden, hvor innholdet som er ulikt for sidene vil være i den hvite boksen.
+            </p>
+            <img src="mockups/generalmockup2.png" alt="Mockup2" class="mockup">
+            <figcaption>Figur 3: Mockup for scrollende navbar</figcaption>
+            <p>
+                Når man scroller ned vil menyen henge igjen på toppen av siden. 
+            </p>
+            <p>
+                Spesifikasjoner som gjelder alle sider er som følgende:
+                <ul>
+                    <li>Font:
+                        <ul class="listeBullet">
+                            <li>Overskrifter:</li>
+                                <ul class="listeBullet">
+                                    <li>H1: "Libel Suit", str: 33pt</li>
+                                    <li>H2: "Libel Suit", str: 27pt</li>
+                                    <li>H3: "Libel Suit", str: 22pt</li>
+                                </ul>
+                            <li>Navigasjonsbar: "Sans-serif", str: 15pt</li>
+                            <li>Brødtekst: "Helvetica", str: 14pt</li>
+                        </ul>
+                    </li>
+                    <li>Fargetema: 
+                        <ul class="listeBullet">
+                            <li>Tekst i navigasjonsbar (normalt): #FFFFFF
+                            <li>Tekst i navigasjonsbar (hovrer): #544b4b</li>
+                            <li>Tekst i hovedinnhold: #000000.</li>
+                            <li>Tekst i footer: #FFFFFF</li>
+                            <li>Bakgrunnsfarge i hovedinnhold: #FFFFFF</li>
+                            <li>Bakgrunnsfarge på siden: #f5f9f2</li>
+                            <li>Bakgrunnsfarge på navigasjonsbar (normal): #544b4b
+                            <li>Bakgrunnsfarge på navigasjonsbar (hovrer): #FFFFFF</li>
+                            <li>Bakgrunnsfarge på footer: #544b4b</li>
+                            <li>Skyggelegging av hovedinnhold: #544b4b.</li>
+                            <li>Bakgrunnsfarge på bokser som kan åpnes og lukkes (hovrer): #544b4b
+                            <li>Tekstfarge på bokser som kan åpnes (hovrer): #FFFFFF</li>
+                        </ul>
+                    </li>
+                    <li>Bredde på innhold: 1000px.</li>
+                    <li>Linker: 
+                        <ul class="listeBullet">
+                            <li>Generelt: Kursiv og svart.</li>
+                            <li>Footer: Kursiv generelt, og har i tillegg underlinje ved hovring.</li>
+                        </ul>
+                    </li>
+                    <li>Navigasjonsbar: Store bokstaver, og "inverse" farger ved hovring. Ved hovring vises en dropdown meny som er mørk og delvis gjennomsiktig, med hvit tekst og store bokstaver. Også i drop-down inverseres fargene ved hovring.</li>
+                    <li>Header: 1000px bred med en logo gitt av kunden. Bakgrunnsfargen til logoen skal matche bakgrunnsfargen på headeren slik at det ser ut til å gå i ett.</li>
+                    <li>Footer: Matcher navigasjonsbar for å gi et helhetlig inntrykk. Inneholder linker til sosialt media, link til kontaktskjema og sitemap. </li>
+                    <li>Logo: Kunden gir oss logo. Skal ha friske farger som passer til sidens fargetema og tema. </li>
+                </ul>
+            </p>
+        </section>
+        <section class="box"> <!--Punkt 6-->
+            <h2>Sidens innhold</h2>
+            <p>
+
+            </p>
+            <h3>Hjem</h3>   
+                <p>
+                    Dette er den første siden brukeren kommer inn på. Denne siden vil inneholde litt info om bakgrunnen til siden, hva man kan forvente å finne her og en tilfeldig oppskrift. Sistnevnte vil genereres tilfeldig ved hjelp av javascript, og vil derfor være forskjellig hver gang man går inne på siden. I tillegg vil det komme en liten tekst mellom introduksjonen av siden og oppskriften, om Sfit, hva de allerede tilbyr av tjenester og hva de ønsker å oppnå.
+                </p>
+                <p>
+                    Siden vil gi en introduksjon av oss til brukeren, og forhåpentligvis gi brukeren lyst til å navigere seg videre. 
+                </p>
+                </p>
+                    Overskrifter er midstilt, og resten av teksten er justify. 
+                    Oppskriften er innrammet og midstilt og under introteksten. 
+                </p>
+                <img src="mockups/homemockup.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 4: Mockup for home.html</figcaption>
+
+
+            <h3>Alltid ha på kjøkkenet</h3>
+                <p>
+                    Siden vil inneholde tre bokser, en for kjøkkenskap, en for fryser og en for kjøleskap. Disse vil ha en kant rundt seg, svakt avrundet i hjørnene. Over dem ønsker kunden et passende ikon, men disse er per dags dato ikke gitt. 
+                </p>
+                <p>
+                    Dette tilfredstiller klientens mål om å informere brukerene om hva det lønner seg å alltid ha, i tilfelle butikker er stengt eller det er for lang vei til butikken. Dette er også nyttige basisvarer som ofte kan brukes og lage billige middager av. 
+                        
+                    Overskriften til hver av boksene vil være midstilt. Listeelementene vil ikke ha noen dot/strek eller lignende forran seg. 
+                </p>
+                <img src="mockups/alltidhamockup.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 5: Mockup for alltidHa.html</figcaption>
+
+            <h3>Middagsretter</h3>
+                <p>
+                    Siden vil inneholde middagsoppskrifter som tilfredstiller det studenter ofte ser etter, blant annet enkle, billige og ikke tidkrevende. 
+                </p>
+                <img src="mockups/middagmockup1.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 6: Mockup for middager.html, lukket</figcaption>
+                <p>
+                    Øverst vil det være en overskrift. Denne er midstilt og med h1-egenskaper.
+                    
+                    Hver oppskrift vil kunne åpnes og lukkes. I lukket tilstand vil det være et bilde på ca. 320x240 px hel til venstre, og til høyre tittelen på oppskriften og en kort beskrivelse av den i kursiv. 
+                </p>
+                <img src="mockups/middagmockup2.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 7: Mockup for middager.html, hover</figcaption>
+                <p>
+                    Når en hovrer over bildet eller teksten, vil bakgrunnen til teksten få nav-barens farge, og teksten vil bli hvit. 
+                </p>
+                <img src="mockups/middagmockup3.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 8: Mockup for middager.html, åpen</figcaption>
+                <p>
+                    Om en klikker på enten bildet eller teksten, vil bildet komme i stort format. Det vil da være ca. 400px høyt og 1000px bredt. Under vil navnet til oppskriften stå i h2-stil, midstilt.
+                </p>
+                <p>
+                    Ingredienser vil være ramset opp på venstre side, med god linjeavstand og en understrekning under hver. 
+                </p>
+                <p>
+                    Til høyre vil fremgangsmåtens steg være oppramset, med tall foran seg som er uthevet. Under fremgangsmåten vil det stå en eller to korte tips, og under der igjen en link til siden hvor oppskriftens inspirasjon er funnet.
+                </p>
+                                
+            <h3>Matpakkeoppskrifter</h3>
+                <p>
+                    Lunsj på skolen er for mange en stor utgift, og egne matpakker kan redusere matbudsjettet betraktelig. Denne siden vil dermed oppfylle klientens mål om å inspirere og gjøre det enklere for studenter å selv lage matpakker, og dermed spare penger. 
+                </p>
+                <p>
+                    Design og innhold er likt som middagsoppskrifter, sett bort fra at oppskriftene er for matpakker og ikke middager.
+                </p>
+            
+            <h3>Matlagingstips</h3>
+                <p>
+                    Siden vil inneholde videoer av ulike teknikker, for eksempel å filetere fisk, koke egg, skrelle avokado og andre teknikker nye kokker ofte har bruk for, men ikke kjennskap til.
+                </p>
+                <p>
+                    Personer i SfiT målgruppe er ofte nye på kjøkkenet og med lite erfaring. Siden skal oppfylle kundens krav om å gi gode tips og instruksjoner til vanlige oppgaver på kjøkkenet, i ønske om å hjelpe studenter i gang med mer avansert matlaging enn grandiosa. 
+                </p>
+                <p>
+                    Instruksjonene vil være tilgjengelig i form av tekst og/eller video.
+                    Alle filmene er 315px høy og 420px bred, og midstilt. Videoer er oftere mer interessante og lærerike enn instruksjoner i form av tekst, samt kan bli sett på, mens en forsøker å utføre teknikken selv. Det vil derfor være mest mulig videoer.
+                </p>
+                <img src="mockups/teknikkermockup.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 9: Mockup for matlaginstips.html, lukket</figcaption>
+                <p>
+                    Innholdet vil være "gjemt" i bokser, hvor bare overskriften er synlig. Når en så klikker på overskriften, vil boksen åpnes og en kan se selve instruksjonene og beskrivelsene. Dette gjør siden ryddig, selv når det er mange ulike teknikker som blir omtalt.
+                </p>
+                <img src="mockups/teknikkermockup1.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 10: Mockup for matlagingstips.html, åpen</figcaption>
+                <img src="mockups/teknikkermockup2.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 11: Mockup for matlagingstips.html</figcaption>
+                <p>
+                    Når en annen boks åpnes, vil den som var åpen, lukke seg.
+                </p>
+                
+                <h3>Økonomi og planlegging</h3>
+                <p>
+                    Siden vil fokusere på økonomi og planlegging, og vil inneholde tips til budsjett og hvordan en kan holde det. I tilegg vil det være eksempel på handleliste og ukesmeny.
+                </p>
+                <p>
+                    Dette skal gjøre matlagingen mer strukturert og hjelpe brukerne med å få orden på økonomien sin. Dette står i stil med målet til SfiT om å informere studenter om hvordan de kan lage mer og bedre mat på et bedre og billigere vis, og videreformidler og forsterker sidens formål som er å gjøre studenters liv en liten bit enklere. 
+                </p>
+                <p>
+                    Informasjonen blir presentert hensiktsmessig ved hjelp av lister og tabeller. Det gjør det enklere for brukeren å luke ut uønsket informasjon, gjør brukeropplevelsen mer variert, og dermed også mindre kjedelig.
+                </p>
+                <p>
+                    Fordi det er mye innhold på siden som går på både planlegging og økonomi, vil innholdet til dem legges i to bokser som kan åpnes og lukkes, i likhet med matlagingstips.
+                </p>
+                <p>
+                    Tabellen er 800px bred med solid, svart ramme på 1 px. For å gjøre den åpen, ryddig og lesbar har den luft, altså "padding" på 7 px.
+                </p>
+                <img src="mockups/okonomimockup4.png" alt="Mockup 1" class="mockup">
+                <figcaption>Figur 12: Mockup for okonomiOgPlanlegging.html, lukket</figcaption>
+                <img src="mockups/okonomimockup1.png" alt="Mockup 2" class="mockup">
+                <figcaption>Figur 13: Mockup for okonomiOgPlanlegging.html, åpen</figcaption>
+                <img src="mockups/okonomimockup5.png" alt="Mockup 3" class="mockup">
+                <figcaption>Figur 14: Mockup for okonomiOgPlanlegging.html, åpen</figcaption>  
+            <h3>Lagring</h3>
+                <p>
+                    Siden om lagring fokuserer på å opplyse om hvordan ulike typer mat bør lagres for å oppnå lengst lagringstid og mest gunstig matkvalitet.
+                </p>
+                <p>
+                    Dette bygger opp under klientens hensikt om å gi studenter den nødvendige informasjonen til å lykkes på kjøkkenet. Lagring av mat er viktig både for kvalitet og helse, men er også med på å presse marginene der økonomien er involvert med tanke på overflødige matvarer som blir dårlig og kastes.
+                </p>
+                <p>
+                    Innholdet er sortert i både lister, tabeller og sammenhengende tekst for å skape inntrykket av en tekst som er enkel å lese. Tabellen er 800px bred med solid, svart ramme på 1 px. For å gjøre den åpen, ryddig og lesbar har den luft, altså "padding" på 7 px.
+                </p>
+                <img src="mockups/lagringmockup1.png" alt="Mockup 1" class="mockup">
+                <figcaption>Figur 15: Mockup for lagring.html</figcaption>
+
+            <h3>Andre nyttige sider</h3>
+                <p>
+                    På denne siden vil det være en liste med linker til andre sider kunden mener kan være nyttig for sidens brukere. Under hver link vil det være en beskrivelse av det man vil finne på siden.
+                </p>
+                <p>
+                    Denne siden skal gi flere en pekepinne til flere sider med nyttige tips, oppskrifter eller som generelt kan være av interesse for studenter med tanke på mat.
+                </p>
+                <img src="mockups/linkermockup.png" alt="Mockup" class="mockup"> 
+                <figcaption>Figur 16: Mockup for linker.html</figcaption>      
+                <p>
+                    Listen vil ikke ha bullet-points, og linkene vil skille seg fra resten av teksten. Beskrivelsen til linkene vil også ha et lite innrykk fra linkene.
+                </p>
+                
+            <h3>Kontakt oss</h3>
+                <p>
+                    På denne siden skal man kunne gi tilbakemeldinger til siden, for eksempel om feil på siden eller dets innhold, eller med forslag til innhold. 
+                </p>
+                <p>
+                    Dette vil gi brukervennlighet i form av at siden kan utvikles og forbedres. I tillegg vil siden bli mer tilpasset og ha et bedre innhold om selve brukergruppen gir tilbakemelding og tips til innhold de ønsker å se her.
+                </p>
+                <p>
+                    Skjemaet som blir brukt har et enkelt design, det er få felter å fylle inn slik at det går rakst og at man kommer til poenget med en gang. Det er også en dropdown-meny som gjør at man ikke trenger to ulike skjemaer for å rapportere to ulike ting. Javascript vil bli brukt for å så det til å bli mer interaktivt, man vil få tilbakemelding når skjemaet er sendt, og om man ikke har fyllt inn alt riktig.
+                </p>
+                <img src="mockups/formmockup.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 17: Mockup for kontakt.html</figcaption>
+                <p>
+                    Designet er enkelt og man ser med en gang hva man skal fylle inn/ikke trenger å fylle inn. Dropdown-menyen har to kategorier: "Forslag til innhold" og "teknisk feil på siden".
+                </p>
+                <img src="mockups/formmockup2.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 18: Mockup for kontakt.html, vellykket sending</figcaption>
+                <p>
+                    Om man har fyllt inn alle feltene riktig, vil informasjonen bli sendt og man får en tilbakemelding som dette. Bakgrunnen er grønn for å vise at sendingen var vellykket.
+                </p>
+                <img src="mockups/formmockup1.png" alt="Mockup" class="mockup">
+                <figcaption>Figur 19: Mockup for kontakt.html, ikke vellykket sending</figcaption>
+                <p>
+                    Dersom man ikke har fyllt inn feltene riktig, vil man få en feilmelding der det står at man må fylle inn alle de obligatoriske feltene. Feltene som man mangler vil få en rød kant.
+                </p>
+        </section>
+
+        <section class="box">        
+            <h2>Minimumskrav</h2> <!--Punkt 7-->
+            <p>
+                Vi planlegger å gjennomføre minimumskravene for bruk av Javascript på følgende måte.
+            </p>
+            <p>
+                Katrine og Julie:
+            </p>
+            <ul class="listeBullet">
+                <li>Skjemavalidering</li>
+                <p>
+                    Dette scriptet vil sørge for at man ikke kan sende inne skjema uten at alle feltene er fylt ut. Man vil få opp en feilmelding i tillegg til at feltene som ikke er fylt ut eller fylt ut rettblir farget røde. Dette er for å få et mer brukervennlig skjema og at man lett vet hva man må endre på. Man vil også få en melding om at skjemaet ble sendt når man har sendt det inn. Dette for at man skal slippe å lure på om det skjedde noe da man trykket på "send"-knappen. Da unngår vi også at brukeren sender på nytt for å være sikker.
+                </p>
+                <li>Highlighting av siden man er på i navigasjonsbar.</li>
+                <p>
+                    Dette har også med brukervennlighet å gjøre. Navigasjonsmenyen vil indikere hvilken side man er inne på slik at man har bedre oversikt. Hvis man for eksempel er inne på en av tips-sidene, vil tabben det står tips på ha en annen farge enn resten av navigasjonsmenyen.
+                </p>
+                <li>Randomized oppskrift</li>
+                <p>
+                    Denne vil bli laget om det er tid til overs, da vi ser på de andre scriptene som viktigere for brukeren. Grunnen til at det skal være en tilfeldig oppskrift på forsiden er for at brukeren raskt skal få forslag til en oppskrift og i stor grad ulike ved hvert besøk, da sannsynligheten er stor for at de besøker siden for noe rakst, billig og enkelt å lage.
+                </p>
+            </ul>
+            <p>
+                Dora Oline og Aasne:
+            </p>
+            <ul class="listeBullet">
+                <li>Henting av innhold fra html til main-seksjonen på index-html.</li>
+                    <p>
+                        For å slippe å skrive kode som går igjen, for eksempel header, navigasjon og footer, og også å måtte endre samme kodesnutt flere steder, vil vi benytte javascript og jQuery. Med dem vil vi ha et dokument, index.html, som har den grunnleggende strukturen, og med ulike tagger/felter for for eksempel header, navigasjonsbar, footer og innholdsboks. Vi koder så de ulike elementene i respektive filer, og laster dem inn. Dette gjør koden mer ryddig og oversiktelig, og også enklere å endre.
+                    </p>
+                <li>Navigasjonsbar med drop-down meny</li>
+                    <p>
+                        For å holde navigasjonsbaren minimalistisk, ryddig og oversiktlig, vil det bare være fire knapper i den: hjem, tips, oppsrifter og linker. To av disse vil ha en dropdownmeny for sider relatert til knappen. For eksempel vil tips ha en drop-down meny med link til alltidHa.html, matlagingstips.html, okonomiOgPlanlegging.html og lagring.html.
+                    </p>
+
+                <li>Fiksert navigasjonsbar</li>
+                    <p>
+                        Vi vil benytte javascript for å få navigasjonsbaren til å være konstant synlig på toppen av siden. På denne måten slipper brukerene å måtte scrolle seg opp til toppen av siden eller bunnen, men kan lett navigere seg til en annen side ved behov.
+                    </p>
+            </ul>
+        </section>
+
+        <section class="box"><!--Punkt 8-->
+            <h2>Plan</h2>
+            <p></p>
+            <h3>Organisatorisk oppsett</h3>
+            <p>
+                Vi har samlet alle filene våre i en mappe som heter studentmatProsjekt som vil bli opprettet når vi når kodingsfasen av prosjektet.
+            </p>
+            <p>
+                Liste over filer og mapper:
+            </p>
+            <ul class="listeNone">
+                <li>
+                    <p>website/</p>
+                    <ul class="listeBullet">
+                        <li><p>general.css</p></li>
+                        <li><p>index.html</p></li>
+                        <li><p>script.js</p></li>
+                        <li><p>html/</p>
+                            <ul class="listeBullet">
+                                <li><p>alltidHa.html</p></li>
+                                <li><p>footer.html</p></li>
+                                <li><p>home.html</p></li> 
+                                <li><p>kontakt.html</p></li>
+                                <li><p>lagring.html</p></li>
+                                <li><p>linker</p></li>
+                                <li><p>matpakker.html</p></li>
+                                <li><p>middager.html</p></li>
+                                <li><p>nav.html</p></li>
+                                <li><p>okonomiOgPlanlegging.html</p></li>
+                                <li><p>matlagingstips.html</p></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>bilder/</p>
+                            <ul>
+                                <li>header.jpg</li>
+                                <li><p>oppskriftsbilder/</p></li>
+                                    <ul class="listeBullet">    
+                                        <li><p>BLT-sandwich.jpg</p></li>
+                                        <li><p>ertesuppe.jpg</p></li>
+                                        <li><p>falafler.jpg</p></li>
+                                        <li><p>gulrotsuppe.jpg</p></li>
+                                        <li><p>kyllingfrikasse.jpg</p></li>
+                                        <li><p>meksikanskbondegryte.jpg</p></li>
+                                        <li><p>ostskinkemuffins.jpg</p></li>
+                                        <li><p>pastasalat.jpg</p></li>
+                                        <li><p>pitaMedKremost.jpg</p></li>
+                                        <li><p>pizzasnurrer.jpg</p></li>
+                                    </ul>
+                                <li>
+                                    <p>icons/</p>
+                                    <ul class="listeBullet">
+                                        <li><p>cabinet.png</p></li>
+                                        <li><p>facebook.jpg</p></li>
+                                        <li><p>facebook.png</p></li>
+                                        <li><p>instagram.png</p></li>
+                                        <li><p>freezer.png</p></li>
+                                        <li><p>fridge.png</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+            <h3>Arbeidsfordeling og frister</h3>
+            <table>
+                <tr>
+                    <th scope="row">Filenavn</th>
+                    <th scope="row">Beskrivelse</th>
+                    <th scope="row">Ansvar</th>
+                    <th scope="row">Frist</th>
+                </tr>
+                <tr>
+                    <th scope="col">home.html</th>
+                    <td> Kort info om sidens bakgrunn, innhold og en tilfeldig oppskrift brukeren kan starte med.</td>
+                    <td>Katrine</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">index.html</th>
+                    <td>Det generelle oppsettet til siden.</td>
+                    <td>Alle</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">nav.html</th>
+                    <td>Navigasjonsliste med linker til alle sider, med unntak av kontaktskjema, da den linkes til fra footer og ikke navigasjonsbaren.</td>
+                    <td>Alle</td>
+                    <td>12.11.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">alltidHa.html</th>
+                    <td>Vil inneholder tre kolonner med tips til ingredienser/matvarer en bør ha i kjøleskap, fryser eller kjøkkenskapet.</td>
+                    <td>Dora Oline</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">matlagingstips.html</th>
+                    <td>Videoer og tekst angående matlaging. </td>
+                    <td>Julie</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">middager.html</th>
+                    <td>Vil inneholde ca. 5 oppskrifter på gode og rimelige middagsretter for studenter.</td>
+                    <td>Dora Oline</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">matpakker.html</th>
+                    <td>Vil inneholde ca. 5 oppskrifter på gode matpakker.</td>
+                    <td>Dora Oline</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">okonomiogplanlegging.html</th>
+                    <td>Tips til hvordan man kan få struktur på bruk og økonomi, hvordan man skal klare å holde seg til et budsjett, og hvordan man kan planlegge for å gi mest effektiv og økonomisk matlaging.</td>
+                    <td>Aasne</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">lagring.html</th>
+                    <td>Oppsummerende oversikt over hvordan man bør lagre vanlige ingredienser.</td>
+                    <td>Aasne</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">andresider.html</th>
+                    <td>Linker til andre sider, for eksempel om en ønsker flere/andre oppskrifter, andre tips og lignende.</td>
+                    <td>Katrine</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">kontakt.html</th>
+                    <td>Skjema for tilbakemelding, nyttig for videre drift av siden.</td>
+                    <td>Katrine</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">script.js</th>
+                    <td>Javascriptkoden nødvendig for å få de nevnte javascript-funksjonene til å fungere.</td>
+                    <td>Alle</td>
+                    <td>12.11.2015</td>
+                </tr>
+                <tr>
+                    <th scope="col">style.css</th>
+                    <td>CSS kode for å få ønsket utseendet på sidene.</td>
+                    <td>Alle</td>
+                    <td>12.11.2015</td>
+                </tr>
+            </table>
+        </section>
+    </section>
+  </body>
+
+</html>

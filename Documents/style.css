@@ -1,10 +1,11 @@
 body {
-	background-color: #5ADB74;
+	background-color: #e9f5dc;
+	font-size: 17px;
 }
 
 #content {
 	margin: 0 auto;
-	width: 1000px;
+	width: 900px;
 	background-color: white;
 	text-align: justify;
 	box-shadow: 0px 0px 3px 0px #333;
@@ -20,11 +21,52 @@ body {
 
 }
 
-.heading {
+header {
 	text-align: center;
 }
+h1 {
+	font-size: 34px;
+}
 h1, h2, h3 {
-	font-family: Impact, "Gill Sans", Sans-serif;
+	font-family: Sans-serif;
 }
 
+table, th, td {
+    width: 800px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+th, td {
+    padding: 7px;
+    text-align: left;
+}
+
+ul.listeBullet {
+    list-style-type: disc;
+}
+
+figcaption {
+	font-style: italic;
+	font-size: 15px;
+	text-align: center;
+}
+
+.mockup {
+	margin-left: 120px;
+
+}
+
+table th:first-child {
+	max-width: 5px;
+}
+
+table tr th + td {
+	max-width: 5px;
+}
+
+img {
+	align: middel;
+}

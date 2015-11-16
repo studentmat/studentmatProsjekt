@@ -1,0 +1,718 @@
+/*
+    Filnavn: general.css
+    Skrevet av: Aasne Livik Natesrtad, Dora Oline Eriksrud, Julie Davidsen, Katrine Tunkvist Jordheim
+    Når: November 2015
+    Hensikt: css nødvendig for å få ønsket design
+*/
+
+/* Design av hovedelementer. */
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 12pt;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    line-height: 30px;
+}
+
+#page{
+    position: absolute;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    background-color: rgba(102,155,102,0.2);
+}
+
+/* Tekst, fonts og skrift.*/
+p {
+    font-family: "Lucida Sans Unicode", sans-serif;
+    text-align: justify;
+}
+
+/*Laster inn font*/
+@font-face {
+    font-family: 'libelSuit'; /* Navn for å bruke senere*/
+    src: url(libelsuit.woff);
+}
+
+h1, h2, h3 {
+    font-family: libelSuit;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: 33pt;
+    padding: 10px 0;
+}
+
+h2 {
+    font-size: 27pt;
+}
+
+h3 {
+    font-size: 22pt;
+}
+
+/* Header og innhold i header. */
+#headerContent{
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 100%;
+    background-color: rgba(102,155,102,1);
+    height: 330px;
+    color: white;
+    overflow: hidden;
+}
+
+#logo {
+    margin-top: 0px;
+}
+
+/* Navigasjonsbar */
+.navfooterColor {
+    background-color: rgba(52, 76, 56, 1);
+}
+
+#navBar {
+    width: 100%;
+    font-family: sans-serif; /*FYLL UT */
+}
+
+/*For å holde menyen på plass når en scroller*/
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+/* Delen av navbaren med knapper */
+#navList {
+    font-size: 15pt;
+    width: 1000px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+/* Knappene */
+#navList .navButton {
+    text-align: center;
+    padding-left: 0;
+    display: inline-block;
+    margin: 0 auto;
+}
+/* Linkene i navbaren som ikke er i dropdown-meny */
+#navList > li > a {
+    text-align: center;
+    padding-left: 0;
+    display: inline-block;
+    color: #FFFFFF;
+    width: 250px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+/* Teksten i en knapp når vi er på dens side */
+#navList > li.highlight > a{
+    color: #544B4B;
+}
+
+/* Knappen til siden vi er på er hvit */
+.highlight {
+    background-color: white;
+}
+
+/* Linkene i menyen */
+#navList a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Linkene i menyen når vi hovrer over dem */
+#navlist a:hover {
+    font-style: normal;
+}
+
+/* Når vi hovrer over en side i navbaren */
+#navList li:hover {
+    /*Slik at overgangen skjer gradivs */
+    transition: 0.2s;
+    color: black;
+    background-color: rgba(138,181,138,1);
+
+}
+/* Når vi hovrer over et listeelement med en link */
+#navList li:hover > a{
+    transition: 0.2s;
+    color: rgb(52, 76, 56);
+    cursor: pointer;
+}
+
+/* Dropdown menyene */
+#navList .dropdown {
+    position: absolute;
+    display: none;
+    z-index: 999;
+    opacity: 0.95;
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    visibility: hidden;
+    height: auto;
+    padding-top: 5px;
+}
+
+/* Når vi hovrer over en knapp med dropdown meny */
+#navList .navButton:hover .dropdown {
+    display: block;
+    visibility: visible;
+    background-color: rgb(52, 76, 56);
+    width: 250px;
+    padding: 5px 0;
+    margin-top: 0px;
+    font-size: 20px;
+}
+/* Elemtenene i dropdown menyen */
+#navList .dropdown li {
+    display: block;
+    height: 30px;
+    padding: 5px 0px;
+    margin: 10px;
+}
+
+/* Hovedboksen */
+#main {
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 12pt;
+    background-color: white;
+    margin: 0 auto;
+    padding: 30px;
+    width: 940px;
+    min-height: 1000px;
+    height: auto !important;
+    height: 100%;
+    box-shadow: 0 2px 2px 2px rgba(102,155,102,0.6);
+}
+
+#main a:link{
+    font-style: italic;
+}
+
+#main a:hover{
+    text-decoration: none;
+}
+
+#mainHeading {
+    font-family: "Lucida Sans Unicode", sans-serif;
+}
+
+/* Footer og innhold i footer. */
+#footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#footerContent {
+    margin: 0 auto;
+    width: 1000px;
+    color: white;
+    line-height: 1.2em;
+    font-family: "Lucida Sans Unicode", sans-serif;
+}
+
+#footerContent a {
+    color: white;
+    font-style: italic;
+    font-size: 12pt;
+}
+
+#footerContent p {
+    text-align: left;
+}
+
+#footerContent a:hover {
+    text-decoration: underline;
+}
+
+.footerBox {
+    vertical-align: top;
+    display: inline-block;
+    padding: 10px 10px;
+    line-height: 1.2em;
+}
+
+#footerBox1 {
+    width: 270px;
+    margin-left: 10px;
+    line-height: 25px;
+}
+
+#footerBox2 {
+    width: 320px;
+    margin: auto;
+    position: relative;
+    text-align: left;
+}
+
+#footerBox3 {
+    width: 1100px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -55px;
+    margin-bottom: -15px;
+}
+
+#footerBox3 a:hover {
+    text-decoration: underline;
+}
+
+#footerBox3 > a {
+    font-size: 13px;
+}
+
+#footerBox3 > .noLink, noLink:hover{
+    font-style: normal;
+    text-decoration: none !important;
+}
+
+.disc {
+    font-size: 8px;
+}
+
+#footerBox4 {
+    width: 250px;
+    margin-top: -308px;
+    margin-left: 710px;
+}
+
+/* Slik at det ikke blir underline på siden av bildene når vi hovrer på dem*/
+.iconLink:hover {
+    text-decoration: none !important;
+}
+
+.footerBottom {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #FFF;
+    padding: 10px;
+}
+
+#footerLink:hover {
+    text-decoration: underline;
+}
+
+/* Til diver med apne og lukke-mekanisme */
+.divSmall {
+    overflow: hidden;
+    height: auto;
+    display: block;
+}
+
+.divSmall:hover {
+    cursor: pointer;
+    background-color: rgb(52, 76, 56);
+    color: white;
+    transition: .5s;
+}
+
+.divBig {
+    margin: 0 auto;
+    overflow: hidden;
+    height: 0;
+    display: none;
+}
+
+.active {
+    display: block;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+    height: auto;
+}
+
+.divSmallBilde {
+    float: left;
+    margin-right: 20px;
+}
+
+.beskrivelse {
+    font-style: italic;
+    vertical-align: top;
+    padding: 0 5px;
+    text-align: left;
+}
+
+.divTekst {
+    float: left;
+    width: 580px;
+}
+
+.divBig img {
+    display: block;
+    margin: 0 auto;
+}
+
+.divTips, .kilde {
+    padding-left: 36px;
+    color: black;
+}
+
+
+.listHeading {
+    font-size: 16pt;
+    border-bottom: none !important;
+}
+
+.rightCol {
+    display: inline-block;
+    width: 600px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li > ul.dropdown {
+    display: none;
+    visibility: hidden;
+}
+
+li {
+    list-style-type: none;
+}
+
+.divBigImg {
+    height: 400px;
+    background-position-y: 40%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Til oppskrifter */
+.oppskrift {
+    width: auto;
+    margin: 0 -30px;
+    display: block;
+}
+
+.oppSkriftsInnhold {
+    padding: 30px;
+    width: 900px;
+}
+
+.oppskriftStorrelse {
+    font-size: 12pt;
+    font-style: italic;
+    border-bottom: none !important;
+}
+
+.ingredienser {
+    list-style-type: none;
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+}
+
+.ingredienser li {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+}
+
+.fremgangsmate {
+    vertical-align: top;
+    width: 500px;
+    line-height: 1.5em;
+    list-style-type: none;
+}
+
+.fremgangsmate li {
+    margin-bottom: 8px;
+}
+
+/* Til de store bildene når en åpner oppskrifta*/
+.meksikanskGryteBg {
+	background-image: url("images/oppskriftsbilder/meksikanskbonnegryte.jpg");
+    /*Hvor på bildet "fokuset" er/hva av bildet som viser i glippen */
+	background-position-y: 55%;
+}
+
+.gulrotSuppeBg {
+	background-image: url("images/oppskriftsbilder/gulrotsuppe.jpg");
+}
+
+.falaflerBg {
+	background-image: url("images/oppskriftsbilder/falafler.jpg");
+}
+
+.kyllingfrikasseBg {
+	background-image: url("images/oppskriftsbilder/kyllingfrikasse.jpg");
+	background-position-y:  51%;
+}
+
+.BLT-sandwichBg {
+	background-image: url("images/oppskriftsbilder/BLT-sandwich.jpg");
+}
+.ostskinkemuffinsBg {
+	background-image: url("images/oppskriftsbilder/ostskinkemuffins.jpg");
+}
+.pastasalatBg {
+	background-image: url("images/oppskriftsbilder/pastasalat.jpg");
+
+}
+.pitaMedKremostBg {
+	background-image: url("images/oppskriftsbilder/pitaMedKremost.jpg");
+}
+.pizzasnurrerBg {
+	background-image: url("images/oppskriftsbilder/pizzasnurrer.jpg");
+}
+
+.tortillapizzaBg {
+	background-image: url("images/oppskriftsbilder/tortillapizza.jpg");
+}
+
+/* Alltid ha */
+.underSeksjon {
+    width: 261px;
+    height: 880px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    display: inline-table;
+    text-align: left;
+}
+
+/* Iconene */
+.underSeksjon > figure > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 120px;
+    width: 120px;
+}
+
+.underSeksjon h3 {
+    text-align: center;	
+}
+
+/* Bildetekst til ikonene */
+figcaption {
+    font-size: 8pt;
+    text-align: center;
+    line-height: 1em;
+}
+
+figcaption a {
+    color: black;
+}
+
+/* Matlagingstips */
+iframe {
+    width: 420px;
+    height: 315px;
+    margin-top: 24px;
+    border: 0;
+}
+.tips_oppsett {
+    width: auto;
+    display: block;
+}
+.tips_left {
+    display: inline-block;
+    vertical-align: top;
+}
+.tips_right {
+    display: inline-block;
+    width: 420px;
+    margin-left: 40px;
+    vertical-align: top;
+}
+.tips_fremgangsmate {
+    vertical-align: top;
+    width: 500px;
+    line-height: 1.5em;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+/* Kontaktskjema */
+#formwrap {
+    width: 700px;
+    margin: 0 auto;
+}
+
+#formwrap .form {
+    width: 600px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    line-height: 25px;
+}
+
+#formwrap .form-field input{
+    display: block;
+    width: 600px;
+    height: 25px;
+    border: 1px solid #888;
+}
+
+#formwrap .form-field textarea {
+    width: 600px;
+    height: 150px;
+}
+#formwrap .form-field select {
+    height: 25px;
+    width: 600px;
+}
+
+#formMelding {
+    margin: 0 auto;
+    width: 600px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#no {
+    width: inherit;
+    height: inherit;
+    padding-left: 10px;
+    background-color: red;
+    color: #FFF;
+}
+
+#yes {
+    background-color: green;
+    width: inherit;
+    height: inherit;
+    padding-left: 10px;
+    color: #FFF;
+}
+
+/* Ankerbar */
+.meny {
+    text-align: center;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-style: oblique;
+}
+
+.anchor:hover {
+    color: rgba(102,155,102,1);
+    cursor: pointer;
+}
+
+#ankerMeny {
+    width: 200px;
+    position: fixed;
+    float: left;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+/*Økonomi og planlegging, og lagring*/
+.num {
+    list-style: decimal;
+}
+
+table, th, td {
+    width: 850px;
+    margin-left: auto;
+    line-height: 30px;
+    margin-right: auto;
+    font-style: normal;
+    font-weight: normal;
+    border: solid 2px rgba(102,155,102,1);
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.cell1, .cell2 {
+    background-color: rgba(102,155,102,0.5);
+}
+
+th, td {
+    text-align: center;
+}
+
+.mellomtittelPlan {
+    font-family: libelSuit;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing:2px;
+}
+
+.mellomtittel {
+    font-family: libelSuit;
+    letter-spacing: 1px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#sifo {
+    box-shadow: 2px 2px 5px rgba(102,155,102,0.7);
+}
+
+#sifoBoks {
+    margin-top: 40px;
+    margin-left: 50px;
+    float: right;
+}
+
+#planlegging, #annet, #Perfekte_egg {
+    margin-bottom: 30px;
+}
+
+.punkt {
+    color: rgba(52, 76, 56, .7);
+    font-style: italic;
+}
+
+.listLeft {
+    margin-left: -40px;
+}
+
+.listLeft li{
+    margin-top: 8px;
+}
+
+/*Til linker-siden*/
+#linkerSide a:link, #linkerSide a:visited{
+    text-decoration: none;
+    text-transform: none;
+}
+
+#linkerSide a:hover {
+    text-decoration: none;
+    text-transform: none;
+
+}
+
+.linkerBox {
+    display: block;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid rgba(129, 176, 82,1);
+}
+.linkLogo {
+    width: 300px;
+    height: auto;
+}

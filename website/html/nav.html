@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <title>Navigasjonsbar</title>
+  <meta charset="UTF-8">
+</head>
+
+<!--
+  Filnavn: html/nav.html
+  Skrevet av: Dora Oline Eriksrud
+  Når: November 2015
+  Hensikt: navigasjonsbaren som vises i toppen på siden, under header
+-->
+
+
+<ul id="navList">
+  <!-- Bruker /#/ for å kunne refreshe siden uavhengig av hvor vi er-->
+  <li class="navButton">
+  <!-- Trenger ikke /#/home da den lastes inn automatisk i js koden om ingenting annet er oppgitt -->
+    <a href="/">
+      Hjem
+    </a>
+  </li><li class="navButton">
+    <a>Tips</a>
+    <ul class="dropdown">
+      <li>
+        <a href="/#/alltidHa">
+          Alltid ha
+        </a>
+      </li><li>
+        <a href="/#/matlagingstips">
+          Matlagingstips
+        </a>
+      </li><li>
+        <a href="/#/okonomiOgPlanlegging">
+          Økonomi og planlegging
+        </a>
+      </li>
+      <li>
+        <a href="/#/lagring">
+          Lagring av mat
+        </a>
+      </li>
+    </ul>
+  </li><li class="navButton">
+    <a>Oppskrifter</a>
+    <ul class="dropdown">
+      <li>
+        <a href="/#/matpakker">
+          Topp 5 matpakker
+        </a>
+      </li><li>
+        <a href="/#/middager">
+          Topp 5 middagsretter
+        </a>
+      </li>
+    </ul>
+  </li><li class="navButton">
+    <a href="/#/linker">
+      Andre sider
+    </a>
+  </li>
+</ul>

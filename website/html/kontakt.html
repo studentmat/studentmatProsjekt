@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+	<title>Kontakt</title>
+	<meta charset="UTF-8">
+</head>
+
+<!--
+	Filnavn: html/kontakt.html
+	Skrevet av: Katrine Jordheim
+	Når: November 2015
+	Hensikt: Kunne gi tilbakemelding på siden. 
+-->
+
+<div id="formwrap">  
+	<h1>Kontakt oss</h1>
+
+	<p>Har du noen tips, enten oppskrifter eller annet, som andre kan ha nytte av? Eller kanskje tilbakemelding til oss? Send oss gjerne en melding!</p>
+ 	<div id="formMelding"></div>
+	<form name="form">
+	        <div class="form">
+	                <label for="name">Navn:(Valgfritt)</label><br/>
+	                <div class="form-field">
+	                    <input type="text" name="name" id="name" value="">
+	                </div>
+	        </div>
+
+
+	        <div class="form">
+	            <label for="email">E-post:*</label><br/>
+	            <div class="form-field">
+	                <input type="email" id="email" name="email"/>
+	            </div>
+	        </div>
+
+
+	        <div class="form">
+	            <label>Hva gjelder meldingen?*</label><br/>
+	            <div class="form-field">
+	                <select name="melding" id="melding">
+	                    <option selected="selected">Velg</option>
+	                    <option value="1">Forslag til innhold</option>
+	                    <option value="2">Teknisk feil på siden</option>
+	                </select>
+	            </div>
+	        </div>
+
+
+	        <div class="form">
+	            <label for="comments">Melding:*</label><br/>
+	            <div class="form-field">
+	                <textarea id="comments" name="comments"></textarea>
+	            </div>
+	        </div>
+
+
+	        <div class="form">
+	        <input type="button" onclick="return validateForm();" value="Send" /> 
+	    </div>
+	</form>  
+</div>

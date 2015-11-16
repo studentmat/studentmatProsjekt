@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+	<title>Hjem</title>
+	<meta charset="UTF-8">
+</head>
+
+<!--
+	Filnavn: html/home.html
+	Skrevet av: Katrine Jordheim
+	Når: November 2015
+	Hensikt: Første side brukeren kommer inn på. Enkel og oversiktlig,
+-->
+
+<h1>
+	Velkommen til StudentMat!
+</h1>
+<p>
+	Studenter har ofte et begrenset budsjett å forholde seg til, tiden kan være knapp og samtidig er det et økende fokus og oppmerksomhet på å spise sunt og variert. I tillegg er mange nylig flyttet hjemmefra hvor mor stod for kokkeleringen, og har dermed lite erfaring med innhandling av mat og selve matlagingen. 
+</p>
+
+
+<p>
+	Som studenter selv har vi kjent på behovet for både oppskrifter tilrettelagt for studentre med tanke på tid, næringsinnhold og pris, men også tips på veien som ofte er nødvendig men ikke alltid like lett å oppdage. 
+</p>
+<p>	
+	Studentmat.no vil derfor forsøke å tilfredstille dette behovet, ved å komme med tips til matretter, basisingredienser en alltid bør ha tilgjengelig, tips for filitrering av fisk og lignende.
+</p> 
+
+<h2>Tilfeldig oppskrift</h2>
+
+<!-- visDiv i tilOppskrift er callback -->
+<div onclick="tilOppskrift('middager', 'meksikanskGryte', visDiv)" class="oppskrift divSmall tilfeldigOppskrift" style="display: none">
+	<img src="images/oppskriftsbilder/meksikanskbonnegryte.jpg" class="divSmallBilde" width="320" height="240" alt="Meksikansk gryte">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Meksikansk bønnegryte
+		</h3>
+		
+		<p class="beskrivelse">
+			En lekker, saftig gryte med et meksikansk preg. Hovedingrediensene er bønner, noen krydder og småingredienser kreves, men ellers er det lite arbeid
+		</p>
+	</div>
+</div>
+
+<div onclick="tilOppskrift('middager', 'gulerotsuppe', visDiv)" class="oppskrift divSmall tilfeldigOppskrift" style="display: none">
+	<img src="images/oppskriftsbilder/gulrotsuppe.jpg" class="divSmallBilde" width="320" height="240" alt="Gulerotsuppe">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Gulrotsuppe
+		</h3>
+
+		<p class="beskrivelse">
+			En fyldig, smaksrik og enkel gulrotsuppe. Hovedingrediensene er gulrot, men ha gjerne stekte kikerter/linser i tillegg, eller ferskt brød
+		</p>
+	</div>
+</div>
+
+<div onclick="tilOppskrift('middager', 'falafler', visDiv)" class="oppskrift divSmall tilfeldigOppskrift" style="display: none">
+	<img src="images/oppskriftsbilder/falafler.jpg" class="divSmallBilde" width="320" height="240" alt="Falafler">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Falafler
+		</h3>
+
+		<p class="beskrivelse">
+			Smaksfulle, sunne og proteinrike falafler. Hovedingrediensen er kikerter og det kreves en stavmikser, men resultatet er fantastisk
+		</p>
+	</div>
+</div>
+
+<div onclick="tilOppskrift('middager', 'tortillapizza', visDiv)" class="oppskrift divSmall" style="display: none">
+	<img src="images/oppskriftsbilder/tortillapizza.jpg" class="divSmallBilde" width="320" height="240" alt="Tortillapizza">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Tortillapizza
+		</h3>
+
+		<p class="beskrivelse">
+			En smakfull pizza som er både enkel og billig å lage. Denne kan tilpasses den enkeltes favoritt, da den lages porsjonsvis.
+		</p>
+	</div>
+</div>
+
+<div onclick="tilOppskrift('middager', 'kyllingfrikasse', visDiv)" class="oppskrift divSmall" style="display: none">
+	<img src="images/oppskriftsbilder/kyllingfrikasse.jpg" class="divSmallBilde" width="320" height="240" alt="Kyllingfrikasse">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Kyllingfrikasse
+		</h3>
+				
+		<p class="beskrivelse">
+			Enkel og rimelig frikasse som metter og smaker svært godt. Hovedingrediensene er kylling og potet, samt noen grønnsaker
+		</p>
+	</div>
+</div>
+
+<!-- Matpakker -->
+<div onclick="tilOppskrift('matpakker', 'ostskinkemuffins', visDiv)" class="oppskrift divSmall" style="display: none">
+	<img src="images/oppskriftsbilder/ostskinkemuffins.jpg" class="divSmallBilde" width="320" height="240" alt="Ost- og skinkemuffins">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Ost- og skinkemuffins
+		</h3>
+		
+		<p class="beskrivelse">
+			Smakfulle og næringsrike muffinser som lett gjør lunsjen mer spennende
+		</p>
+	</div>
+</div>
+
+<div onclick="tilOppskrift('matpakker', 'pitaMedKremost', visDiv)" class="oppskrift divSmall" style="display: none">
+	<img src="images/oppskriftsbilder/pitaMedKremost.jpg" class="divSmallBilde" width="320" height="240" alt="Pitabrød med kremost">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Pitabrød med kremost
+		</h3>
+
+		<p class="beskrivelse">
+			Et smakfult alternativ til brødskiver, hvor du lett kan modifisere avhengig av hva du har i kjøleskapet. 
+		</p>
+	</div>	
+</div>
+
+<div onclick="tilOppskrift('matpakker', 'pastasalat', visDiv)" class="oppskrift divSmall" style="display: none">
+	<img src="images/oppskriftsbilder/pastasalat.jpg" class="divSmallBilde" width="320" height="240" alt="Lun pastasalat med chorizo">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Lun pastasalat med chorizo
+		</h3>
+
+		<p class="beskrivelse">
+			En flott basis-salat som enkelt kan endres etter dine preferanser, eller bare nytes slik den er.
+		</p>
+	</div>
+</div>
+
+<div onclick="tilOppskrift('matpakker', 'pizzasnurrer', visDiv)" class="oppskrift divSmall" style="display: none">
+	<img src="images/oppskriftsbilder/pizzasnurrer.jpg" class="divSmallBilde" width="320" height="240" alt="Pizzasnurrer">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			Pizzasnurrer
+		</h3>
+			
+		<p class="beskrivelse">
+			Ikke bare er disse enkle å ta med seg på skolen, men de er også billige å lage og smaker kjempegodt.
+		</p>
+	</div>
+</div>
+
+<div onclick="tilOppskrift('matpakker', 'BLT-sandwich', visDiv)" class="oppskrift divSmall" style="display: none">
+	<img src="images/oppskriftsbilder/BLT-sandwich.jpg" class="divSmallBilde" width="320" height="240" alt="BLT-sandwich">
+	<div class="divTekst">
+		<h3 class="overskrift">
+			BLT-sandwich
+		</h3>
+				
+		<p class="beskrivelse">
+			Disse er veldig enkle å lage, og smaker fantastisk godt. Perfekt til å ha med som lunsj, eller som frokost en dag man har litt ekstra tid.
+		</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	randomOppskrift();
+</script>
