@@ -728,12 +728,20 @@ th, td {
 
 }
 
+
+.linkerBox {
+    display: block;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid rgba(129, 176, 82,1);
+}
 .linkLogo {
     width: 300px;
     height: auto;
 }
 
-/*Mobil og tablet design FYLL INN*/
+
+/*Design for Mobil, de fleste duplikatene her er nødvendige. */
 @media screen and (max-width: 481px) {
     html{
         width: 480px;
