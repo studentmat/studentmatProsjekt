@@ -144,7 +144,6 @@ h3 {
     /*Slik at overgangen skjer gradivs */
     transition: 0.2s;
     color: black;
-    /*background-color: rgba(225,252,195,0.8);*/
     background-color: rgba(138,181,138,1);
 
 }
@@ -303,7 +302,7 @@ h3 {
     height: auto;
     text-align: center;
     color: #FFF;
-    font-size: 12pt;
+    padding: 10px;
 }
 
 #footerLink:hover {
@@ -508,7 +507,7 @@ li {
     text-align: center;	
 }
 
-/* Bildetekst til iconene */
+/* Bildetekst til ikonene */
 figcaption {
     font-size: 8pt;
     text-align: center;
