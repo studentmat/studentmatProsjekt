@@ -161,7 +161,7 @@ h3 {
 /* Når vi hovrer over et listeelement med en link */
 #navList li:hover > a{
     transition: 0.2s;
-    color: rgb(52, 76, 56); 
+    color: rgb(52, 76, 56);
     cursor: pointer;
 }
 
@@ -248,7 +248,6 @@ h3 {
 }
 
 #footerContent p {
-    font-size: 12pt;
     text-align: left;
 }
 
