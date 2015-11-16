@@ -30,7 +30,6 @@ body {
 /* Tekst, fonts og skrift.*/
 p {
     font-family: "Lucida Sans Unicode", sans-serif;
-    /*font-size: 14pt; SETTES FLERE GANGER */
     text-align: justify;
 }
 
@@ -39,14 +38,6 @@ p {
     font-family: 'libelSuit'; /* Navn for å bruke senere*/
     src: url(libelsuit.woff);
 }
-
-/* TROLIG IKKE NØDVENDIG DA DET LIGGER I STYLE FOR MAIN
-SJEKK UT
-.textStyle {
-    font-family:sans-serif;
-    font-size: 14pt;
-}
-*/
 
 h1, h2, h3 {
     font-family: libelSuit;
@@ -74,7 +65,6 @@ h3 {
     margin-top: 0px;
     padding-top: 0px;
     width: 100%;
-/*    background-color: rgba(129, 176, 82,1);*/
     background-color: rgba(102,155,102,1);
     height: 330px;
     color: white;
@@ -171,11 +161,9 @@ h3 {
     display: none;
     z-index: 999;
     opacity: 0.95;
-
     list-style: none;
     padding: 0; 
     margin: 0;
-
     visibility: hidden;
     height: auto;
     padding-top: 5px;
@@ -226,7 +214,6 @@ h3 {
 }
 
 /* Footer og innhold i footer. */
-
 #footer{
     left: 0;
     bottom: 0;
@@ -532,15 +519,6 @@ figcaption a {
     color: black;
 }
 
-/* Home */
-tilfeldigOppskrift {
-    border: 2px solid black;
-}
-
-tilfeldigOppskrift:hover {
-    border: 4px solid black;
-}
-
 /* Matlagingstips */
 iframe {
     width: 420px;
@@ -731,7 +709,6 @@ th, td {
 
 }
 
-
 .linkerBox {
     display: block;
     padding: 10px;
@@ -742,7 +719,6 @@ th, td {
     width: 300px;
     height: auto;
 }
-
 
 /*Design for Mobil, de fleste duplikatene her er nødvendige. */
 @media screen and (max-device-width: 481px) {
@@ -759,6 +735,37 @@ th, td {
     #page{
         background-color: #fff;
         width: 480px;
+    }
+
+    /* Tekst, fonts og skrift.*/
+    p {
+        font-family: "Lucida Sans Unicode", sans-serif;
+        text-align: justify;
+    }
+
+    /*Laster inn font*/
+    @font-face {
+        font-family: 'libelSuit'; /* Navn for å bruke senere*/
+        src: url(libelsuit.woff);
+    }
+
+    h1, h2, h3 {
+        font-family: libelSuit;
+        text-align: center;
+        letter-spacing: 0.05em;
+    }
+
+    h1 {
+        font-size: 33pt;
+        padding: 10px 0;
+    }
+
+    h2 {
+        font-size: 27pt;
+    }
+
+    h3 {
+        font-size: 22pt;
     }
 
 
@@ -781,6 +788,7 @@ th, td {
     .navfooterColor {
         background-color: rgba(52, 76, 56, 1);
     }
+
     #navBar {
         width: 480px;
     }
@@ -790,6 +798,112 @@ th, td {
         width: 480px;
 
     }
+       /* Delen av navbaren med knapper */
+
+    #navBar {
+        width: 480px;
+        font-family: sans-serif;
+    }
+
+
+    #navList {
+        font-size: 15pt;
+        width: 480px;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    /* Knappene */
+    #navList .navButton {
+        text-align: center;
+        padding-left: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Linkene i navbaren som ikke er i dropdown-meny */
+    #navList > li > a {
+        text-align: center;
+        padding-left: 0;
+        display: block;
+        color: #FFFFFF;
+        width: 250px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        padding: 10px 0;
+    }
+
+    /* Teksten i en knapp når vi er på dens side */
+    #navList > li.highlight > a{
+        color: #544B4B;
+    }
+
+    /* Knappen til siden vi er på er hvit */
+    .highlight {
+        background-color: white;
+    }
+
+    /* Linkene i menyen */
+    #navList a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    /* Linkene i menyen når vi hovrer over dem */
+    #navlist a:hover {
+        font-style: normal;
+    }
+
+    /* Når vi hovrer over en side i navbaren */
+    #navList li:hover {
+        /*Slik at overgangen skjer gradivs */
+        transition: 0.2s;
+        color: black;
+        background-color: rgba(138,181,138,1);
+
+    }
+    /* Når vi hovrer over et listeelement med en link */
+    #navList li:hover > a{
+        transition: 0.2s;
+        color: rgb(52, 76, 56); 
+        cursor: pointer;
+    }
+
+    /* Dropdown menyene */
+    #navList .dropdown {
+        position: relative;
+        display: none;
+        z-index: 999;
+        opacity: 0.95;
+
+        list-style: none;
+        padding: 0; 
+        margin: 0;
+
+        visibility: hidden;
+        height: auto;
+        padding-top: 5px;
+    }
+
+    /* Når vi hovrer over en knapp med dropdown meny */
+    #navList .navButton:hover .dropdown {
+        display: block;
+        visibility: visible;
+        background-color: rgb(52, 76, 56);
+        width: 480px;
+        padding: 5px 0;
+        margin-top: 0px;
+        font-size: 20px;
+    }
+    /* Elemtenene i dropdown menyen */
+    #navList .dropdown li {
+        display: block;
+        height: 30px;
+        padding: 5px 0px;
+        margin: 0px;
+    }
+
+
        /* Delen av navbaren med knapper */
     #navList {
         font-size: 15pt;
@@ -874,7 +988,7 @@ th, td {
         display: block;
         visibility: visible;
         background-color: rgb(52, 76, 56);
-        width: 480px;
+        width: 470px;
         padding: 5px 0;
         margin-top: 0px;
         font-size: 20px;
@@ -887,6 +1001,7 @@ th, td {
         margin: 0px;
     }
 
+>>>>>>> 657194a895651049b45c3e7df701696ae393f95b
     #navList .dropdown a {
         text-align: center;
     }
@@ -935,6 +1050,11 @@ th, td {
     }
 
 
+    #footerBox3 a:hover {
+        text-decoration: underline;
+    }
+
+
     #footerBox3 > .noLink {
         font-style: normal;
     }
@@ -954,7 +1074,7 @@ th, td {
     
     p > .attr {
     font-size: 10px !important; 
-}
+    }
 
     /* Slik at det ikke blir underline på siden av bildene når vi hovrer på dem*/
     .iconLink:hover {
@@ -1046,7 +1166,72 @@ th, td {
         list-style-type: none;
     }
 
+    .fremgangsmate li {
+        margin-bottom: 8px;
+        width: inherit;
+    }
 
+    /* Til de store bildene når en åpner oppskrifta*/
+    .meksikanskGryteBg {
+        background-image: url("images/oppskriftsbilder/meksikanskbonnegryte.jpg");
+        /*Hvor på bildet "fokuset" er/hva av bildet som viser i glippen */
+        background-position-y: 55%;
+    }
+
+    .gulrotSuppeBg {
+        background-image: url("images/oppskriftsbilder/gulrotsuppe.jpg");
+    }
+
+    .falaflerBg {
+        background-image: url("images/oppskriftsbilder/falafler.jpg");
+    }
+
+    .kyllingfrikasseBg {
+        background-image: url("images/oppskriftsbilder/kyllingfrikasse.jpg");
+        background-position-y:  51%;
+    }
+
+    .BLT-sandwichBg {
+        background-image: url("images/oppskriftsbilder/BLT-sandwich.jpg");
+    }
+    .ostskinkemuffinsBg {
+        background-image: url("images/oppskriftsbilder/ostskinkemuffins.jpg");
+    }
+    .pastasalatBg {
+        background-image: url("images/oppskriftsbilder/pastasalat.jpg");
+    }
+    .pitaMedKremostBg {
+        background-image: url("images/oppskriftsbilder/pitaMedKremost.jpg");
+    }
+    .pizzasnurrerBg {
+        background-image: url("images/oppskriftsbilder/Pizzasnurrer.jpg");
+    }
+
+    .tortillapizzaBg {
+        background-image: url("images/oppskriftsbilder/tortillapizza.jpg");
+    }
+
+    /* Alltid ha */
+    .underSeksjon {
+        width: 261px;
+        height: 880px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        display: inline-table;
+        text-align: left;
+    }
+
+    /* Iconene */
+    .underSeksjon > figure > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 120px;
+        width: 120px;
+    }
+>>>>>>> 657194a895651049b45c3e7df701696ae393f95b
 
     .underSeksjon h3 {
         text-align: center; 
