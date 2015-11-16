@@ -453,43 +453,43 @@ li {
 
 /* Til de store bildene når en åpner oppskrifta*/
 .meksikanskGryteBg {
-	background-image: url("oppskriftsbilder/meksikanskbonnegryte.jpg");
+	background-image: url("images/oppskriftsbilder/meksikanskbonnegryte.jpg");
     /*Hvor på bildet "fokuset" er/hva av bildet som viser i glippen */
 	background-position-y: 55%;
 }
 
 .gulrotSuppeBg {
-	background-image: url("oppskriftsbilder/gulrotsuppe.jpg");
+	background-image: url("images/oppskriftsbilder/gulrotsuppe.jpg");
 }
 
 .falaflerBg {
-	background-image: url("oppskriftsbilder/falafler.jpg");
+	background-image: url("images/oppskriftsbilder/falafler.jpg");
 }
 
 .kyllingfrikasseBg {
-	background-image: url("oppskriftsbilder/kyllingfrikasse.jpg");
+	background-image: url("images/oppskriftsbilder/kyllingfrikasse.jpg");
 	background-position-y:  51%;
 }
 
 .BLT-sandwichBg {
-	background-image: url("oppskriftsbilder/BLT-sandwich.jpg");
+	background-image: url("images/oppskriftsbilder/BLT-sandwich.jpg");
 }
 .ostskinkemuffinsBg {
-	background-image: url("oppskriftsbilder/ostskinkemuffins.jpg");
+	background-image: url("images/oppskriftsbilder/ostskinkemuffins.jpg");
 }
 .pastasalatBg {
-	background-image: url("oppskriftsbilder/pastasalat.jpg");
+	background-image: url("images/oppskriftsbilder/pastasalat.jpg");
 
 }
 .pitaMedKremostBg {
-	background-image: url("oppskriftsbilder/pitaMedKremost.jpg");
+	background-image: url("images/oppskriftsbilder/pitaMedKremost.jpg");
 }
 .pizzasnurrerBg {
-	background-image: url("oppskriftsbilder/Pizzasnurrer.jpg");
+	background-image: url("images/oppskriftsbilder/Pizzasnurrer.jpg");
 }
 
 .tortillapizzaBg {
-	background-image: url("oppskriftsbilder/tortillapizza.jpg");
+	background-image: url("images/oppskriftsbilder/tortillapizza.jpg");
 }
 
 /* Alltid ha */
